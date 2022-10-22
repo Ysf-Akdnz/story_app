@@ -18,62 +18,11 @@ class HikayeUygulamasi extends StatelessWidget {
     );
   }
 }*/
-/*
-class MainMenuWidgets extends StatelessWidget {
-  // const MyButtons({Key? key}) : super(key: key);
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      color: Colors.grey[900],
-      child: Column(
-        mainAxisSize: MainAxisSize.max,
-        //crossAxisAlignment: CrossAxisAlignment.stretch,
-        children: <Widget>[
-          Container(
-            margin: EdgeInsets.all(100),
-            child: const Text(
-              'Hikaye İsmi',
-              textAlign: TextAlign.center,
-              style: TextStyle(
-                color: Colors.white,
-                fontSize: 40,
-                fontWeight: FontWeight.bold,
-              ),
-            ),
-          ),
-          SizedBox(height: 25),
-          TextButton(
-              style: TextButton.styleFrom(textStyle: TextStyle(fontSize: 30)),
-              onPressed: () {},
-              child: const Text(
-                'Devam Et',
-                style: TextStyle(color: Colors.white),
-              )),
-          SizedBox(height: 25),
-          TextButton(
-              style: TextButton.styleFrom(textStyle: TextStyle(fontSize: 30)),
-              onPressed: () {},
-              child: const Text(
-                'Yeni Oyun',
-                style: TextStyle(color: Colors.white),
-              )),
-          SizedBox(height: 25),
-          TextButton(
-              style: TextButton.styleFrom(textStyle: TextStyle(fontSize: 30)),
-              onPressed: () {},
-              child: const Text(
-                'Çıkış',
-                style: TextStyle(color: Colors.white),
-              )),
-        ],
-      ),
-    );
-  }
-}*/
-
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_arc_speed_dial/flutter_speed_dial_menu_button.dart';
 import 'package:flutter_arc_speed_dial/main_menu_floating_action_button.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 void main() => runApp(MyApp());
 
@@ -84,8 +33,8 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Hikaye İsmi',
       theme: ThemeData(
-        primarySwatch: Colors.grey,
-      ),
+          //primarySwatch: Colors.grey,
+          ),
       home: StoryApp(title: 'Hikaye İsmi'),
     );
   }
@@ -96,17 +45,20 @@ class StoryApp extends StatefulWidget {
   final String title;
 
   @override
-  _MainMenu createState() => _MainMenu();
+  // ignore: library_private_types_in_public_api
+  MainMenu createState() => MainMenu();
 }
 
-class _MainMenu extends State<StoryApp> {
+class MainMenu extends State<StoryApp> {
   bool _isShowDial = true;
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: _MainMenuButton(),
-      floatingActionButton: _getFloatingActionButton(),
+    return SafeArea(
+      child: Scaffold(
+        body: _MainMenuButton(),
+        floatingActionButton: _getFloatingActionButton(),
+      ),
     );
   }
 
@@ -122,12 +74,16 @@ class _MainMenu extends State<StoryApp> {
       //general init
       isMainFABMini: false,
       mainMenuFloatingActionButton: MainMenuFloatingActionButton(
+          backgroundColor: Colors.grey[900],
           mini: false,
-          child: const Icon(Icons.menu),
+          child: const Icon(Icons.menu, size: 40),
           onPressed: () {},
-          closeMenuChild: Icon(Icons.close),
-          closeMenuForegroundColor: Colors.black,
-          closeMenuBackgroundColor: Colors.white),
+          closeMenuChild: const Icon(
+            Icons.close,
+            size: 40,
+          ),
+          closeMenuForegroundColor: Colors.white,
+          closeMenuBackgroundColor: Colors.grey[900]),
       floatingActionButtonWidgetChildren: <FloatingActionButton>[
         FloatingActionButton(
           mini: false,
@@ -136,13 +92,13 @@ class _MainMenu extends State<StoryApp> {
             //_isShowDial = false;
             setState(() {});
           },
-          backgroundColor: Colors.blue[700],
-          child: const Text(
+          backgroundColor: Colors.grey[900],
+          child: Text(
             'ENG',
-            style: TextStyle(
-              fontSize: 20,
+            style: GoogleFonts.quintessential(
+              fontSize: 25,
               fontWeight: FontWeight.bold,
-              color: Colors.white,
+              color: Colors.blue,
             ),
           ),
         ),
@@ -153,25 +109,28 @@ class _MainMenu extends State<StoryApp> {
             //_isShowDial = _isShowDial;
             setState(() {});
           },
-          backgroundColor: Colors.red[700],
-          child: const Text(
+          backgroundColor: Colors.grey[900],
+          child: Text(
             'TR',
-            style: TextStyle(
-              fontSize: 20,
+            style: GoogleFonts.quintessential(
+              fontSize: 25,
               fontWeight: FontWeight.bold,
-              color: Colors.white,
+              color: Colors.red,
             ),
           ),
         ),
         FloatingActionButton(
           mini: false,
-          child: Icon(Icons.volume_up),
           onPressed: () {
             //if no need to change the menu status
             // _isShowDial = !_isShowDial;
             //Icon(Icons.volume_off);
           },
-          backgroundColor: Colors.white,
+          backgroundColor: Colors.grey[900],
+          child: const Icon(
+            Icons.volume_up_outlined,
+            size: 40,
+          ),
         ),
       ],
       isSpeedDialFABsMini: true,
@@ -179,6 +138,7 @@ class _MainMenu extends State<StoryApp> {
     );
   }
 
+  // ignore: non_constant_identifier_names
   Widget _MainMenuButton() {
     return Container(
       color: Colors.grey[900],
@@ -188,41 +148,139 @@ class _MainMenu extends State<StoryApp> {
         children: <Widget>[
           Container(
             width: 200,
-            margin: EdgeInsets.all(100),
-            child: const Text(
+            margin: const EdgeInsets.all(100),
+            child: Text(
               'Hikaye İsmi',
               textAlign: TextAlign.center,
-              style: TextStyle(
-                color: Colors.white,
-                fontSize: 35,
-                fontWeight: FontWeight.bold,
+              style: GoogleFonts.quintessential(
+                  color: Colors.white,
+                  fontSize: 35,
+                  fontWeight: FontWeight.bold),
+            ),
+          ),
+          const SizedBox(height: 25),
+          TextButton(
+              style: TextButton.styleFrom(
+                  textStyle: const TextStyle(fontSize: 30)),
+              onPressed: () {},
+              child: Text(
+                'Devam Et',
+                style: GoogleFonts.quintessential(color: Colors.white),
+              )), //Devam Et
+          const SizedBox(height: 25),
+          TextButton(
+              style: TextButton.styleFrom(
+                  textStyle: const TextStyle(fontSize: 30)),
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const StoryPage(),
+                  ),
+                );
+              },
+              child: Text(
+                'Yeni Oyun',
+                style: GoogleFonts.quintessential(color: Colors.white),
+              )), //Yeni Oyun
+          const SizedBox(height: 25),
+          TextButton(
+              style: TextButton.styleFrom(
+                  textStyle: const TextStyle(fontSize: 30)),
+              onPressed: () {
+                SystemNavigator.pop();
+              },
+              child: Text(
+                'Çıkış',
+                style: GoogleFonts.quintessential(color: Colors.white),
+              )), //Çıkış
+        ],
+      ),
+    );
+  }
+}
+
+class StoryPage extends StatelessWidget {
+  const StoryPage({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return SafeArea(
+      child: Scaffold(
+        backgroundColor: Colors.grey[900],
+        body: StoryPageChild(),
+      ),
+    );
+  }
+}
+
+class StoryPageChild extends StatelessWidget {
+  const StoryPageChild({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      color: Colors.grey[900],
+      child: Column(
+        //mainAxisSize: MainAxisSize.min,
+        //crossAxisAlignment: CrossAxisAlignment.stretch,
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          SizedBox(height: 1),
+          Container(
+            //margin: EdgeInsets.fromLTRB(18, 0, 18, 0),
+            height: 200,
+            decoration: BoxDecoration(
+              shape: BoxShape.rectangle,
+              borderRadius: BorderRadiusDirectional.circular(16.0),
+              color: Colors.grey,
+            ),
+            child: Center(
+              child: Image.asset('assets/images/foto.jpeg'),
+            ),
+          ),
+          Container(
+            height: 480,
+            decoration: BoxDecoration(
+              shape: BoxShape.rectangle,
+              color: Colors.grey[800],
+              borderRadius: BorderRadiusDirectional.circular(16.0),
+            ),
+            child: Center(
+              child: Text(
+                'Metin',
+                style: GoogleFonts.quintessential(
+                  fontSize: 50,
+                  color: Colors.white,
+                ),
               ),
             ),
           ),
-          SizedBox(height: 25),
-          TextButton(
-              style: TextButton.styleFrom(textStyle: TextStyle(fontSize: 30)),
-              onPressed: () {},
-              child: const Text(
-                'Devam Et',
-                style: TextStyle(color: Colors.white),
-              )), //Devam Et
-          SizedBox(height: 25),
-          TextButton(
-              style: TextButton.styleFrom(textStyle: TextStyle(fontSize: 30)),
-              onPressed: () {},
-              child: const Text(
-                'Yeni Oyun',
-                style: TextStyle(color: Colors.white),
-              )), //Yeni Oyun
-          SizedBox(height: 25),
-          TextButton(
-              style: TextButton.styleFrom(textStyle: TextStyle(fontSize: 30)),
-              onPressed: () {},
-              child: const Text(
-                'Çıkış',
-                style: TextStyle(color: Colors.white),
-              )), //Çıkış
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              BackButton(
+                color: Colors.white,
+              ),
+              /*FloatingActionButton(
+                onPressed: () {},
+                backgroundColor: Colors.grey[900],
+                child: Icon(
+                  Icons.menu,
+                  size: 45,
+                ),
+              ),*/
+              FloatingActionButton(
+                onPressed: () {},
+                backgroundColor: Colors.grey[900],
+                child: Icon(
+                  Icons.volume_up_outlined,
+                  size: 45,
+                ),
+              )
+            ],
+          ),
+          SizedBox(height: 1)
         ],
       ),
     );
