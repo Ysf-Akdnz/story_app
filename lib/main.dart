@@ -4,32 +4,41 @@ import 'package:flutter_arc_speed_dial/flutter_speed_dial_menu_button.dart';
 import 'package:flutter_arc_speed_dial/main_menu_floating_action_button.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-void main() => runApp(HikayeUygulamasi());
+import 'story_choice_page.dart';
 
-class HikayeUygulamasi extends StatelessWidget {
+void main() => runApp(StoryApp());
+
+class StoryApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Hikaye İsmi',
-      theme: ThemeData(
-          //primarySwatch: Colors.grey,
-          ),
-      home: StoryApp(title: 'Hikaye İsmi'),
+      debugShowCheckedModeBanner: false,
+      //title: 'Hikaye Uygulaması',
+      home: Iskele(),
     );
   }
 }
 
-class StoryApp extends StatefulWidget {
-  StoryApp({Key? key, required this.title}) : super(key: key);
-  final String title;
+class Iskele extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: Colors.grey[900],
+      body: HikUyg(),
+    );
+  }
+}
+
+class HikUyg extends StatefulWidget {
+  HikUyg({Key? key}) : super(key: key);
 
   @override
   // ignore: library_private_types_in_public_api
   MainMenu createState() => MainMenu();
 }
 
-class MainMenu extends State<StoryApp> {
+class MainMenu extends State<HikUyg> {
   bool _isShowDial = true;
 
   @override
@@ -146,7 +155,7 @@ class MainMenu extends State<StoryApp> {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => ChoicePage(),
+                    builder: (context) => StoryChoicePage(),
                   ),
                 );
               },
@@ -162,7 +171,9 @@ class MainMenu extends State<StoryApp> {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => const StoryPage(),
+                    builder: (context) => StoryChoicePage(
+                      showChoice: true,
+                    ),
                   ),
                 );
               },
@@ -181,224 +192,6 @@ class MainMenu extends State<StoryApp> {
                 'Çıkış',
                 style: GoogleFonts.quintessential(color: Colors.white),
               )), //Çıkış
-        ],
-      ),
-    );
-  }
-}
-
-class StoryPage extends StatelessWidget {
-  const StoryPage({Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return SafeArea(
-      child: Scaffold(
-        backgroundColor: Colors.grey[900],
-        body: StoryPageChild(),
-      ),
-    );
-  }
-}
-
-class StoryPageChild extends StatelessWidget {
-  const StoryPageChild({Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      padding: EdgeInsets.all(10.0),
-      //color: Colors.grey[900],
-      child: Column(
-        mainAxisSize: MainAxisSize.max,
-        //crossAxisAlignment: CrossAxisAlignment.stretch,
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: [
-          Container(
-            //margin: EdgeInsets.fromLTRB(18, 0, 18, 0),
-            height: 200,
-            decoration: BoxDecoration(
-              shape: BoxShape.rectangle,
-              borderRadius: BorderRadiusDirectional.circular(16.0),
-              color: Colors.grey,
-              image: DecorationImage(
-                image: AssetImage('assets/images/foto.jpeg'),
-                fit: BoxFit.fill,
-              ),
-            ),
-            /*child: Center(
-              child: Image.asset('assets/images/foto.jpeg'),
-            ),*/
-          ),
-          Container(
-            height: 365,
-            decoration: BoxDecoration(
-              shape: BoxShape.rectangle,
-              color: Colors.grey[800],
-              borderRadius: BorderRadiusDirectional.circular(16.0),
-            ),
-            child: Center(
-              child: Text(
-                'Metin',
-                style: GoogleFonts.quintessential(
-                  fontSize: 50,
-                  color: Colors.white,
-                ),
-              ),
-            ),
-          ),
-          Row(
-            mainAxisSize: MainAxisSize.max,
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              BackButton(
-                color: Colors.white,
-              ),
-              /*FloatingActionButton(
-                onPressed: () {},
-                backgroundColor: Colors.grey[900],
-                child: Icon(
-                  Icons.menu,
-                  size: 45,
-                ),
-              ),*/
-              FloatingActionButton(
-                onPressed: () {},
-                backgroundColor: Colors.grey[900],
-                child: Icon(
-                  Icons.volume_up_outlined,
-                  size: 45,
-                ),
-              )
-            ],
-          ),
-        ],
-      ),
-    );
-  }
-}
-
-class ChoicePage extends StatelessWidget {
-  const ChoicePage({Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return SafeArea(
-      child: Scaffold(
-        backgroundColor: Colors.grey[900],
-        body: ChoicePageChild(),
-      ),
-    );
-  }
-}
-
-class ChoicePageChild extends StatelessWidget {
-  const ChoicePageChild({Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    final ButtonStyle style = ElevatedButton.styleFrom(
-      textStyle: GoogleFonts.quintessential(
-        fontSize: 20,
-        fontWeight: FontWeight.bold,
-      ),
-      backgroundColor: Colors.grey,
-    );
-    return Container(
-      padding: EdgeInsets.all(10.0),
-      //constraints: BoxConstraints.tightForFinite(width: 400),
-      child: Column(
-        mainAxisSize: MainAxisSize.max,
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: [
-          Container(
-            height: 200,
-            decoration: BoxDecoration(
-              shape: BoxShape.rectangle,
-              borderRadius: BorderRadiusDirectional.circular(16.0),
-              color: Colors.grey,
-              image: DecorationImage(
-                image: AssetImage('assets/images/foto.jpeg'),
-                fit: BoxFit.fill,
-              ),
-            ),
-            /*child: Center(
-              child: Image.asset('assets/images/foto.jpeg'),
-            ),*/
-          ),
-          SizedBox(height: 5),
-          Column(
-            //mainAxisSize: MainAxisSize.max,
-            //crossAxisAlignment: CrossAxisAlignment.stretch,
-            children: [
-              Container(
-                height: MediaQuery.of(context).size.height * 0.40,
-                /*constraints: BoxConstraints.expand(
-                  height:
-                      Theme.of(context).textTheme.headline4!.fontSize! * 1.1 +
-                          200.0,
-                ),*/
-                decoration: BoxDecoration(
-                  shape: BoxShape.rectangle,
-                  color: Colors.grey[800],
-                  borderRadius: BorderRadiusDirectional.circular(16.0),
-                ),
-                child: Center(
-                  child: Text(
-                    'Metin',
-                    //softWrap: true,
-                    //textAlign: TextAlign.center,
-                    style: GoogleFonts.quintessential(
-                      fontSize: 50,
-                      color: Colors.white,
-                    ),
-                  ),
-                ),
-              ),
-            ],
-          ),
-          Container(
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.stretch,
-              children: [
-                ElevatedButton(
-                  style: style,
-                  onPressed: () {},
-                  child: const Text('Seçim 1'),
-                ),
-                ElevatedButton(
-                  style: style,
-                  onPressed: () {},
-                  child: const Text('Seçim 2'),
-                ),
-              ],
-            ),
-          ),
-          Row(
-            mainAxisSize: MainAxisSize.max,
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              BackButton(
-                color: Colors.white,
-              ),
-              /*FloatingActionButton(
-                onPressed: () {},
-                backgroundColor: Colors.grey[900],
-                child: Icon(
-                  Icons.menu,
-                  size: 45,
-                ),
-              ),*/
-              FloatingActionButton(
-                onPressed: () {},
-                backgroundColor: Colors.grey[900],
-                child: Icon(
-                  Icons.volume_up_outlined,
-                  size: 45,
-                ),
-              )
-            ],
-          ),
         ],
       ),
     );
