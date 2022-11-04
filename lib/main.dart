@@ -1,3 +1,4 @@
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_arc_speed_dial/flutter_speed_dial_menu_button.dart';
@@ -32,26 +33,26 @@ class Iskele extends StatelessWidget {
 
 class HikUyg extends StatefulWidget {
   HikUyg({Key? key}) : super(key: key);
-
   @override
   // ignore: library_private_types_in_public_api
   MainMenu createState() => MainMenu();
 }
 
 class MainMenu extends State<HikUyg> {
-  bool _isShowDial = true;
+  //bool _isShowDial = false;
+  //bool _isVolumeMute = false;
 
   @override
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        body: _MainMenuButton(),
-        floatingActionButton: _getFloatingActionButton(),
+        body: _mainMenuButton(),
+        //floatingActionButton: _getFloatingActionButton(),
       ),
     );
   }
 
-  Widget _getFloatingActionButton() {
+  /*Widget _getFloatingActionButton() {
     return SpeedDialMenuButton(
       //if needed to close the menu after clicking sub-FAB
       isShowSpeedDial: _isShowDial,
@@ -74,7 +75,7 @@ class MainMenu extends State<HikUyg> {
           closeMenuForegroundColor: Colors.white,
           closeMenuBackgroundColor: Colors.grey[900]),
       floatingActionButtonWidgetChildren: <FloatingActionButton>[
-        FloatingActionButton(
+        FloatingActionButton(heroTag: "ENG",
           mini: false,
           onPressed: () {
             //if need to close menu after click
@@ -91,7 +92,7 @@ class MainMenu extends State<HikUyg> {
             ),
           ),
         ),
-        FloatingActionButton(
+        FloatingActionButton(heroTag: "TR",
           mini: false,
           onPressed: () {
             //if need to toggle menu after click
@@ -108,16 +109,16 @@ class MainMenu extends State<HikUyg> {
             ),
           ),
         ),
-        FloatingActionButton(
+        FloatingActionButton(heroTag: "Ses aç/kapa 1",
           mini: false,
           onPressed: () {
-            //if no need to change the menu status
-            // _isShowDial = !_isShowDial;
-            //Icon(Icons.volume_off);
+            setState(() {
+              _isVolumeMute =! _isVolumeMute;
+            });
           },
           backgroundColor: Colors.grey[900],
-          child: const Icon(
-            Icons.volume_up_outlined,
+          child: Icon(
+            _isVolumeMute?Icons.volume_off:Icons.volume_up_outlined,
             size: 40,
           ),
         ),
@@ -125,10 +126,9 @@ class MainMenu extends State<HikUyg> {
       isSpeedDialFABsMini: true,
       paddingBtwSpeedDialButton: 30.0,
     );
-  }
+  }*/
 
-  // ignore: non_constant_identifier_names
-  Widget _MainMenuButton() {
+  Widget _mainMenuButton() {
     return Container(
       color: Colors.grey[900],
       child: Column(
@@ -155,7 +155,10 @@ class MainMenu extends State<HikUyg> {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => StoryChoicePage(),
+                    builder: (context) => StoryChoicePage(
+                      chapterNum: 0,
+                      dialogNum: 1,
+                    ),
                   ),
                 );
               },
@@ -171,9 +174,7 @@ class MainMenu extends State<HikUyg> {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => StoryChoicePage(
-                      showChoice: true,
-                    ),
+                    builder: (context) => StoryChoicePage(),
                   ),
                 );
               },

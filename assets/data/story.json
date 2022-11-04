@@ -1,0 +1,27 @@
+{
+    "chapters": [
+        {
+            "dialogs": [
+                {
+                    "id": 0,
+                    "text": "Welcome to my Hell"
+                },
+                {
+                    "id": 1,
+                    "text": "metin 1",
+                    "choices": [
+                        {
+                            "id": 0,
+                            "text": "Seçim 1asdasdsa",
+                            "nextdialog": 0
+                        },
+                        {
+                            "id": 1,
+                            "text": "Seçim 2aq"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
