@@ -4,20 +4,73 @@
             "dialogs": [
                 {
                     "id": 0,
-                    "text": "Welcome to my Hell"
+                    "text": "dialog 0"
                 },
                 {
                     "id": 1,
-                    "text": "metin 1",
+                    "text": "dialog 1"
+                },
+                {
+                    "id": 2,
+                    "text": "dialog 2",
                     "choices": [
                         {
                             "id": 0,
-                            "text": "Seçim 1asdasdsa",
+                            "text": "Seçim 1",
+                            "nextdialog": 3
+                        },
+                        {
+                            "id": 1,
+                            "text": "Seçim 2",
+                            "nextdialog": 6
+                        }
+                    ]
+                },
+                {
+                    "id": 3,
+                    "text": "dialog 3"
+                },
+                {
+                    "id": 4,
+                    "text": "dialog 4"
+                },
+                {
+                    "id": 5,
+                    "text": "dialog 5",
+                    "choices": [
+                        {
+                            "id": 0,
+                            "text": "Seçim 1",
                             "nextdialog": 0
                         },
                         {
                             "id": 1,
-                            "text": "Seçim 2aq"
+                            "text": "Seçim 2",
+                            "nextdialog": 1
+                        }
+                    ]
+                },
+                {
+                    "id": 6,
+                    "text": "dialog 6"
+                },
+                {
+                    "id": 7,
+                    "text": "dialog 7"
+                },
+                {
+                    "id": 8,
+                    "text": "dialog 8",
+                    "choices": [
+                        {
+                            "id": 0,
+                            "text": "Seçim 1",
+                            "nextdialog": 0
+                        },
+                        {
+                            "id": 1,
+                            "text": "Seçim 2",
+                            "nextdialog": 1
                         }
                     ]
                 }
