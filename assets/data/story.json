@@ -4,63 +4,84 @@
             "dialogs": [
                 {
                     "id": 0,
-                    "text": "dialog 0"
+                    "text": "At arabasının sallantılarıyla gözlerini yavaşça araladın. Gece göğünün altında bulutsuz ve yıldızlı bir manzarayla karşılaştın. Yavaşça doğrulduğunda yanında, senin yaşlarında birkaç gencin daha uyuduğunu gördün. İleride meşale ışıkları gözükmeye başlamıştı. “Uyanın.” Diye bağırdı sürücü ve uyumakta olanlar herkesi uyandırdı. Kısa süre sonra araba durduğunda zincir zırh giymiş bir asker arabaya yaklaştı. “İnin ve beni takip edin.” ",
+                    "save": true
                 },
                 {
                     "id": 1,
-                    "text": "dialog 1"
+                    "text": "Arabadan inip adamı takip etmeye başladın. Onu takip ederken talim alanlarının etrafından geçtiğinizi fark ettin. İlk talim alanı neredeyse boştu. Sadece birkaç kişi birbirleriyle kılıç mücadelesindeydi ve bir hayli yorulmuş görünüyorlardı. İkinci talim alanına geldiğinizde takip ettiğiniz asker durdu. Yanına iki asker daha geldi ve birisi elindeki parşömen ve kalemi, sizi oraya götüren askere uzattı. Başınızdaki asker parşömen ve kağıdı aldı ve size döndü. “Sıraya girin, sırayla bilgileriniz alınacak.”",
+                    "save": false
                 },
                 {
                     "id": 2,
-                    "text": "dialog 2",
+                    "text": "Sıraya girdiniz ve iki kişi sonrasında sıra sana geldi. Asker ezberden sorularını sormaya başladı. “İsmin, yaşın, geldiğin köy.” Askerin sesi tekdüze ve bıkmış şekilde çıkmıştı. “Artyom, 20, Sami Köyü.” Asker hepsini kağıda yazdı ve devam etti. “Peki becerikli olduğun alan ne?” Bu soruya nasıl cevap vereceğini, önceki iki genç sayesinde öğrenmiştin.",
+                    "image": "assets/images/foto1.jpeg",
+                    "save": false,
                     "choices": [
                         {
                             "id": 0,
-                            "text": "Seçim 1",
-                            "nextdialog": 3
+                            "text": "Kılıç kullanmayı biliyorum",
+                            "nextdialog": 4
                         },
                         {
                             "id": 1,
-                            "text": "Seçim 2",
-                            "nextdialog": 6
+                            "text": "Büyü yapabiliyorum",
+                            "nextdialog": 4
+                        },
+                        {
+                            "id": 2,
+                            "text": "Savaş konusunda bir becerim yok",
+                            "nextdialog": 3
                         }
                     ]
                 },
                 {
                     "id": 3,
-                    "text": "dialog 3"
-                },
-                {
-                    "id": 4,
-                    "text": "dialog 4"
-                },
-                {
-                    "id": 5,
-                    "text": "dialog 5",
+                    "text": "Asker gözlerini kağıttan kaldırıp önce yanındaki diğer iki askere, sonrasında sana baktı. “Demek daha önce hiç antrenman yapmadan krallığın için savaşmak istiyorsun. Cesur hareket Artyom. O halde şunu soracağım, büyü kullanmak mı istersin yoksa kılıç kullanmak mı?”",
+                    "image": "assets/images/foto4.jpeg",
+                    "save": false,
                     "choices": [
                         {
                             "id": 0,
-                            "text": "Seçim 1",
-                            "nextdialog": 0
+                            "text": "Kılıç kullanmayı öğrenmek istiyorum",
+                            "nextdialog": 4
                         },
                         {
                             "id": 1,
-                            "text": "Seçim 2",
-                            "nextdialog": 1
+                            "text": "Büyü yapmayı öğrenmek istiyorum",
+                            "nextdialog": 4
                         }
                     ]
                 },
                 {
+                    "id": 4,
+                    "text": "Asker dediklerini not aldıktan sonra diğer iki gence katılman için kafasıyla işaret verdi ve sıradakine geçip onun bilgilerini almaya başladı. Herkesin cevapları alındıktan sonra Başınızdaki asker parşömeni yuvarladı ve kapattı. Size dönerek hafifçe öksürdü ve konuşmaya başladı. “Hepinize Gretro Krallığı adına teşekkür ediyorum. Delfia Krallığı ile olan savaşta gönüllü askerlik yapmak için evlerinizden ayrıldınız. Bu gecelik iyice dinlenin. Yarın eğitimleriniz başlayacak.”",
+                    "image": "assets/images/foto.jpeg",
+                    "save": true
+                },
+                {
+                    "id": 5,
+                    "text": "Başınızdaki asker parşömenle birlikte yanınızdan ayrıldı, diğer iki asker ise sizi yatacağınız yere götürdü. Yatakhaneniz küçük bir binaydı ve içinde on tane ranza bulunuyordu, senin geldiğin at arabasındaysa en fazla altı kişi vardı. Deneyimli askerler sizinle yatmayacağını düşünüyordun, o halde tek gelen grup siz olamazdınız. Ancak şu an için yatakhane sizin haricinizde boştu. ",
+                    "image": "assets/images/foto5.jpeg",
+                    "save": false
+                },
+                {
                     "id": 6,
-                    "text": "dialog 6"
+                    "text": "Üzerini değiştin ve bir yatağa uzandın. Yolda gelirken uyumuş olsan bile ilerde olacağını düşündüğün şeyleri enerjik bir şekilde karşılamak istiyordun, bu yüzden kendini uyumak için zorladın ve bir süre sonra rüyasız bir uykuya daldın.",
+                    "image": "assets/images/foto3.jpeg",
+                    "save": false
                 },
                 {
                     "id": 7,
-                    "text": "dialog 7"
+                    "text": "dialog 7",
+                    "image": "assets/images/foto.jpeg",
+                    "save": false
                 },
                 {
                     "id": 8,
                     "text": "dialog 8",
+                    "image": "assets/images/foto7.jpeg",
+                    "save": false,
                     "choices": [
                         {
                             "id": 0,
@@ -70,7 +91,7 @@
                         {
                             "id": 1,
                             "text": "Seçim 2",
-                            "nextdialog": 1
+                            "nextdialog": 0
                         }
                     ]
                 }

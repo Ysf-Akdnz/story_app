@@ -19,7 +19,7 @@ class _LanguagesState extends State<Languages> {
           onPressed: () {
             setState(() {});
           },
-          backgroundColor: Colors.grey[900],
+          backgroundColor: Colors.transparent,
           child: Text(
             'TR',
             style: GoogleFonts.quintessential(
@@ -34,11 +34,9 @@ class _LanguagesState extends State<Languages> {
           heroTag: "ENG",
           mini: false,
           onPressed: () {
-            //if need to close menu after click
-            //_isShowDial = false;
             setState(() {});
           },
-          backgroundColor: Colors.grey[900],
+          backgroundColor: Colors.transparent,
           child: Text(
             'ENG',
             style: GoogleFonts.quintessential(

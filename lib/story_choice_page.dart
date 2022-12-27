@@ -1,8 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import 'package:story_app/data.dart';
+import 'package:story_app/storyPage.dart';
+import 'package:story_app/widgets/setting.dart';
 import 'package:story_app/widgets/volume_button.dart';
+import 'package:story_app/widgets/language.dart';
 
 class StoryChoicePage extends StatefulWidget {
   final int chapterNum, dialogNum;
@@ -15,6 +19,16 @@ class StoryChoicePage extends StatefulWidget {
 }
 
 class _StoryChoicePageState extends State<StoryChoicePage> {
+  final GlobalKey<ScaffoldState> _key = GlobalKey();
+
+  int currentDialog = 0;
+  final storyData = StoryData();
+  @override
+  void initState() {
+    currentDialog = widget.dialogNum;
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) {
     final ButtonStyle style = ElevatedButton.styleFrom(
@@ -26,18 +40,17 @@ class _StoryChoicePageState extends State<StoryChoicePage> {
     );
     return SafeArea(
       child: Scaffold(
+        key: _key,
         backgroundColor: Colors.grey[900],
         body: FutureBuilder<dynamic>(
-          future: StoryData().readJson(),
+          future: storyData.getDialog(widget.chapterNum, currentDialog),
           builder: (context, snapshot) {
             List<Widget> children;
             if (snapshot.hasData) {
-              var data = snapshot.data;
-              var chapter = snapshot.data["chapters"][widget.chapterNum];
-              var dialog = chapter["dialogs"][widget.dialogNum];
+              var dialog = snapshot.data;
+              var image = dialog["image"];
               var metin = dialog["text"];
               var choices = dialog["choices"];
-              print(choices);
               return Container(
                 padding: const EdgeInsets.all(10.0),
                 //constraints: BoxConstraints.tightForFinite(width: 400),
@@ -45,36 +58,62 @@ class _StoryChoicePageState extends State<StoryChoicePage> {
                   mainAxisSize: MainAxisSize.max,
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Container(
-                      margin: const EdgeInsets.only(bottom: 7.5),
-                      clipBehavior: Clip.hardEdge,
-                      decoration: BoxDecoration(
-                        shape: BoxShape.rectangle,
-                        borderRadius: BorderRadiusDirectional.circular(16.0),
-                      ),
-                      child: Image.asset('assets/images/foto.jpeg'),
-                    ),
-                    Expanded(
-                      child: Container(
-                        width: MediaQuery.of(context).size.width,
-                        padding: const EdgeInsets.symmetric(horizontal: 20),
-                        decoration: BoxDecoration(
-                          shape: BoxShape.rectangle,
-                          color: Colors.grey[800],
-                          borderRadius: BorderRadiusDirectional.circular(16.0),
+                    if (image != null)
+                      Center(
+                        child: Container(
+                          height: 210,
+                          margin: const EdgeInsets.only(bottom: 7.5),
+                          clipBehavior: Clip.hardEdge,
+                          decoration: BoxDecoration(
+                            shape: BoxShape.rectangle,
+                            borderRadius:
+                                BorderRadiusDirectional.circular(16.0),
+                          ),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.stretch,
+                            children: [
+                              Image.asset(
+                                image,
+                                height: 210,
+                                fit: BoxFit.cover,
+                              ),
+                            ],
+                          ),
                         ),
-                        child: SingleChildScrollView(
-                          child: Text(
-                            metin,
-                            textAlign: TextAlign.center,
-                            //softWrap: true,
-                            //textAlign: TextAlign.center,
-                            style: GoogleFonts.quintessential(
-                              fontSize: Theme.of(context)
-                                  .textTheme
-                                  .headline6
-                                  ?.fontSize,
-                              color: Colors.white,
+                      ),
+                    Expanded(
+                      child: GestureDetector(
+                        onTap: choices == null
+                            ? () {
+                                setState(
+                                  () {
+                                    currentDialog++;
+                                  },
+                                );
+                              }
+                            : null,
+                        child: Container(
+                          width: MediaQuery.of(context).size.width,
+                          padding: const EdgeInsets.symmetric(horizontal: 20),
+                          decoration: BoxDecoration(
+                            shape: BoxShape.rectangle,
+                            color: Colors.grey[800],
+                            borderRadius:
+                                BorderRadiusDirectional.circular(16.0),
+                          ),
+                          child: SingleChildScrollView(
+                            child: Text(
+                              metin,
+                              textAlign: TextAlign.center,
+                              //softWrap: true,
+                              //textAlign: TextAlign.center,
+                              style: GoogleFonts.quintessential(
+                                fontSize: Theme.of(context)
+                                    .textTheme
+                                    .headline6
+                                    ?.fontSize,
+                                color: Colors.white,
+                              ),
                             ),
                           ),
                         ),
@@ -86,57 +125,23 @@ class _StoryChoicePageState extends State<StoryChoicePage> {
                         shrinkWrap: true,
                         itemCount: choices.length,
                         itemBuilder: (BuildContext context, int index) {
-                          var choice = choices[index]["text"];
-                          print(choice);
+                          var choice = choices[index];
                           return SizedBox(
                             width: MediaQuery.of(context).size.width,
                             child: ElevatedButton(
                               style: style,
-                              onPressed: () {},
-                              child: Text(choice),
+                              onPressed: () {
+                                setState(
+                                  () {
+                                    currentDialog = choice["nextdialog"];
+                                  },
+                                );
+                              },
+                              child: Text(choice["text"]),
                             ),
                           );
                         },
                       ),
-                    /*Column(
-                        mainAxisSize: MainAxisSize.min,
-                        children: [
-                          SizedBox(
-                            width: MediaQuery.of(context).size.width,
-                            child: ElevatedButton(
-                              style: style,
-                              onPressed: () {},
-                              child: Text('Seçim 1'),
-                            ),
-                          ),
-                          SizedBox(
-                            width: MediaQuery.of(context).size.width,
-                            child: ElevatedButton(
-                              style: style,
-                              onPressed: () {},
-                              child: Text('Seçim 2'),
-                            ),
-                          ),
-                        ],
-                      ),*/
-                    Row(
-                      mainAxisSize: MainAxisSize.max,
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        FloatingActionButton(
-                          heroTag: "Menu",
-                          onPressed: () {
-                            Navigator.pop(context);
-                          },
-                          backgroundColor: Colors.grey[900],
-                          child: const Icon(
-                            Icons.menu,
-                            size: 45,
-                          ),
-                        ),
-                        const VolumeButton(),
-                      ],
-                    ),
                   ],
                 ),
               );
@@ -172,6 +177,8 @@ class _StoryChoicePageState extends State<StoryChoicePage> {
             );
           },
         ),
+        bottomNavigationBar: getSettings(_key),
+        endDrawer: const SettingDrawer(),
       ),
     );
   }

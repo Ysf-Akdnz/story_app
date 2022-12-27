@@ -19,7 +19,7 @@ class _VolumeButtonState extends State<VolumeButton> {
           _isVolumeMute = !_isVolumeMute;
         });
       },
-      backgroundColor: Colors.grey[900],
+      backgroundColor: Colors.transparent,
       child: Icon(
         _isVolumeMute ? Icons.volume_off : Icons.volume_up_outlined,
         size: 40,
