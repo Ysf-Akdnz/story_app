@@ -39,7 +39,10 @@ dependencies:
   floating_action_bubble: ^1.1.4
   flutter_arc_speed_dial: ^2.0.1
   google_fonts: ^3.0.1
+  json_serializable: ^6.6.0
   shared_preferences: ^2.0.15
+  json_annotation: ^4.8.0
+  build_runner: ^2.3.3
 
 dev_dependencies:
   flutter_test:
@@ -67,6 +70,7 @@ flutter:
   assets:
     - assets/images/
     - assets/data/story.json
+    - assets/data/choicesHistory.json
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

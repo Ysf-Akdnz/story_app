@@ -4,12 +4,12 @@ import 'package:shared_preferences/shared_preferences.dart';
 
 class StoryData {
   dynamic data;
-  int chapterId = 0;
-  int dialoId = 0;
+  int chapterId = 0, numDialog = 0;
+  int dialogId = 0;
   late SharedPreferences prefs;
 
   Future<dynamic> readJson() async {
-    prefs = await SharedPreferences.getInstance();
+    prefs = await SharedPreferences.getInstance(); 
     final String response =
         await rootBundle.loadString('assets/data/story.json');
     return await json.decode(response);
@@ -17,7 +17,14 @@ class StoryData {
 
   Future<dynamic> getDialog(int chapterId, int dialogId) async {
     data ??= await readJson(); //data == null ise imiş
+    if (data["chapters"].length <= chapterId) {
+      return null;
+    }
     var chapter = data["chapters"][chapterId];
+    numDialog = chapter["dialogs"].length;
+    if (chapter["dialogs"].length <= dialogId) {
+      return null;
+    }
     var dialog = chapter["dialogs"][dialogId];
     bool save = dialog["save"];
     if (save) {

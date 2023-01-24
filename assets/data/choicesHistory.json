@@ -1,0 +1,14 @@
+{
+    "MagicFontType": [
+        {
+            "id": 17,
+            "text": [
+                {
+                    "text": "Pyro",
+                    "fontstyle": "Bold"
+                }
+            ],
+            "save": false
+        }
+    ]
+}

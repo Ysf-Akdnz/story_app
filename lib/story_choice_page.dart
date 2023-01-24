@@ -1,12 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
+import 'package:flutter/rendering.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:shared_preferences/shared_preferences.dart';
 import 'package:story_app/data.dart';
-import 'package:story_app/storyPage.dart';
 import 'package:story_app/widgets/setting.dart';
-import 'package:story_app/widgets/volume_button.dart';
-import 'package:story_app/widgets/language.dart';
+
 
 class StoryChoicePage extends StatefulWidget {
   final int chapterNum, dialogNum;
@@ -87,6 +84,14 @@ class _StoryChoicePageState extends State<StoryChoicePage> {
                             ? () {
                                 setState(
                                   () {
+                                    if (currentDialog ==
+                                        storyData.numDialog - 1) {
+                                      return;
+                                    }
+                                    if (dialog["nextdialog"] != null) {
+                                      currentDialog = dialog["nextdialog"];
+                                      return;
+                                    }
                                     currentDialog++;
                                   },
                                 );
@@ -134,6 +139,7 @@ class _StoryChoicePageState extends State<StoryChoicePage> {
                                 setState(
                                   () {
                                     currentDialog = choice["nextdialog"];
+                                    //saveData(choice["text"]);
                                   },
                                 );
                               },

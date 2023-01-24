@@ -38,7 +38,7 @@ Widget getSettings(GlobalKey<ScaffoldState> _key) {
         child: FloatingActionButton(
           backgroundColor: Colors.transparent,
           child: const Icon(
-            Icons.menu,
+            Icons.miscellaneous_services,
             size: 45,
           ),
           onPressed: () {
