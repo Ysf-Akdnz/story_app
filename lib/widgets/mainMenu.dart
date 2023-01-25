@@ -40,7 +40,7 @@ class _MainMenuPageState extends State<MainMenuPage> {
             child: Center(
               child: Container(
                 child: Text(
-                  "Rose'un Harikalar Diyarı",
+                  "Legends of Azeroth",
                   textAlign: TextAlign.center,
                   style: GoogleFonts.quintessential(
                       color: Colors.white,

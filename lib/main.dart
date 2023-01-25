@@ -1,11 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:shared_preferences/shared_preferences.dart';
-import 'package:story_app/widgets/setting.dart';
-
 import 'package:story_app/widgets/mainMenu.dart';
-import 'story_choice_page.dart';
 
 void main() => runApp(StoryApp());
 
@@ -87,7 +81,6 @@ class HikUygState extends State<HikUyg> {
     return Container(
       child: WillPopScope(
         onWillPop: () async {
-          print('Back Button pressed');
           final shouldpop = await showWarning(context);
           return shouldpop ?? false;
         },

@@ -4,7 +4,6 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:story_app/data.dart';
 import 'package:story_app/widgets/setting.dart';
 
-
 class StoryChoicePage extends StatefulWidget {
   final int chapterNum, dialogNum;
 
@@ -109,7 +108,7 @@ class _StoryChoicePageState extends State<StoryChoicePage> {
                           child: SingleChildScrollView(
                             child: Text(
                               metin,
-                              textAlign: TextAlign.center,
+                              //textAlign: TextAlign.center,
                               //softWrap: true,
                               //textAlign: TextAlign.center,
                               style: GoogleFonts.quintessential(
