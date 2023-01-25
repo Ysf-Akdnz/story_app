@@ -19,19 +19,29 @@ class _MainMenuPageState extends State<MainMenuPage> {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
-      child: Scaffold(
-        key: _key,
-        backgroundColor: Colors.grey[900],
-        body: _mainMenuButton(),
-        bottomNavigationBar: getSettings(_key),
-        endDrawer: const SettingDrawer(),
+      child: Stack(
+        children: [
+          Image.asset(
+            "assets/images/let-me-a-legend.jpeg",
+            height: MediaQuery.of(context).size.height,
+            width: MediaQuery.of(context).size.width,
+            fit: BoxFit.fill,
+          ),
+          Scaffold(
+            key: _key,
+            backgroundColor: Colors.transparent,
+            body: _mainMenuButton(),
+            bottomNavigationBar: getSettings(_key),
+            endDrawer: const SettingDrawer(),
+          ),
+        ],
       ),
     );
   }
 
   Widget _mainMenuButton() {
     return Container(
-      color: Colors.grey[900],
+      //color: Colors.grey[900],
       child: Column(
         mainAxisSize: MainAxisSize.max,
         //crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -40,19 +50,21 @@ class _MainMenuPageState extends State<MainMenuPage> {
             child: Center(
               child: Container(
                 child: Text(
-                  "Legends of Azeroth",
+                  "Tell Me a Legend",
                   textAlign: TextAlign.center,
                   style: GoogleFonts.quintessential(
                       color: Colors.white,
-                      fontSize: 35,
-                      fontWeight: FontWeight.bold),
+                      fontSize: 40,
+                      fontWeight: FontWeight.bold,
+                      fontStyle: FontStyle.italic),
                 ),
               ),
             ),
           ),
-          TextButton(
+          ElevatedButton(
               style: TextButton.styleFrom(
-                  textStyle: const TextStyle(fontSize: 30)),
+                  textStyle: const TextStyle(fontSize: 30),
+                  backgroundColor: Colors.transparent),
               onPressed: () async {
                 final prefs = await SharedPreferences.getInstance();
                 final chapterId = prefs.getInt('chapterId') ?? 0;
@@ -71,9 +83,10 @@ class _MainMenuPageState extends State<MainMenuPage> {
                 style: GoogleFonts.quintessential(color: Colors.white),
               )), //Devam Et
           const SizedBox(height: 25),
-          TextButton(
-            style:
-                TextButton.styleFrom(textStyle: const TextStyle(fontSize: 30)),
+          ElevatedButton(
+            style: TextButton.styleFrom(
+                textStyle: const TextStyle(fontSize: 30),
+                backgroundColor: Colors.transparent),
             onPressed: () {
               Navigator.push(
                 context,
@@ -105,9 +118,10 @@ class _MainMenuPageState extends State<MainMenuPage> {
             ), //Yeni Oyun
           ),*/
           const SizedBox(height: 25),
-          TextButton(
-            style:
-                TextButton.styleFrom(textStyle: const TextStyle(fontSize: 30)),
+          ElevatedButton(
+            style: TextButton.styleFrom(
+                textStyle: const TextStyle(fontSize: 30),
+                backgroundColor: Colors.transparent),
             onPressed: () {
               SystemNavigator.pop();
             },
