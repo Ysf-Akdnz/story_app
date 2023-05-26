@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "249726596922",
+    "firebase_url": "https://tezprojesi-3ea5d-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "tezprojesi-3ea5d",
+    "storage_bucket": "tezprojesi-3ea5d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:249726596922:android:5a6e07700d3b32981dc203",
+        "android_client_info": {
+          "package_name": "com.example.story_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "249726596922-slo5t8716k693cd3mm459sj6op02tdc1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAxK-kRyqK_yIWILSiclChpdnyGL_stfSE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "249726596922-slo5t8716k693cd3mm459sj6op02tdc1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -2,9 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:story_app/widgets/language.dart';
 import 'package:story_app/widgets/volume_button.dart';
 
-class SettingDrawer extends StatelessWidget {
-  const SettingDrawer({super.key});
+class MySettingDrawer extends StatefulWidget {
+  const MySettingDrawer({super.key});
 
+  @override
+  State<MySettingDrawer> createState() => _MySettingDrawerState();
+}
+
+class _MySettingDrawerState extends State<MySettingDrawer> {
   @override
   Widget build(BuildContext context) {
     return Drawer(
@@ -14,38 +19,13 @@ class SettingDrawer extends StatelessWidget {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          Languages(),
+          const Languages(),
           Container(
             margin: const EdgeInsets.only(bottom: 7.5),
-            child: VolumeButton(),
+            child: const VolumeButton(),
           ),
         ],
       ),
     );
   }
-}
-
-Widget getSettings(GlobalKey<ScaffoldState> _key) {
-  return Row(
-    children: [
-      Container(
-        margin: const EdgeInsets.only(bottom: 10, left: 10),
-        clipBehavior: Clip.hardEdge,
-        // ignore: prefer_const_constructors
-        decoration: BoxDecoration(
-          shape: BoxShape.circle,
-        ),
-        child: FloatingActionButton(
-          backgroundColor: Colors.transparent,
-          child: const Icon(
-            Icons.miscellaneous_services,
-            size: 45,
-          ),
-          onPressed: () {
-            _key.currentState!.openEndDrawer();
-          },
-        ),
-      ),
-    ],
-  );
 }

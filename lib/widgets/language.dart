@@ -20,6 +20,7 @@ class _LanguagesState extends State<Languages> {
             setState(() {});
           },
           backgroundColor: Colors.transparent,
+          elevation: 0,
           child: Text(
             'TR',
             style: GoogleFonts.quintessential(
@@ -31,6 +32,7 @@ class _LanguagesState extends State<Languages> {
         ),
         const SizedBox(height: 20),
         FloatingActionButton(
+          elevation: 0,
           heroTag: "ENG",
           mini: false,
           onPressed: () {

@@ -1,12 +1,16 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
+import 'package:flutter_tts/flutter_tts.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:just_audio/just_audio.dart';
 import 'package:story_app/data.dart';
+import 'package:story_app/utils/audio_background.dart';
+import 'package:story_app/utils/sound.dart';
+import 'package:story_app/utils/speak_function.dart';
+import 'package:story_app/widgets/get_settings.dart';
 import 'package:story_app/widgets/setting.dart';
 
 class StoryChoicePage extends StatefulWidget {
   final int chapterNum, dialogNum;
-
   const StoryChoicePage({Key? key, this.chapterNum = 0, this.dialogNum = 0})
       : super(key: key);
 
@@ -19,10 +23,35 @@ class _StoryChoicePageState extends State<StoryChoicePage> {
 
   int currentDialog = 0;
   final storyData = StoryData();
+  final TtsController _ttsController = TtsController();
+
+  Future<void> _speak(String text) async {
+    await _ttsController.speak(text);
+    setState(
+      () {},
+    );
+  }
+
+  @override
+  void dispose() {
+    _ttsController.stop();
+    player.stop();
+    super.dispose();
+  }
+
   @override
   void initState() {
+    playMusic("assets/musics/skyrim.mp3", volume: 1, loopMode: LoopMode.all);
     currentDialog = widget.dialogNum;
     super.initState();
+  }
+
+  var currentMetin = "";
+  void ondialogloaded(dialog) {
+    var metin = dialog["text"];
+    if (metin == currentMetin) return;
+    currentMetin = metin;
+    _speak(metin);
   }
 
   @override
@@ -37,19 +66,20 @@ class _StoryChoicePageState extends State<StoryChoicePage> {
     return SafeArea(
       child: Scaffold(
         key: _key,
-        backgroundColor: Colors.grey[900],
+        backgroundColor: Colors.black87,
         body: FutureBuilder<dynamic>(
           future: storyData.getDialog(widget.chapterNum, currentDialog),
           builder: (context, snapshot) {
             List<Widget> children;
             if (snapshot.hasData) {
-              var dialog = snapshot.data;
-              var image = dialog["image"];
+              var dialog = snapshot.data["dialog"];
+              var images = snapshot.data["images"];
+              var image = images[dialog["image"]];
               var metin = dialog["text"];
               var choices = dialog["choices"];
+              ondialogloaded(dialog);
               return Container(
                 padding: const EdgeInsets.all(10.0),
-                //constraints: BoxConstraints.tightForFinite(width: 400),
                 child: Column(
                   mainAxisSize: MainAxisSize.max,
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -68,11 +98,11 @@ class _StoryChoicePageState extends State<StoryChoicePage> {
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.stretch,
                             children: [
-                              Image.asset(
+                              Image.network(
                                 image,
                                 height: 210,
                                 fit: BoxFit.cover,
-                              ),
+                              )
                             ],
                           ),
                         ),
@@ -108,9 +138,6 @@ class _StoryChoicePageState extends State<StoryChoicePage> {
                           child: SingleChildScrollView(
                             child: Text(
                               metin,
-                              //textAlign: TextAlign.center,
-                              //softWrap: true,
-                              //textAlign: TextAlign.center,
                               style: GoogleFonts.quintessential(
                                 fontSize: Theme.of(context)
                                     .textTheme
@@ -138,7 +165,6 @@ class _StoryChoicePageState extends State<StoryChoicePage> {
                                 setState(
                                   () {
                                     currentDialog = choice["nextdialog"];
-                                    //saveData(choice["text"]);
                                   },
                                 );
                               },
@@ -163,15 +189,22 @@ class _StoryChoicePageState extends State<StoryChoicePage> {
                 ),
               ];
             } else {
-              children = const <Widget>[
-                SizedBox(
+              children = <Widget>[
+                const SizedBox(
                   width: 60,
                   height: 60,
                   child: CircularProgressIndicator(),
                 ),
                 Padding(
-                  padding: EdgeInsets.only(top: 16),
-                  child: Text('Awaiting result...'),
+                  padding: const EdgeInsets.only(top: 16),
+                  child: Text(
+                    'Loading',
+                    style: GoogleFonts.quintessential(
+                      color: Colors.white,
+                      fontWeight: FontWeight.bold,
+                      fontStyle: FontStyle.italic,
+                    ),
+                  ),
                 ),
               ];
             }
@@ -182,8 +215,8 @@ class _StoryChoicePageState extends State<StoryChoicePage> {
             );
           },
         ),
-        bottomNavigationBar: getSettings(_key),
-        endDrawer: const SettingDrawer(),
+        bottomNavigationBar: GetSettings(sckey: _key, menuVisible: true),
+        endDrawer: const MySettingDrawer(),
       ),
     );
   }
