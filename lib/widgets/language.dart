@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class Languages extends StatefulWidget {
@@ -17,7 +18,7 @@ class _LanguagesState extends State<Languages> {
           heroTag: "TR",
           mini: false,
           onPressed: () {
-            setState(() {});
+            Get.updateLocale(const Locale("tr", "TR"));
           },
           backgroundColor: Colors.transparent,
           elevation: 0,
@@ -33,14 +34,14 @@ class _LanguagesState extends State<Languages> {
         const SizedBox(height: 20),
         FloatingActionButton(
           elevation: 0,
-          heroTag: "ENG",
+          heroTag: "EN",
           mini: false,
           onPressed: () {
-            setState(() {});
+            Get.updateLocale(const Locale("en", "US"));
           },
           backgroundColor: Colors.transparent,
           child: Text(
-            'ENG',
+            'EN',
             style: GoogleFonts.quintessential(
               fontSize: 25,
               fontWeight: FontWeight.bold,

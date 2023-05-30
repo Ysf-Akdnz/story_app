@@ -1,0 +1,372 @@
+{
+  "chapters": [
+    {
+      "id": 0,
+      "texts": {
+        "tr-TR": {
+          "dg000": "At arabasının sallantılarıyla gözlerini yavaşça araladın. Gece göğünün altında bulutsuz ve yıldızlı bir manzarayla karşılaştın. Yavaşça doğrulduğunda yanında, senin yaşlarında birkaç gencin daha uyuduğunu gördün. İleride meşale ışıkları gözükmeye başlamıştı. \n\n“Uyanın!” diye bağırdı sürücü ve uyumakta olanlar herkesi uyandırdı. Kısa süre sonra araba durduğunda örme zincir zırh giymiş bir asker arabaya yaklaştı. \n\n“İnin ve beni takip edin.” \n\nArabadan inip adamı takip etmeye başladın. Onu takip ederken talim alanlarının etrafından geçtiğinizi fark ettin. İlk talim alanı neredeyse boştu. Sadece birkaç kişi birbirleriyle kılıç mücadelesindeydi ve bir hayli yorulmuş görünüyorlardı. İkinci talim alanına geldiğinizde takip ettiğiniz asker durdu. Yanına iki asker daha geldi ve birisi elindeki parşömen ve kalemi, sizi oraya götüren askere uzattı. Başınızdaki asker parşömen ve kağıdı aldı ve size döndü. \n\n“Sıraya girin, sırayla bilgileriniz alınacak.”\n",
+          "dg001": "Sıraya girdiniz ve iki kişi sonrasında sıra sana geldi. Asker gözlerini kâğıttan ayırmadan, ezberden sorularını sormaya başladı. \n\n“İsmin, yaşın, geldiğin köy.” Askerin sesi tekdüze ve bıkmış şekilde çıkmıştı. \n\n“Fenrik, 20, Sami Köyü.” \n\nAsker hepsini kağıda yazdı ve devam etti. “Peki becerikli olduğun alan nedir?” \n\nBu soruya nasıl cevap vereceğini, önceki iki genç sayesinde öğrenmiştin.\n",
+          "c0dg1ch1": "Kılıç kullanmayı biliyorum.",
+          "c0dg1ch2": "Büyü yapabiliyorum.",
+          "c0dg1ch3": "Savaş konusunda bir becerim yok"
+        },
+        "en-US": {
+          "dg000": "You slowly opened your eyes, jolted by the shaking of the car. You were met with a view of the night sky, cloudless and filled with stars. As you sat up, you noticed a few other youths your age sleeping beside you. In the distance, torchlights started to become visible. \n\n“Wake up,” The driver shouted, jolting everyone awake. Shortly after, the car stopped and a soldier wearing chain armor approached the vehicle. \n\n“Get out and follow me.” \n\nYou got out of the car and started to follow the man. As you followed him, you noticed that you were passing by training areas. The first training area was almost empty, with only a few people engaging in sword fights and looking quite tired. When you arrived at the second training area, the soldier leading you stopped. Two more soldiers approached him, one of whom handed him a parchment and a quill to give to the soldier who had brought you there. The soldier in charge took the parchment and turned to you. \n\n“Get in line, we will be taking your information one by one.”\n",
+          "dg001": "You got in line, and after two more people, it was your turn. The soldier began to ask questions from memory. \n\n“Your name, age, and the village you came from.” The soldier's voice was monotonous and bored. \n\n“Fenrik, 20, Sami Village,” you replied. \n\nThe soldier wrote everything down on the parchment and continued. “So, what is your skill?” \n\nYou had learned how to answer this question from the two previous youths.\n",
+          "c0dg1ch1": "I know how to use a sword.",
+          "c0dg1ch2": "I can perform magic.",
+          "c0dg1ch3": "I don't have any skills related to war."
+        }
+      },
+      "dialogs": [
+        {
+          "id": 0,
+          "image": "train",
+          "save": true,
+          "text": "dg000"
+        },
+        {
+          "choices": [
+            {
+              "id": 0,
+              "nextdialog": 3,
+              "text": "c0dg1ch1"
+            },
+            {
+              "id": 1,
+              "nextdialog": 17,
+              "text": "c0dg1ch2"
+            },
+            {
+              "id": 2,
+              "nextdialog": 2,
+              "text": "c0dg1ch3"
+            }
+          ],
+          "id": 1,
+          "image": "train",
+          "save": false,
+          "text": "dg001"
+        },
+        {
+          "choices": [
+            {
+              "id": 0,
+              "nextdialog": 3,
+              "text": "Kılıç kullanmayı öğrenmek istiyorum."
+            },
+            {
+              "id": 1,
+              "nextdialog": 17,
+              "text": "Büyü yapmayı öğrenmek istiyorum."
+            }
+          ],
+          "id": 2,
+          "image": "train",
+          "save": false,
+          "text": "Asker gözlerini kâğıttan kaldırıp önce yanındaki diğer iki askere, sonrasında sana baktı. \n\n“Demek daha önce hiç antrenman yapmadan krallığın için savaşmak istiyorsun. Cesurca hareket! Fenrik. O halde şunu soracağım, büyü kullanmak mı istersin yoksa kılıç kullanmak mı?”\n"
+        },
+        {
+          "id": 3,
+          "image": "train",
+          "save": true,
+          "text": "Asker dediklerini not aldıktan sonra diğer iki gence katılman için kafasıyla işaret verdi ve sıradakine geçip onun bilgilerini almaya başladı. Herkesin cevapları alındıktan sonra başınızdaki asker parşömeni yuvarladı ve kapattı. Size dönerek hafifçe öksürdü ve konuşmaya başladı. \n\n“Hepinize Zenith Krallığı adına teşekkür ediyorum. Delphia Krallığı ile olan savaşta gönüllü askerlik yapmak için evlerinizden ayrıldınız. Bu gecelik iyice dinlenin. Yarın eğitimleriniz başlayacak.”\n"
+        },
+        {
+          "id": 4,
+          "image": "bed",
+          "save": false,
+          "text": "Başınızdaki asker parşömenle birlikte yanınızdan ayrıldı, diğer iki asker ise sizi yatacağınız yere götürdü. Yatakhaneniz küçük bir binaydı ve içinde on tane ranza bulunuyordu, senin geldiğin at arabasındaysa en fazla altı kişi vardı. Deneyimli askerler sizinle yatmayacağını düşünüyordun, o halde tek gelen grup siz olamazdınız. Ancak şu an için yatakhane sizin haricinizde boştu. \n\nÜzerini değiştin ve bir yatağa uzandın. Yolda gelirken uyumuş olsan bile ilerde olacağını düşündüğün şeyleri enerjik bir şekilde karşılamak istiyordun, bu yüzden kendini uyumak için zorladın ve bir süre sonra rüyasız bir uykuya daldın.\n"
+        },
+        {
+          "id": 5,
+          "image": "bed",
+          "save": false,
+          "text": "“Uyanın çömezler!” \n\nbağrışı eşliğinde bir anda yerinden sıçradın. Gözlerin yavaşça açılırken etrafına bakmaya başladın yavaşça. Nerede olduğunu hatırladığında hızla ayaklandın ve diğer yedi kişiyle birlikte sıraya girdin. Bilincin kendine geldiğinde yatakhanede üç asker gördün. Bu askerler dün gördüklerindi. Ortadaki sizin bilgilerinizi alandı, diğer ikisi ise onun sağında ve solunda duruyordu. Sağındakinin elinde yeşil, solundakinin elinde turuncu kumaş parçaları vardı. \n\n“Hepinizin dolaplarınız önüne antrenman kıyafetleriniz kondu. Hazırlanın derhal!” \n\nDolaplar, yatakhanenin kapısının iki tarafına sıralanmış vaziyette duruyordu. Oraya doğru ilerlediğinden her dolabın üstünde bir isim yazılı olduğunu gördün. Kendi isminin olduğu dolabı bulduğunda, önündeki kıyafetleri giydin ve eski kıyafetlerini dolabına koydun.\n"
+        },
+        {
+          "id": 6,
+          "image": "bed",
+          "save": false,
+          "text": "Altınız da giyindikten sonra sizi bekleyen askerlerin karşısında sıraya geçtiniz ve ortadaki adam konuşmaya başladı. \n\n“Ben Yüzbaşı Harbender Torse, bunlarda Teğmenlerim Orion Getes ve Darian Bendola.” Sırayla önce sağındaki sonra solundaki askeri göstererek. \n\n“Bundan sonra siz acemilerin eğitiminden biz sorumluyuz. Şimdi, büyü eğitimi alacak olanlar Teğmen Getes’in, kılıç eğitimi alacaklarda Teğmen Bendola’nın önünde tek sıra olsunlar.”\n"
+        },
+        {
+          "id": 7,
+          "image": "train",
+          "save": true,
+          "text": "Önceki gün kılıç eğitimi seçtiğin için Teğmen Bendola’nın önünde diğerleriyle birlikte sıraya girdin. Altı kişiden şans eseri üçerli olarak ayrılmıştınız. Teğmen sana turuncu kumaşı uzattı. \n\n“Eğitimleriniz boyunca bunları belinize bağlamalısınız ki diğerleri hangi alanda eğitim gördüğünüzü anlayabilsinler.”\n\n Onun dediği üzere sana verilen kumaşı beline dolayıp bağladın. Artık kendini hazır hissediyordun. \n\n“Beni takip edin.” diyen Teğmen Bendola seni ve diğer iki çaylağı dışarı çıkardı. Güneş daha yeni doğmuş olmalı ki, gökteki kızıllık henüz gitmemişti. Teğmeni takip ederken çatal bıçak seslerini duymaya başladın. Kısa süre sonra da sebebini anlamıştın, Teğmen sizi yemekhaneye getirmişti.\n"
+        },
+        {
+          "id": 8,
+          "image": "train",
+          "save": false,
+          "text": "Onun arkasından sıraya girdiniz ve sıranız geldiğinde kahvaltı tepsilerinizi alıp Teğmen ile birlikte bir masaya oturup kahvaltınızı etmeye başladınız. Aranızdan biri, sarışın yeşil gözlü bir kızdı. Kendini kocaman bir gülümsemeyle tanıtmaya başladı. “Benim adım Aurelia. 19 yaşındayım, Terestia şehrinden geliyorum.” \n\nOnun ardından diğerleri de kendilerini tanıtmaya başlamıştı. “Tanith, 20 yaşındayım ve Winterfalls’dan geliyorum.” \n\nBu seferki, kızıl saçlı bir erkekti. Bakışlarındaki sertliği çok rahat bir şekilde görebilmiştin, tuttuğunu koparan cinsten birine benziyordu. Arından 3. Acemi konuştu.\n"
+        },
+        {
+          "id": 9,
+          "image": "train",
+          "save": false,
+          "text": "“Keira, 18 yaşındayım ve Thalassa kasabasından geliyorum, ikizim Kaelen’de benimle geldi ve o da büyü eğitimine katıldı.” Kahverengi saçları adeta bir kirpininki gibi diken-diken görünen bir çocuktu. Muhtemelen ailesinden yadigâr almıştı bu saç stilini, ikizi dediği Kaelen’nın da saçları böyle miydi acaba? İstemsizce merak etmiştin. \n\nEn sona sen kalmıştın ve sende kendini tanıtmaya başladın. “Fenrik, Sami köyünden geldim. 20 yaşındayım.” \n\nYanındakilerden Keira bir şey söylemek için ağzını açmıştı ki Teğmen Bendola, “Yeter bu kadar konuşma artık, eğitim vakti geldi.” diyerek masadan kalkmasıyla hepiniz ayaklanmıştınız. Tepsilerinizi yemekhane görevlilerine vererek Bendola’yı takip etmeye başladınız.\n"
+        },
+        {
+          "choices": [
+            {
+              "id": 0,
+              "nextdialog": 11,
+              "text": "Hızla kuklaya saldır."
+            },
+            {
+              "id": 1,
+              "nextdialog": 14,
+              "text": "Dengeni sağla."
+            }
+          ],
+          "id": 10,
+          "image": "train",
+          "save": false,
+          "text": "Bendola’nın önderliğinde talim alanına geldiniz. Etrafta kılıçlarla veya büyülerle talim yapanları görüyordunuz. Bendola hepinize birer talim kılıcı verdi ve “Aranızda belki temelleri bilenler vardır ancak bilmeyenler için en basit şekilden başlayacağız.” diyerek size kılıçları nasıl tutacağınızı ve duruşlarınızı nasıl ayarlayacağınızı gösterdi. \n\n“Kılıç kullanırken en önemli şey dengenizi iyi sağlamanızdır, sakın unutmayın. Dengesini bir an için bile kaybeden savaşçı, ölü bir savaşçıdır.” \n\nBunun ardından elindeki kılıç ile karşısındaki kuklaya birkaç seri darbe vurdu ve ardından sizi işaret etti. \n\n“Deneyin.” gelen emirle birlikte hepiniz birer kuklanın karşısına geçtiniz. \n\nNe yapacaksın?\n"
+        },
+        {
+          "choices": [
+            {
+              "id": 0,
+              "nextdialog": 12,
+              "text": "Hızla kuklaya saldır."
+            },
+            {
+              "id": 1,
+              "nextdialog": 14,
+              "text": "Dengeni sağla."
+            }
+          ],
+          "id": 11,
+          "image": "train",
+          "save": false,
+          "text": "Kuklanın karşısına geçer geçmez kılıcını tüm gücünle kuklaya savurdun ancak kukladan seken kılıç omzuna çarparak seni geri sendeletti. \n\n“Önce dengeni kur sonrasında saldır Fenrik.” diye uyardı Teğmen Bendola seni. \n\nNe yapacaksın?\n"
+        },
+        {
+          "choices": [
+            {
+              "id": 0,
+              "nextdialog": 13,
+              "text": "Hızla kuklaya saldır."
+            },
+            {
+              "id": 1,
+              "nextdialog": 14,
+              "text": "Dengeni sağla."
+            }
+          ],
+          "id": 12,
+          "image": "train",
+          "save": false,
+          "text": "Tekrar tüm gücünle kuklaya savurdun ancak kukladan seken kılıç omzuna çarparak seni geri sendeletti ancak bu sefer yere düşmüştün aynı zamanda. \n\n“Dediklerimi duymuyor musun Fenrik!!” diye bağırdı Teğmen Bendola sana. \n\n“Tekrar, bu sefer düzgünce.” \n\nNe yapacaksın?\n"
+        },
+        {
+          "id": 13,
+          "image": "train",
+          "nextdialog": 15,
+          "save": true,
+          "text": "Aynı şekilde tüm gücünle kuklaya savurdun ancak kukladan seken kılıç bu sefer elinden fırlayarak başka yere uçtu. \n\n“Fenrik, daha en temel şeylere bile uyamıyorsun, bugünlük çalışman bitti, cezalısın. Tüm gün boyunca tuvaletleri temizleyeceksin!” diye bağırdı Teğmen Bendola sana. Gelen emirle birlikte talim alanından ayrıldın ve tuvaletleri temizlemeye gittin. İlk gün tam bir fiyasko ile sonlanmıştı. Bu ilk günden sonra günler geçtikçe yavaş yavaş kılıcı usulünce sallamaya ve doğru zamanda doğru hamlelerle düşmanın işini bitirmeye dair eğitimler almaya başladınız.\n"
+        },
+        {
+          "id": 14,
+          "image": "train",
+          "save": true,
+          "text": "Kılıcını elinde sıkıca tuttu ve bacaklarını düzgünce açıp yere sağlam bir şekilde bastın. Teğmen Bendola gibi birkaç hamle savurdun kuklaya. Elbette onun kadar çevik ve sert hamleler değildi ama göz ucuyla Bendola’ya baktığında yüzünde bir beğeni ifadesi olduğunu görmüştün. İlk gününüzün tamamı bunlar ve bunlar gibi temel kılıç kullanma hareketlerine alışmakla geçmişti. Bu ilk günden sonra günler geçtikçe yavaş yavaş kılıcı usulünce sallamaya ve doğru zamanda doğru hamlelerle düşmanın işini bitirmeye dair eğitimler almaya başladınız. \n"
+        },
+        {
+          "id": 15,
+          "image": "train",
+          "save": false,
+          "text": "Günleriniz sabah gün doğumuyla başlayıp gün batımına kadar süren zorlu ve yorucu bir süreçle geçiyordu. Birlikteki arkadaşlarınla yavaş yavaş kaynaşıyordun ve bu süre zarfından devamlı yeni acemiler gelmeye devam ediyordu. \n\nBir hafta kadar sonra acemi yatakhanesinde 15 kişiyi geçmiştiniz, yarınızdan fazlası kılıç eğitimi alıyordu. \n\nBir haftanın sonunda artık günlük rutinlere alışmıştın ve bedenin bu sıkı eğitime yavaş yavaş uyum sağlamaya başlamıştı.\n"
+        },
+        {
+          "id": 16,
+          "image": "train",
+          "nextdialog": 31,
+          "save": false,
+          "text": "Aradan bir hafta geçmişti ve artık gerçek kılıçlarla talim yapmaya başlamış ve kendi aranızda, Bendola’nın gözetiminde, ufak düellolar yapmaya başlamıştınız. Yeni gelenlerle birlikte 9 acemiydiniz. Sen acemiler arasında düellolarda genelde iyi bir performans sergilemekteydin, kılıçta senden daha iyi olan tek acemi Aurelia’ydı. \n\nYavaş yavaş kılıcın yanında kalkan kullanmaya da başlamış ve ikisi arasında bedeninizi dengeye oturtmaya başlamıştınız. Teğmen Darian Bendola size gerçekten yardım ediyor gibiydi. Size özel isimleri olan birkaç hareket göstermişti. En çok “Dönen Nilüfer” ve “Yılan Isırığı” adlı saldırılar aklında kalmıştı senin. Dönen Nilüfer adından da anlaşılacağı üzere kişinin etrafındaki çoklu düşmanları savurmak için yapılan bir saldırıydı. Yılan Isırığı ise tek bir kişiye karşı delici hasar vermek amacıyla kullanılıyordu. Şu anda ikisinde de usta olmasan bile gafil avladığın birilerine karşı kullanabilirdin belki.\n"
+        },
+        {
+          "id": 17,
+          "image": "train",
+          "save": true,
+          "text": "Asker dediklerini not aldıktan sonra diğer iki gence katılman için kafasıyla işaret verdi ve sıradakine geçip onun bilgilerini almaya başladı. Herkesin cevapları alındıktan sonra başınızdaki asker parşömeni yuvarladı ve kapattı. Size dönerek hafifçe öksürdü ve konuşmaya başladı. \n\n“Hepinize Zenith Krallığı adına teşekkür ediyorum. Delphia Krallığı ile olan savaşta gönüllü askerlik yapmak için evlerinizden ayrıldınız. Bu gecelik iyice dinlenin. Yarın eğitimleriniz başlayacak.”\n"
+        },
+        {
+          "id": 18,
+          "image": "bed",
+          "save": false,
+          "text": "Başınızdaki asker parşömenle birlikte yanınızdan ayrıldı, diğer iki asker ise sizi yatacağınız yere götürdü. Yatakhaneniz küçük bir binaydı ve içinde on tane ranza bulunuyordu, senin geldiğin at arabasındaysa en fazla altı kişi vardı. Deneyimli askerler sizinle yatmayacağını düşünüyordun, o halde tek gelen grup siz olamazdınız. Ancak şu an için yatakhane sizin haricinizde boştu. \n\nÜzerini değiştin ve bir yatağa uzandın. Yolda gelirken uyumuş olsan bile ilerde olacağını düşündüğün şeyleri enerjik bir şekilde karşılamak istiyordun, bu yüzden kendini uyumak için zorladın ve bir süre sonra rüyasız bir uykuya daldın.\n"
+        },
+        {
+          "id": 19,
+          "image": "bed",
+          "save": false,
+          "text": "“Uyanın çömezler!” \n\nBağrışı eşliğinde bir anda yerinden sıçradın. Gözlerin yavaşça açılırken etrafına bakmaya başladın yavaşça. Nerede olduğunu hatırladığında hızla ayaklandın ve diğer yedi kişiyle birlikte sıraya girdin. Bilincin kendine geldiğinde yatakhanede üç asker gördün. Bu askerler dün gördüklerindi. Ortadaki sizin bilgilerinizi alandı, diğer ikisi ise onun sağında ve solunda duruyordu. Sağındakinin elinde yeşil, solundakinin elinde turuncu kumaş parçaları vardı. \n\n“Hepinizin dolaplarınız önüne antrenman kıyafetleriniz kondu. Hazırlanın derhal!” \n\nDolaplar, yatakhanenin kapısının iki tarafına sıralanmış vaziyette duruyordu. Oraya doğru ilerlediğinden her dolabın üstünde bir isim yazılı olduğunu gördün. Kendi isminin olduğu dolabı bulduğunda, önündeki kıyafetleri giydin ve eski kıyafetlerini dolabına koydun.\n"
+        },
+        {
+          "id": 20,
+          "image": "bed",
+          "save": false,
+          "text": "Altınız da giyindikten sonra sizi bekleyen askerlerin karşısında sıraya geçtiniz ve ortadaki adam konuşmaya başladı. \n\n“Ben Yüzbaşı Harbender Torse, bunlarda Teğmenlerim Orion Getes ve Darian Bendola.” Sırayla önce sağındaki sonra solundaki askeri göstererek. \n\n“Bundan sonra siz acemilerin eğitiminden biz sorumluyuz. Şimdi, büyü eğitimi alacak olanlar Teğmen Getes’in, kılıç eğitimi alacaklarda Teğmen Bendola’nın önünde tek sıra olsunlar.”\n"
+        },
+        {
+          "id": 21,
+          "image": "eat",
+          "save": true,
+          "text": "Önceki gün büyü eğitimi seçtiğin için Teğmen Getes’in önünde diğerleriyle birlikte sıraya girdin. Altı kişiden şans eseri üçerli olarak ayrılmıştınız. Teğmen sana yeşil kumaşı uzattı. \n\n“Eğitimleriniz boyunca bunları belinize bağlamalısınız ki diğerleri hangi alanda eğitim gördüğünüzü anlayabilsinler.” \n\nOnun dediği üzere sana verilen kumaşı beline dolayıp bağladın. Artık kendini hazır hissediyordun. \n\n“Beni takip edin.” diyen Teğmen Getes seni ve diğer iki çaylağı dışarı çıkardı. Güneş daha yeni doğmuş olmalı ki, gökteki kızıllık henüz gitmemişti. Teğmeni takip ederken çatal bıçak seslerini duymaya başladın. Kısa süre sonra da sebebini anlamıştın, Teğmen sizi yemekhaneye getirmişti.\n"
+        },
+        {
+          "id": 22,
+          "image": "eat",
+          "save": false,
+          "text": "Onun arkasından sıraya girdiniz ve sıranız geldiğinde kahvaltı tepsilerinizi alıp Teğmen ile birlikte bir masaya oturup kahvaltınızı etmeye başladınız. Aranızdan biri yemeğini yerken kendini tanıtmaya başladı. \n\n“Benim adım Althea. 18 yaşındayım, Stonefort şehrinden geliyorum.” Siyah saçlı mavi gözlü bir kızdı. \n\nOnun ardından diğerleri de kendilerini tanıtmaya başlamıştı. “Aevar, 19 yaşındayım ve Silverhold’dan geliyorum.” Bu seferki siyah saçlı bir erkekti, alnında ve kaşında yaralar vardı, daha öncesinde kavgalara girdiğini kolayca anlayabiliyordun. Arından 3. Acemi konuştu.\n"
+        },
+        {
+          "id": 23,
+          "image": "eat",
+          "save": false,
+          "text": "“Kaelen, 18 yaşındayım ve Thalassa kasabasından geliyorum, ikizim Keira’da benimle geldi ve o da kılıç eğitimine katıldı.” Kahverengi saçları adeta bir kirpininki gibi diken-diken görünen bir çocuktu. Muhtemelen ailesinden yadigar almıştı bu saç stilini, ikizi dediği Keira’nın da saçları böyle miydi acaba? İstemsizce merak etmiştin. \n\nEn sona sen kalmıştın ve sende kendini tanıtmaya başladın. “Fenrik, Sami köyünden geldim. 20 yaşındayım.” \n\nYanındakilerden Kaelen bir şey söylemek için ağzını açmıştı ki Teğmen Getes’in “Yeter bu kadar konuşma artık, eğitim vakti geldi.” diyerek masadan kalkmasıyla hepiniz ayaklanmıştınız. Tepsilerinizi yemekhane görevlilerine vererek Getes’i takip etmeye başladınız.\n"
+        },
+        {
+          "id": 24,
+          "image": "train",
+          "save": false,
+          "text": "Getes’in önderliğinde talim alanına geldiniz. Etrafta kılıçlarla veya büyülerle talim yapanları görüyordunuz. Getes hepinizi kuklaların önüne tek sıra halinde dizdi ve arkanızda durarak konuşmaya başladı. \n\n“Aranızda belki temelleri bilenler vardır ancak bilmeyenler için en basit şekilden başlayacağız.” dedi ardından kısa bir duraksama ardından devam etti. \n\n“Büyü kullanmak için en önemli şey nefes alıp vermeniz ve sakinliğinizi korumanızdır. Sakinlikle yapılmayan büyü dengesizleşir, duygular büyülerin yapılarını değiştirebilir. Bu bazı durumlarda negatif, bazı durumlarda pozitif sonuçlara neden olur ancak acemiler için en kolay başlangıç sakin ve duygulardan uzak şekilde denemektir.” \n\nArkanızdan adım sesleri duyduğunda Getes’in konuşurken bir sağa bir sola yürüdüğünü anlamıştın. \n\n“İkinci önemli şey ise kendinize olan güveninizdir. Büyülerin var olması için önce hayal etmeniz, sonrasında hayal ettiğiniz şeyleri sözlere dökmeniz ve büyüyü gerçekleştireceğinize dair kendinize güvenmeniz gerekir.”\n"
+        },
+        {
+          "choices": [
+            {
+              "id": 0,
+              "nextdialog": 26,
+              "text": "Hızla kuklaya saldır. “Ignis.”"
+            },
+            {
+              "id": 1,
+              "nextdialog": 28,
+              "text": "Derin bir nefes al ve sakinleşerek odaklan."
+            }
+          ],
+          "id": 25,
+          "image": "train",
+          "save": false,
+          "text": "Ardından önünüze geçti ve bir elini önündeki kuklalara doğru çevirdi. \n\n“Büyüler kademe kademedir, her sözcükle birlikte büyünün amacı da değişir, izleyin. Ignis.” \n\nBüyü sözcüğünü dediği anda elinin önünde bir anda alevler oluşmuştu. \n\n“Ignis Incantatio.” \n\nGetes’in avucundan büyük bir ateş topu fırlayarak kuklalara çarptı ve onları yakmaya başladı. Birkaç saniye sonra ise hala eli yanan kuklalara bakarken “Ignis Extinguere.” dedi. \n\nBunun ardından yanan alevler yavaşça sönmüştü. “Ignis ateş oluşturma büyüsü olarak en temel büyülerden biridir. Sizde bununla başlayacaksınız.” dedi ve tekrar arkamıza geçti. \n\n“Çalışmaya başlayın, acemi olduğunuz için iki eliniz de hedefinize dönük olsun ve düzenli nefes alarak kendinizi sakinleştirin.” \n\nNe yapacaksın?\n"
+        },
+        {
+          "choices": [
+            {
+              "id": 0,
+              "nextdialog": 27,
+              "text": "Hızla kuklaya saldır. “Ignis.”"
+            },
+            {
+              "id": 1,
+              "nextdialog": 28,
+              "text": "Derin bir nefes al ve sakinleşerek odaklan."
+            }
+          ],
+          "id": 26,
+          "image": "train",
+          "save": false,
+          "text": "Hiçbir şey olmamıştı, çok can sıkıcı bir durumdu. \n\n“Önce düzenli bir nefes alın sonrasında tekrar deneyin.” Getes’in sözleri sonrası tekrar deneme zamanın gelmişti. \n\nNe yapacaksın?\n"
+        },
+        {
+          "id": 27,
+          "image": "train",
+          "nextdialog": 29,
+          "save": true,
+          "text": "Ellerinin önünde en ufak bir kızıllık bile belirmemişti, senin dışındakiler ise en azından kıvılcımlar çıkarmayı başarmıştı. \n\n“Fenrik, daha en temel şeylere bile uyamıyorsun, bugünlük çalışman bitti, cezalısın. Tüm gün boyunca tuvaletleri temizleyeceksin!” diye bağırdı Teğmen Getes sana. Gelen emirle birlikte talim alanından ayrıldın ve tuvaletleri temizlemeye gittin. İlk gün tam bir fiyasko ile sonlanmıştı. Bu ilk günden sonra günler doğru zamanda doğru şekilde büyüleri yapmaya başlamıştınız.\n"
+        },
+        {
+          "id": 28,
+          "image": "train",
+          "save": true,
+          "text": "Derin bir nefes alıp ve sakinleşerek odaklandın. Hayalinde, ellerin arasında alevlerin yandığını görerek sözcük ağzından döküldü. \n\n“Ignis.” \n\nEllerinin arasında ufak kıvılcımlar çıkmıştı. İlk günün için çok büyük bir başarıydı ki, sen ilk kıvılcım çıkarabilen acemi olmuştun. Elbette Getes kadar mükemmel ateşler beklemiyordun ama onun yüzünde ufak da olsa bir memnuniyet belirtisi görmek seni mutlu etmişti. İşte bu şekilde başlamıştı büyü eğitiminiz. İlk gün hiçbiriniz gerçek bir ateş yakamasa da sen ufak kıvılcımlar çıkarmayı başarmıştın gün sonunda ve bu şekilde de devam etti günler. \n"
+        },
+        {
+          "id": 29,
+          "image": "train",
+          "save": false,
+          "text": "Günleriniz sabah gün doğumuyla başlayıp gün batımına kadar süren zorlu ve yorucu bir süreçle geçiyordu. Birlikteki arkadaşlarınla yavaş yavaş kaynaşıyordun ve bu süre zarfından devamlı yeni acemiler gelmeye devam ediyordu. \n\nBir hafta kadar sonra acemi yatakhanesinde 15 kişiyi geçmiştiniz, yarınızdan fazlası kılıç eğitimi alıyordu. \n\nBir haftanın sonunda artık günlük rutinlere alışmıştın ve bedenin bu sıkı eğitime yavaş yavaş uyum sağlamaya başlamıştı.\n"
+        },
+        {
+          "id": 30,
+          "image": "train",
+          "save": false,
+          "text": "Yavaş yavaş elinde ateşler oluşturabilmeye ve hatta Ignis Incantatio büyüsüyle küçükte olsa ateş topları atabilmeye başlamıştın. Acemiler arasındaki en hızlı gelişim gösteren kişi sendin. Bir hafta içinde Ignis dışında basit bir savunma büyüsü olan Praesidium’u öğrenmiştiniz. Kılıç, balta gibi yakın menzilli silahlarda çok işlevsel olmasa da yaptığın savunma büyüsü parçalanmadan önce gelen birkaç uzun menzilli saldırıyı engelleyebiliyordu.\n"
+        },
+        {
+          "id": 31,
+          "text": "Günlük eğitiminiz bitmişti artık ve akşam yemeğinizi yemiştiniz. Birliğindeki arkadaşlarınla birlikte yatakhaneye ilerlerken aklına o gece nöbetin olduğu gelmişti bu sebeple… \n\nTo be continued… ",
+          "save": false
+        }
+      ],
+      "name": "Let M a Legend",
+      "imageUrl": "assets/images/let-me-a-legend.jpeg"
+    },
+    {
+      "id": 1,
+      "name": "Hk2",
+      "imageUrl": "assets/images/training-area.jpeg",
+      "texts": {
+        "tr-TR": {
+          "dg000": "asdasdasdasdasd",
+          "dg001": "asdasdasdadaswqeqweqweqwe",
+          "c0dg1ch1": "Kılıç kulrwerwerlanmayı biliyorum.",
+          "c0dg1ch2": "Büyü yapatrtyutybiliyorum.",
+          "c0dg1ch3": "Savaş kon57657657usunda bir becerim yok"
+        },
+        "en-US": {
+          "dg000": "asdasdasdasdasjhkjhkhjkjhkd",
+          "dg001": "asdasdasdadaswqeqwhjkhjkhjkhjkhjkeqweqwe",
+          "c0dg1ch1": "I know hoasdasdw to use a sword.",
+          "c0dg1ch2": "I can perfasdaorm magic.",
+          "c0dg1ch3": "I don't haveasdasd any skills related to war."
+        }
+      },
+      "dialogs": [
+        {
+          "id": 0,
+          "image": "train",
+          "save": true,
+          "text": "dg000"
+        },
+        {
+          "choices": [
+            {
+              "id": 0,
+              "nextdialog": 3,
+              "text": "c0dg1ch1"
+            },
+            {
+              "id": 1,
+              "nextdialog": 17,
+              "text": "c0dg1ch2"
+            },
+            {
+              "id": 2,
+              "nextdialog": 2,
+              "text": "c0dg1ch3"
+            }
+          ],
+          "id": 1,
+          "image": "train",
+          "save": false,
+          "text": "dg001"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Hk3",
+      "imageUrl": "assets/images/yemekhane.jpeg"
+    }
+  ],
+  "images": {
+    "bed": "https://firebasestorage.googleapis.com/v0/b/tezprojesi-3ea5d.appspot.com/o/yatakhane.jpeg?alt=media&token=0744ddae-aa22-4f63-9b7c-641d7ad3a91c",
+    "eat": "https://firebasestorage.googleapis.com/v0/b/tezprojesi-3ea5d.appspot.com/o/yemekhane.jpeg?alt=media&token=30fa4236-3ede-4f83-9b3c-1ed0ce33c19b",
+    "train": "https://firebasestorage.googleapis.com/v0/b/tezprojesi-3ea5d.appspot.com/o/training-area.jpeg?alt=media&token=0322c8ab-73b2-41ea-a19b-d1e33b509aff"
+  }
+}

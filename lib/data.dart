@@ -12,13 +12,8 @@ class StoryData {
 
   Future<dynamic> readFirebaseData() async {
     db = FirebaseDatabase.instance;
-    // ignore: deprecated_member_use
-    /*db = FirebaseDatabase(
-            databaseURL:
-                "https://tezprojesi-3ea5d-default-rtdb.europe-west1.firebasedatabase.app")
-        .ref();*/
+    db.setPersistenceEnabled(true);
     final snapshot = await db.ref().get();
-    //DataSnapshot snapshot = (await db.once()) as DataSnapshot;
     return snapshot.value;
   }
 
@@ -29,11 +24,6 @@ class StoryData {
     final Map<String, dynamic> datas = json.decode(jsonString);
     return datas;
   }
-  /*prefs = await SharedPreferences.getInstance();
-    final String response =
-        await rootBundle.loadString('assets/data/story.json');
-    return await json.decode(response);*/
-  //}
 
   Future<dynamic> getDialog(int chapterId, int dialogId) async {
     data ??= await readJson(); //data == null ise imiş
@@ -41,6 +31,7 @@ class StoryData {
       return null;
     }
     var chapter = data["chapters"][chapterId];
+    var texts = chapter["texts"];
     numDialog = chapter["dialogs"].length;
     if (chapter["dialogs"].length <= dialogId) {
       return null;
@@ -51,7 +42,39 @@ class StoryData {
       await prefs.setInt('chapterId', chapterId);
       await prefs.setInt('dialogId', dialogId);
     }
-    var dialogView = {"images" : data["images"],"dialog" : dialog};
+    var dialogView = {
+      "images": data["images"],
+      "dialog": dialog,
+      "texts": texts
+    };
     return dialogView;
+  }
+
+  Future<dynamic> getStories() async {
+    data ??= await readJson();
+    if (data["chapters"].length <= chapterId) {
+      return null;
+    }
+    return data["chapters"];
+  }
+
+  Future<String> getStoryImage() async {
+    data ??= await readJson();
+    final prefs = await SharedPreferences.getInstance();
+    final chapterId = prefs.getInt('chapterId') ?? 0;
+    if (data["chapters"].length <= chapterId) {
+      return "assets/images/adsiz.jpg";
+    }
+    return data["chapters"][chapterId]["imageUrl"];
+  }
+
+  Future<String> getStoryName() async {
+    data ??= await readJson();
+    final prefs = await SharedPreferences.getInstance();
+    final chapterId = prefs.getInt('chapterId') ?? 0;
+    if (data["chapters"].length <= chapterId) {
+      return " ";
+    }
+    return data["chapters"][chapterId]["name"];
   }
 }

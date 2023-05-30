@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_tts/flutter_tts.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:just_audio/just_audio.dart';
 import 'package:story_app/data.dart';
 import 'package:story_app/utils/audio_background.dart';
-import 'package:story_app/utils/sound.dart';
 import 'package:story_app/utils/speak_function.dart';
 import 'package:story_app/widgets/get_settings.dart';
 import 'package:story_app/widgets/setting.dart';
+import 'package:get/get.dart';
 
 class StoryChoicePage extends StatefulWidget {
   final int chapterNum, dialogNum;
+
   const StoryChoicePage({Key? key, this.chapterNum = 0, this.dialogNum = 0})
       : super(key: key);
 
@@ -22,6 +22,8 @@ class _StoryChoicePageState extends State<StoryChoicePage> {
   final GlobalKey<ScaffoldState> _key = GlobalKey();
 
   int currentDialog = 0;
+  int currentChapter = 0;
+
   final storyData = StoryData();
   final TtsController _ttsController = TtsController();
 
@@ -30,6 +32,11 @@ class _StoryChoicePageState extends State<StoryChoicePage> {
     setState(
       () {},
     );
+  }
+
+  getStoryValue() {
+    currentChapter = widget.chapterNum;
+    return currentChapter;
   }
 
   @override
@@ -47,8 +54,7 @@ class _StoryChoicePageState extends State<StoryChoicePage> {
   }
 
   var currentMetin = "";
-  void ondialogloaded(dialog) {
-    var metin = dialog["text"];
+  void ondialogloaded(metin) {
     if (metin == currentMetin) return;
     currentMetin = metin;
     _speak(metin);
@@ -75,9 +81,13 @@ class _StoryChoicePageState extends State<StoryChoicePage> {
               var dialog = snapshot.data["dialog"];
               var images = snapshot.data["images"];
               var image = images[dialog["image"]];
-              var metin = dialog["text"];
+              var metinID = dialog["text"];
               var choices = dialog["choices"];
-              ondialogloaded(dialog);
+              var textData = snapshot.data["texts"];
+              var locale = Get.locale ?? Get.deviceLocale;
+              var dil = locale!.languageCode + "-" + locale.countryCode!;
+              var metin = textData[dil][metinID];
+              ondialogloaded(metin);
               return Container(
                 padding: const EdgeInsets.all(10.0),
                 child: Column(
@@ -157,11 +167,37 @@ class _StoryChoicePageState extends State<StoryChoicePage> {
                         itemCount: choices.length,
                         itemBuilder: (BuildContext context, int index) {
                           var choice = choices[index];
+                          var chText = textData[dil][choice["text"]];
+                          return SizedBox(
+                            width: MediaQuery.of(context).size.width,
+                            child: GestureDetector(
+                              onLongPress: () {
+                                setState(() {
+                                  currentDialog = choice["nextdialog"];
+                                });
+                              },
+                              child: ElevatedButton(
+                                style: style,
+                                onPressed: () {},
+                                child: Text(chText),
+                              ),
+                            ),
+                          );
+                        },
+                      ),
+                    /*if (choices != null)
+                      ListView.builder(
+                        scrollDirection: Axis.vertical,
+                        shrinkWrap: true,
+                        itemCount: choices.length,
+                        itemBuilder: (BuildContext context, int index) {
+                          var choice = choices[index];
                           return SizedBox(
                             width: MediaQuery.of(context).size.width,
                             child: ElevatedButton(
                               style: style,
-                              onPressed: () {
+                              onPressed: () {},
+                              onLongPress: () {
                                 setState(
                                   () {
                                     currentDialog = choice["nextdialog"];
@@ -172,7 +208,7 @@ class _StoryChoicePageState extends State<StoryChoicePage> {
                             ),
                           );
                         },
-                      ),
+                      ),*/
                   ],
                 ),
               );

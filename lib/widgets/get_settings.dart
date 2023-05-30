@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:story_app/story_choice_page.dart';
-import 'package:story_app/utils/audio_background.dart';
 import 'package:story_app/utils/sound.dart';
 import 'package:story_app/utils/speak_function.dart';
-
 import 'main_menu.dart';
 
 class GetSettings extends StatefulWidget {
@@ -70,7 +68,7 @@ class _GetSettingsState extends State<GetSettings> {
               });
             },
             child: Text(
-              playSpeak ? "Duraklat" : "Oynat",
+              playSpeak ? 'Duraklat'.tr : 'Oynat'.tr,
               style: GoogleFonts.quintessential(
                 fontSize: 20,
                 fontWeight: FontWeight.bold,

@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:shared_preferences/shared_preferences.dart';
+import 'package:story_app/data.dart';
 import 'package:story_app/model/stories_repository.dart';
 import 'package:story_app/model/story.dart';
+import 'package:story_app/story_choice_page.dart';
+import 'package:story_app/widgets/main_menu.dart';
 
 class CardListView extends StatefulWidget {
   const CardListView({super.key});
@@ -12,17 +16,12 @@ class CardListView extends StatefulWidget {
 
 class CardButtons extends StatefulWidget {
   const CardButtons(
-      {Key? key,
-      required this.id,
-      required this.name,
-      required this.imageUrl,
-      required this.page})
+      {Key? key, required this.id, required this.name, required this.imageUrl})
       : super(key: key);
 
   final int id;
   final String name;
   final String imageUrl;
-  final Widget page;
 
   @override
   State<CardButtons> createState() => _CardButtonsState();
@@ -30,15 +29,18 @@ class CardButtons extends StatefulWidget {
 
 class _CardButtonsState extends State<CardButtons> {
   bool _isTapped = false;
+  late SharedPreferences prefs;
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onLongPress: () {
-        Navigator.push(
-          context,
+      onLongPress: () async {
+        final prefs = await SharedPreferences.getInstance();
+        await prefs.setInt('chapterId', widget.id);
+        await prefs.setInt('dialogId', 0);
+        Navigator.of(context).pushReplacement(
           MaterialPageRoute(
-            builder: (context) => StoriesRepository.stories[widget.id].page,
+            builder: (context) => const MainMenuPage(),
           ),
         );
       },
@@ -97,20 +99,9 @@ class _CardButtonsState extends State<CardButtons> {
   }
 }
 
-List<CardButtons> _buildGridCards() {
-  List<Story> stories = StoriesRepository.loadStories();
-  List<CardButtons> cards = stories
-      .map((story) => CardButtons(
-            id: story.id,
-            name: story.name,
-            imageUrl: story.imageUrl,
-            page: story.page,
-          ))
-      .toList();
-  return cards;
-}
-
 class _CardListViewState extends State<CardListView> {
+  final storyData = StoryData();
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -122,11 +113,62 @@ class _CardListViewState extends State<CardListView> {
         color: Colors.grey[900],
         borderRadius: BorderRadiusDirectional.circular(16.0),
       ),
-      child: GridView.count(
-        crossAxisCount: 2,
-        padding: const EdgeInsets.all(10.0),
-        childAspectRatio: 9.0 / 13.9,
-        children: _buildGridCards(),
+      child: FutureBuilder<dynamic>(
+        future: storyData.getStories(),
+        builder: (context, snapshot) {
+          List<Widget> children;
+          if (snapshot.hasData) {
+            var stories = snapshot.data;
+            List<Widget> storyWidget = (stories as List<dynamic>)
+                .map((story) => CardButtons(
+                      id: story["id"],
+                      name: story["name"],
+                      imageUrl: story["imageUrl"],
+                    ))
+                .toList();
+            return GridView.count(
+                crossAxisCount: 2,
+                padding: const EdgeInsets.all(10.0),
+                childAspectRatio: 9.0 / 13.9,
+                children: [...storyWidget, ]);
+          } else if (snapshot.hasError) {
+            children = <Widget>[
+              const Icon(
+                Icons.error_outline,
+                color: Colors.red,
+                size: 60,
+              ),
+              Padding(
+                padding: const EdgeInsets.only(top: 16),
+                child: Text('Error: ${snapshot.error}'),
+              ),
+            ];
+          } else {
+            children = <Widget>[
+              const SizedBox(
+                width: 60,
+                height: 60,
+                child: CircularProgressIndicator(),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(top: 16),
+                child: Text(
+                  'Loading',
+                  style: GoogleFonts.quintessential(
+                    color: Colors.white,
+                    fontWeight: FontWeight.bold,
+                    fontStyle: FontStyle.italic,
+                  ),
+                ),
+              ),
+            ];
+          }
+          return Center(
+            child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: children),
+          );
+        },
       ),
     );
   }

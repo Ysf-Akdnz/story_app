@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+
 import 'package:google_fonts/google_fonts.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:story_app/arayuz_main.dart';
+import 'package:story_app/data.dart';
 import 'package:story_app/utils/audio_background.dart';
 import 'package:story_app/widgets/setting.dart';
 
@@ -17,15 +20,16 @@ class MainMenuPage extends StatefulWidget {
 
 class _MainMenuPageState extends State<MainMenuPage> {
   final GlobalKey<ScaffoldState> _key = GlobalKey();
+  final storyData = StoryData();
 
   Future<dynamic> exitDialog() {
     return showDialog(
       context: context,
       builder: (context) => AlertDialog(
         backgroundColor: Colors.grey[900],
-        title: const Text(
-          'Uygulamadan çıkmak istediğinden emin misin?',
-          style: TextStyle(
+        title: Text(
+          'Exit'.tr,
+          style: const TextStyle(
               color: Colors.white, fontSize: 25, fontFamily: 'Quintessential'),
         ),
         actions: [
@@ -35,9 +39,9 @@ class _MainMenuPageState extends State<MainMenuPage> {
               FloatingActionButton(
                 backgroundColor: Colors.transparent,
                 onPressed: () => Navigator.pop(context, false),
-                child: const Text(
-                  "Nöö",
-                  style: TextStyle(
+                child: Text(
+                  'Nöö'.tr,
+                  style: const TextStyle(
                       fontSize: 18,
                       fontWeight: FontWeight.bold,
                       fontFamily: 'Quintessential'),
@@ -55,9 +59,9 @@ class _MainMenuPageState extends State<MainMenuPage> {
                     ),
                   );
                 },
-                child: const Text(
-                  "Yesn't",
-                  style: TextStyle(
+                child: Text(
+                  'Yesnt'.tr,
+                  style: const TextStyle(
                       fontSize: 18,
                       fontWeight: FontWeight.bold,
                       fontFamily: 'Quintessential'),
@@ -72,7 +76,7 @@ class _MainMenuPageState extends State<MainMenuPage> {
 
   @override
   void initState() {
-    playMusic("assets/musics/ezio.mp3", volume: 0.1);
+    playMusic("assets/musics/main-menu-music.ogg");
     super.initState();
   }
 
@@ -81,12 +85,19 @@ class _MainMenuPageState extends State<MainMenuPage> {
     return SafeArea(
       child: Stack(
         children: [
-          Image.asset(
-            "assets/images/let-me-a-legend.jpeg",
-            height: MediaQuery.of(context).size.height,
-            width: MediaQuery.of(context).size.width,
-            fit: BoxFit.fill,
-          ),
+          FutureBuilder<dynamic>(
+              future: storyData.getStoryImage(),
+              builder: (context, snapshot) {
+                String imageUrl = snapshot.hasData
+                    ? snapshot.data
+                    : "assets/images/adsiz.jpg";
+                return Image.asset(
+                  imageUrl,
+                  height: MediaQuery.of(context).size.height,
+                  width: MediaQuery.of(context).size.width,
+                  fit: BoxFit.fill,
+                );
+              }),
           Scaffold(
             key: _key,
             backgroundColor: Colors.transparent,
@@ -106,15 +117,20 @@ class _MainMenuPageState extends State<MainMenuPage> {
       children: <Widget>[
         Expanded(
           child: Center(
-            child: Text(
-              "Tell Me a Legend",
-              textAlign: TextAlign.center,
-              style: GoogleFonts.quintessential(
-                  color: Colors.white,
-                  fontSize: 40,
-                  fontWeight: FontWeight.bold,
-                  fontStyle: FontStyle.italic),
-            ),
+            child: FutureBuilder<dynamic>(
+                future: storyData.getStoryName(),
+                builder: (context, snapshot) {
+                  String name = snapshot.hasData ? snapshot.data : " ";
+                  return Text(
+                    name,
+                    textAlign: TextAlign.center,
+                    style: GoogleFonts.quintessential(
+                        color: Colors.white,
+                        fontSize: 40,
+                        fontWeight: FontWeight.bold,
+                        fontStyle: FontStyle.italic),
+                  );
+                }),
           ),
         ),
         ElevatedButton(
@@ -136,7 +152,7 @@ class _MainMenuPageState extends State<MainMenuPage> {
               );
             },
             child: Text(
-              'Devam Et',
+              'Devam Et'.tr,
               style: GoogleFonts.quintessential(color: Colors.white),
             )), //Devam Et
         const SizedBox(height: 25),
@@ -144,16 +160,21 @@ class _MainMenuPageState extends State<MainMenuPage> {
           style: TextButton.styleFrom(
               textStyle: const TextStyle(fontSize: 30),
               backgroundColor: Colors.transparent),
-          onPressed: () {
+          onPressed: () async {
+            final prefs = await SharedPreferences.getInstance();
+            final chapterId = prefs.getInt('chapterId') ?? 0;
             Navigator.push(
               context,
               MaterialPageRoute(
-                builder: (context) => const StoryChoicePage(),
+                builder: (context) => StoryChoicePage(
+                  chapterNum: chapterId,
+                  dialogNum: 0,
+                ),
               ),
             );
           },
           child: Text(
-            'Yeni Oyun',
+            'Yeni Oyun'.tr,
             style: GoogleFonts.quintessential(color: Colors.white),
           ), //Yeni Oyun
         ),
@@ -183,7 +204,7 @@ class _MainMenuPageState extends State<MainMenuPage> {
             exitDialog();
           },
           child: Text(
-            'Çıkış',
+            'Çıkış'.tr,
             style: GoogleFonts.quintessential(color: Colors.white),
           ), //Çıkış
         ),

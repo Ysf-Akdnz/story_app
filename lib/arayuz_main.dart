@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:story_app/utils/audio_background.dart';
+import 'package:get/get.dart';
 import 'package:story_app/widgets/get_settings.dart';
 import 'widgets/setting.dart';
 import 'widgets/cards.dart';
@@ -15,7 +15,7 @@ class ArayuzMainIskele extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    playMusic("assets/musics/main-menu-music.ogg");
+    //playMusic("assets/musics/main-menu-music.ogg");
     return SafeArea(
       child: Scaffold(
         key: _key,
@@ -41,9 +41,9 @@ class _ArayuzMainState extends State<ArayuzMain> {
         context: context,
         builder: (context) => AlertDialog(
           backgroundColor: Colors.grey[900],
-          title: const Text(
-            'Uygulamadan çıkmak istediğinden emin misin?',
-            style: TextStyle(
+          title: Text(
+            'Exit'.tr,
+            style: const TextStyle(
                 color: Colors.white,
                 fontSize: 25,
                 fontFamily: 'Quintessential'),
@@ -55,9 +55,9 @@ class _ArayuzMainState extends State<ArayuzMain> {
                 FloatingActionButton(
                   backgroundColor: Colors.transparent,
                   onPressed: () => Navigator.pop(context, false),
-                  child: const Text(
-                    "Nöö",
-                    style: TextStyle(
+                  child: Text(
+                    'Nöö'.tr,
+                    style: const TextStyle(
                         fontSize: 18,
                         fontWeight: FontWeight.bold,
                         fontFamily: 'Quintessential'),
@@ -67,9 +67,9 @@ class _ArayuzMainState extends State<ArayuzMain> {
                 FloatingActionButton(
                   backgroundColor: Colors.transparent,
                   onPressed: () => SystemNavigator.pop(),
-                  child: const Text(
-                    "Yesn't",
-                    style: TextStyle(
+                  child: Text(
+                    'Yesnt'.tr,
+                    style: const TextStyle(
                         fontSize: 18,
                         fontWeight: FontWeight.bold,
                         fontFamily: 'Quintessential'),
