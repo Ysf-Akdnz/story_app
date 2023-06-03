@@ -8,8 +8,12 @@ import 'main_menu.dart';
 class GetSettings extends StatefulWidget {
   final GlobalKey<ScaffoldState> sckey;
   final bool menuVisible;
+  final bool girisVisible;
   const GetSettings(
-      {super.key, required this.sckey, required this.menuVisible});
+      {super.key,
+      required this.sckey,
+      required this.menuVisible,
+      required this.girisVisible});
 
   @override
   State<GetSettings> createState() => _GetSettingsState();
@@ -17,9 +21,12 @@ class GetSettings extends StatefulWidget {
 
 class _GetSettingsState extends State<GetSettings> {
   bool _menuVisible = false;
+  bool _girisVisible = false;
+
   @override
   void initState() {
     _menuVisible = widget.menuVisible;
+    _girisVisible = widget.girisVisible;
     super.initState();
   }
 
@@ -28,30 +35,33 @@ class _GetSettingsState extends State<GetSettings> {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
-        Container(
-          margin: const EdgeInsets.only(bottom: 10, left: 10),
-          clipBehavior: Clip.hardEdge,
-          // ignore: prefer_const_constructors
-          decoration: BoxDecoration(
-            shape: BoxShape.circle,
-          ),
-          child: FloatingActionButton(
-            elevation: 0,
-            backgroundColor: Colors.black87,
-            foregroundColor: Colors.yellow.shade700,
-            shape: BeveledRectangleBorder(
-                borderRadius: BorderRadius.circular(25.0),
-                side: BorderSide(
-                    color: Colors.yellow.shade700,
-                    width: 1.0,
-                    style: BorderStyle.solid)),
-            child: const Icon(
-              Icons.settings,
-              size: 45,
+        Visibility(
+          visible: _girisVisible,
+          child: Container(
+            margin: const EdgeInsets.only(bottom: 10, left: 10),
+            clipBehavior: Clip.hardEdge,
+            // ignore: prefer_const_constructors
+            decoration: BoxDecoration(
+              shape: BoxShape.circle,
             ),
-            onPressed: () {
-              widget.sckey.currentState!.openEndDrawer();
-            },
+            child: FloatingActionButton(
+              elevation: 0,
+              backgroundColor: Colors.black87,
+              foregroundColor: Colors.white.withOpacity(0.75),
+              shape: BeveledRectangleBorder(
+                  borderRadius: BorderRadius.circular(25.0),
+                  side: BorderSide(
+                      color: Colors.white.withOpacity(0.75),
+                      width: 1.0,
+                      style: BorderStyle.solid)),
+              child: const Icon(
+                Icons.settings,
+                size: 45,
+              ),
+              onPressed: () {
+                widget.sckey.currentState!.openEndDrawer();
+              },
+            ),
           ),
         ),
         Visibility(
@@ -72,7 +82,7 @@ class _GetSettingsState extends State<GetSettings> {
               style: GoogleFonts.quintessential(
                 fontSize: 20,
                 fontWeight: FontWeight.bold,
-                color: Colors.yellow.shade700,
+                color: Colors.white.withOpacity(0.75),
               ),
             ),
           ),
@@ -92,7 +102,7 @@ class _GetSettingsState extends State<GetSettings> {
               style: GoogleFonts.quintessential(
                 fontSize: 20,
                 fontWeight: FontWeight.bold,
-                color: Colors.yellow.shade700,
+                color: Colors.white.withOpacity(0.75),
               ),
             ),
           ),

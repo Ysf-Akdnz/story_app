@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
+import 'package:story_app/giris_sayfasi.dart';
 import 'package:story_app/widgets/get_settings.dart';
 import 'widgets/setting.dart';
-import 'widgets/cards.dart';
 
 showMenu(GlobalKey<ScaffoldState> kkey) {
   kkey.currentState!.openDrawer();
@@ -21,7 +21,11 @@ class ArayuzMainIskele extends StatelessWidget {
         key: _key,
         backgroundColor: Colors.black87,
         body: const ArayuzMain(),
-        bottomNavigationBar: GetSettings(sckey: _key, menuVisible: false),
+        bottomNavigationBar: GetSettings(
+          sckey: _key,
+          menuVisible: false,
+          girisVisible: false,
+        ),
         endDrawer: const MySettingDrawer(),
         resizeToAvoidBottomInset: false,
       ),
@@ -88,7 +92,7 @@ class _ArayuzMainState extends State<ArayuzMain> {
         final shouldpop = await showWarning(context);
         return shouldpop ?? false;
       },
-      child: const CardListView(),
+      child: const GirisSayfasi(),
     );
   }
 }

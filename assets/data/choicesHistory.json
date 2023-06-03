@@ -1,301 +1,302 @@
 {
-    "MagicFontType": [
+  "MagicFontType": [
+    {
+      "id": 17,
+      "text": [
         {
-            "id": 17,
-            "text": [
-                {
-                    "text": "Pyro",
-                    "fontstyle": "Bold"
-                }
-            ],
-            "save": false
-        },{
-            "dialogs": [
-              {
-                "id": 0,
-                "image": "train",
-                "save": true,
-                "text": "You slowly opened your eyes, jolted by the shaking of the car. You were met with a view of the night sky, cloudless and filled with stars. As you sat up, you noticed a few other youths your age sleeping beside you. In the distance, torchlights started to become visible. \n\n“Wake up,” The driver shouted, jolting everyone awake. Shortly after, the car stopped and a soldier wearing chain armor approached the vehicle. \n\n“Get out and follow me.” \n\nYou got out of the car and started to follow the man. As you followed him, you noticed that you were passing by training areas. The first training area was almost empty, with only a few people engaging in sword fights and looking quite tired. When you arrived at the second training area, the soldier leading you stopped. Two more soldiers approached him, one of whom handed him a parchment and a quill to give to the soldier who had brought you there. The soldier in charge took the parchment and turned to you. \n\n“Get in line, we will be taking your information one by one.”\n"
-              },
-              {
-                "choices": [
-                  {
-                    "id": 0,
-                    "nextdialog": 3,
-                    "text": "I know how to use a sword."
-                  },
-                  {
-                    "id": 1,
-                    "nextdialog": 17,
-                    "text": "I can perform magic."
-                  },
-                  {
-                    "id": 2,
-                    "nextdialog": 2,
-                    "text": "I don't have any skills related to war."
-                  }
-                ],
-                "id": 1,
-                "image": "train",
-                "save": false,
-                "text": "You got in line, and after two more people, it was your turn. The soldier began to ask questions from memory. \n\n“Your name, age, and the village you came from.” The soldier's voice was monotonous and bored. \n\n“Fenrik, 20, Sami Village,” you replied. \n\nThe soldier wrote everything down on the parchment and continued. “So, what is your skill?” \n\nYou had learned how to answer this question from the two previous youths.\n"
-              },
-              {
-                "choices": [
-                  {
-                    "id": 0,
-                    "nextdialog": 3,
-                    "text": "I want to learn how to use a sword."
-                  },
-                  {
-                    "id": 1,
-                    "nextdialog": 17,
-                    "text": "I want to learn how to perform magic."
-                  }
-                ],
-                "id": 2,
-                "image": "train",
-                "save": false,
-                "text": "The soldier looked up from the parchment, first at the two soldiers beside him, and then at you. \n\n“So, you want to fight for the kingdom without any prior training. Brave move, Fenrik. I will ask you then, do you want to learn how to use a sword or how to perform magic?”\n"
-              },
-              {
-                "id": 3,
-                "image": "train",
-                "save": true,
-                "text": "After taking note of your answer, the soldier nodded his head towards the other two youths and moved on to the next person in line to take their information. Once everyone's information had been collected, the soldier in charge rolled up the parchment and closed it. He cleared his throat and addressed the group. \n\n“I thank all of you on behalf of the Zenith Kingdom. You left your homes to serve as volunteer soldiers in the war against the Delfia Kingdom. Rest well tonight, as your training will begin tomorrow.”\n"
-              },
-              {
-                "id": 4,
-                "image": "bed",
-                "save": false,
-                "text": "The soldier in charge left with the parchment, and the other two soldiers led you to where you would be sleeping. The sleeping quarters were in a small building with ten bunk beds, while there were at most six people in the carriage you had come in. You didn't think that experienced soldiers would be sleeping with you, so you couldn't have been the only group to arrive. However, for now, the sleeping quarters were empty except for you. \n\nYou changed into sleeping clothes and lay down on a bed. Even though you had dozed off during the journey, you wanted to be fully energized for what lay ahead, so you forced yourself to sleep and eventually drifted off into a dreamless slumber.\n"
-              },
-              {
-                "id": 5,
-                "image": "bed",
-                "save": false,
-                "text": "“You rookies, wake up!” \n\nYou suddenly jump out of your bed accompanied by the shouting. As your eyes slowly open, you start looking around. When you remember where you are, you quickly stand up and get in line with the other seven people. As your consciousness comes back, you see three soldiers in the dormitory. They were the ones you saw yesterday. The one in the middle takes your information, while the other two stand on his right and left. The one on the right has a green cloth in his hand, while the one on the left has an orange one. \n\n“Your workout clothes have been placed in front of your lockers. Get ready immediately!” \n\nThe lockers are lined up on both sides of the dormitory door. As you move towards them, you see that each locker has a name written on it. When you find your own locker with your name on it, you put on the clothes in front of it and place your old clothes in the locker.\n"
-              },
-              {
-                "id": 6,
-                "image": "bed",
-                "save": false,
-                "text": "After everyone is dressed, you line up in front of the waiting soldiers, and the man in the middle starts speaking. \n\n“I am Captain Harbender Torse, and these are my Lieutenants Orion Getes and Darian Bendola,” \n\nHe said, pointing to the soldiers on his right and left respectively. \n\n“From now on, we are responsible for your training, rookies. Now, those who will receive magic training, form a single line in front of Lieutenant Getes, and those who will receive sword training, form a single line in front of Lieutenant Bendola.”\n"
-              },
-              {
-                "id": 7,
-                "image": "train",
-                "save": true,
-                "text": "The other day, you lined up with the others in front of Lieutenant Bendola because you chose sword training. By chance, you were divided into groups of three from the six people. The lieutenant handed you an orange fabric. \n\n“You must tie these to your waist during your training so that others can understand which field you are trained in.” \n\nAs he said, you wrapped the fabric around your waist and tied it. You felt ready now. \n\n“Follow me,” said Lieutenant Bendola, and led you and the other two novices outside. The sun must have just risen, as the redness in the sky had not yet faded. While following the lieutenant, you began to hear the clinking of knives and forks. Shortly after, you understood the reason. Lieutenant had brought you to the mess hall.\n"
-              },
-              {
-                "id": 8,
-                "image": "train",
-                "save": false,
-                "text": "You lined up behind him and, when it was your turn, took your breakfast tray and sat down with Lieutenant Bendola at a table. One of you was a blonde green-eyed girl. “My name is Aurelia. I'm 19 years old and from the city of Teresta,” She said, introducing herself. \n\nAfter her, others started introducing themselves. “Tanith, I'm 20 years old, and I'm from Winterfalls.” \n\nThis time, it was a red-haired boy. You could easily see the hardness in his gaze; he seemed like someone who could grab and hold onto something firmly. The third novice spoke after him.\n"
-              },
-              {
-                "id": 9,
-                "image": "train",
-                "save": false,
-                "text": "“I'm Keira. I'm 18 years old and from the town of Thalassa. My twin, Kaelen, came with me, and he also joined the magic training.” He was a child with brown hair that looked like a hedgehog's. He probably inherited this hair style from his family. You couldn't help but wonder if Keira, who she mentioned as her twin, had hair like this too. \n\nYou were the last one to introduce yourself, and you began to do so. “I'm Fenrik, and I came from the village of Sami. I'm 20 years old.” \n\nKeira had opened her mouth to say something when Lieutenant Bendola stood up and said, “Enough talking. It's time for training.” You all stood up, giving your trays to the mess hall staff, and began to follow Bendola.\n"
-              },
-              {
-                "choices": [
-                  {
-                    "id": 0,
-                    "nextdialog": 11,
-                    "text": "Quickly attack the puppet."
-                  },
-                  {
-                    "id": 1,
-                    "nextdialog": 14,
-                    "text": "Maintain your balance."
-                  }
-                ],
-                "id": 10,
-                "image": "train",
-                "save": false,
-                "text": "You arrived at the training field under the leadership of Bendola. You saw people practicing with swords or magic around you. Bendola gave each of you a practice sword and said, “Some of you may already know the basics, but for those who don't, we'll start with the simplest form.” He showed you how to hold the sword and adjust your posture. \n\n“When using a sword, the most important thing is to maintain your balance, never forget that. A warrior who loses his balance even for a moment is a dead warrior.” \n\nAfter that, he struck the puppet in front of him with his sword a few times and then pointed at you. \n\n“Try it.” With that command, all of you stood in front of a puppet. \n\nWhat will you do?\n"
-              },
-              {
-                "choices": [
-                  {
-                    "id": 0,
-                    "nextdialog": 12,
-                    "text": "Quickly attack the puppet."
-                  },
-                  {
-                    "id": 1,
-                    "nextdialog": 14,
-                    "text": "Maintain your balance."
-                  }
-                ],
-                "id": 11,
-                "image": "train",
-                "save": false,
-                "text": "As soon as you stood in front of the puppet, you swung your sword at it with all your might, but the sword bounced off the puppet and hit your shoulder, making you stumble back. \n\n“Establish your balance first, then attack, Fenrik,” Lieutenant Bendola warned you. \n\nWhat will you do?\n"
-              },
-              {
-                "choices": [
-                  {
-                    "id": 0,
-                    "nextdialog": 13,
-                    "text": "Quickly attack the puppet."
-                  },
-                  {
-                    "id": 1,
-                    "nextdialog": 14,
-                    "text": "Maintain your balance."
-                  }
-                ],
-                "id": 12,
-                "image": "train",
-                "save": false,
-                "text": "Once again, you swung your sword at the puppet with all your might, but the sword bounced off the puppet and hit your shoulder, causing you to fall to the ground. \n\n“Are you not listening to what I'm saying, Fenrik?” Lieutenant Bendola shouted at you. \n\n“Again, but do it properly this time.” \n\nWhat will you do?\n"
-              },
-              {
-                "id": 13,
-                "image": "train",
-                "nextdialog": 15,
-                "save": true,
-                "text": "You swung your sword at the puppet with all your might once again, but the sword bounced off the puppet and flew out of your hand. \n\n“Fenrik, you can't even follow the most basic instructions. Your training for today is over, and you're on punishment. You'll be cleaning the toilets all day.” Lieutenant Bendola shouted at you. With that command, you left the training field and went to clean the toilets. The first day ended in a complete failure. After this first day, as the days passed, you began to learn how to swing the sword properly and to finish off the enemy with the right moves at the right time.\n"
-              },
-              {
-                "id": 14,
-                "image": "train",
-                "save": true,
-                "text": "You held the sword tightly in your hand, stood with your legs spread apart, and firmly planted your feet on the ground. You made a few moves similar to Lieutenant Bendola's on the puppet. They weren't as agile and strong as his, but you saw a look of admiration on his face when you looked at him out of the corner of your eye. The entire first day was spent getting used to these basic sword movements and others like them. After this first day, as the days passed, you began to learn how to swing the sword properly and to finish off the enemy with the right moves at the right time.\n"
-              },
-              {
-                "id": 15,
-                "image": "train",
-                "save": false,
-                "text": "Your days were spent in a challenging and exhausting process that started with sunrise and lasted until sunset. You were slowly bonding with your friends in the unit, and during this time, new recruits kept arriving. \n\nAfter about a week, you had surpassed 15 people in the novice barracks, and more than half of you were receiving sword training. \n\nAt the end of the week, you had become accustomed to the daily routines and your body had slowly begun to adapt to the rigorous training.\n"
-              },
-              {
-                "id": 16,
-                "image": "train",
-                "nextdialog": 31,
-                "save": false,
-                "text": "A week had passed, and you had started practicing with real swords, engaging in small duels among yourselves under the supervision of Lieutenant Bendola. With the new recruits, there were a total of nine novices. Among the novices, you generally performed well in duels, with Aurelia being the only novice who was better than you with a sword. \n\nGradually, you had also started using a shield alongside the sword, finding a balance between the two in your body. Lieutenant Darian Bendola seemed to be genuinely helping you. He had shown you a few moves with special names. The attacks named “Whirling Water Lily” and “Snake Bite” had stuck in your mind. As the name implied, Whirling Water Lily was an attack used to sweep multiple enemies around the person. Snake Bite, on the other hand, was used to inflict piercing damage against a single opponent. Although you were not a master in either of them, you could perhaps use them against unsuspecting prey.\n"
-              },
-              {
-                "id": 17,
-                "image": "train",
-                "save": true,
-                "text": "After taking note of your answer, the soldier nodded his head towards the other two youths and moved on to the next person in line to take their information. Once everyone's information had been collected, the soldier in charge rolled up the parchment and closed it. He cleared his throat and addressed the group. \n\n“I thank all of you on behalf of the Zenith Kingdom. You left your homes to serve as volunteer soldiers in the war against the Delfia Kingdom. Rest well tonight, as your training will begin tomorrow.”\n"
-              },
-              {
-                "id": 18,
-                "image": "bed",
-                "save": false,
-                "text": "The soldier in charge left with the parchment, and the other two soldiers led you to where you would be sleeping. The sleeping quarters were in a small building with ten bunk beds, while there were at most six people in the carriage you had come in. You didn't think that experienced soldiers would be sleeping with you, so you couldn't have been the only group to arrive. However, for now, the sleeping quarters were empty except for you. \n\nYou changed into sleeping clothes and lay down on a bed. Even though you had dozed off during the journey, you wanted to be fully energized for what lay ahead, so you forced yourself to sleep and eventually drifted off into a dreamless slumber.\n"
-              },
-              {
-                "id": 19,
-                "image": "bed",
-                "save": false,
-                "text": "“You rookies, wake up!” \n\nYou suddenly jump out of your bed accompanied by the shouting. As your eyes slowly open, you start looking around. When you remember where you are, you quickly stand up and get in line with the other seven people. As your consciousness comes back, you see three soldiers in the dormitory. They were the ones you saw yesterday. The one in the middle takes your information, while the other two stand on his right and left. The one on the right has a green cloth in his hand, while the one on the left has an orange one. \n\n“Your workout clothes have been placed in front of your lockers. Get ready immediately!” \n\nThe lockers are lined up on both sides of the dormitory door. As you move towards them, you see that each locker has a name written on it. When you find your own locker with your name on it, you put on the clothes in front of it and place your old clothes in the locker.\n"
-              },
-              {
-                "id": 20,
-                "image": "bed",
-                "save": false,
-                "text": "After everyone is dressed, you line up in front of the waiting soldiers, and the man in the middle starts speaking. \n\n“I am Captain Harbender Torse, and these are my Lieutenants Orion Getes and Darian Bendola,” He said, pointing to the soldiers on his right and left respectively. \n\n“From now on, we are responsible for your training, rookies. Now, those who will receive magic training, form a single line in front of Lieutenant Getes, and those who will receive sword training, form a single line in front of Lieutenant Bendola.”\n"
-              },
-              {
-                "id": 21,
-                "image": "eat",
-                "save": true,
-                "text": "The other day, you had chosen to attend the magic training and lined up in front of Lieutenant Getes with the others. By chance, you were divided into groups of three from the six people. Lieutenant Getes handed you a green cloth. \n\n“You must tie these around your waist during your training so that others can tell which field you are studying in.” \n\nAs instructed, you wrapped the cloth around your waist. You now felt ready. \n\n“Follow me,” said Lieutenant Getes, leading you and two other recruits outside. The sun must have just risen, as the reddish hue in the sky had not yet faded. As you followed the lieutenant, you began to hear the sound of cutlery. Shortly thereafter, you realized the reason - Lieutenant Getes had brought you to the mess hall.\n"
-              },
-              {
-                "id": 22,
-                "image": "eat",
-                "save": false,
-                "text": "You lined up behind him, and when it was your turn, you took your breakfast tray and sat down at a table with Lieutenant Getes to eat. One of you was a black-haired, blue-eyed girl named Althea. \n\n“My name is Althea. I'm 18 years old, and I'm from Stonefort city,” she said, introducing herself. \n\nAfter her, the others began to introduce themselves. “I'm Aevar, 19 years old, and I'm from Silverhold,” said the next recruit, a black-haired man with wounds on his forehead and eyebrows. You could easily tell that he had been in fights before. Then, the third recruit spoke.\n"
-              },
-              {
-                "id": 23,
-                "image": "eat",
-                "save": false,
-                "text": "“I'm Kaelen, 18 years old, and I'm from the town of Thalassa. My twin sister Keira came with me, and she also joined the sword training.” He was a child with brown hair that stood up like a hedgehog's. He must have inherited this hairstyle from his family. You couldn't help but wonder if his twin, Keira, had the same hair. \n\nLastly, it was your turn to introduce yourself. “I'm Fenrik, and I come from the village of Sami. I'm 20 years old.” \n\nKaelen was about to say something when Lieutenant Getes interrupted with, “Enough talking, it's time for training.” You all got up and followed Getes, handing your trays over to the mess hall staff.\n"
-              },
-              {
-                "id": 24,
-                "image": "train",
-                "save": false,
-                "text": "You arrived at the training field under Getes' leadership. You could see people practicing with swords and spells around you. Getes lined all of you up in front of the puppets and stood behind you, starting to speak. \n\n“Some of you may already have some knowledge, but for those who don't, we will start from the simplest form,” he said, pausing briefly and then continuing. \n\n“The most important thing in using magic is to breathe and maintain your composure. Magic performed without calmness becomes imbalanced, and emotions can alter the structure of spells. This can lead to negative or positive outcomes in different situations. However, for beginners, the easiest way to start is by practicing with calmness and detachment from emotions.” \n\nAs you heard footsteps behind you, you realized that Getes was walking back and forth while speaking. \n\n“The second important thing is confidence in yourself. To make magic real, you must first imagine and then verbalize what you imagine, having faith in your ability to perform the spell.”\n"
-              },
-              {
-                "choices": [
-                  {
-                    "id": 0,
-                    "nextdialog": 26,
-                    "text": "Quickly attack the puppet. “Ignis.”"
-                  },
-                  {
-                    "id": 1,
-                    "nextdialog": 28,
-                    "text": "Take a deep breath, calm down, and focus."
-                  }
-                ],
-                "id": 25,
-                "image": "train",
-                "save": false,
-                "text": "He then stepped in front of you and turned one of his hands towards the puppets in front of him. \n\n“Spells progress step by step, and with each word, the purpose of the spell changes. Watch closely. Ignis.” \n\nAs he uttered the spell, flames suddenly appeared in front of his hand. \n\n“Ignis Incantatio.” \n\nA large fireball shot from Getes' palm, hitting the puppets and setting them on fire. After a few seconds, while still looking at the burning puppets, he said, “Ignis Extinguere.” \n\nImmediately, the flames slowly extinguished. “Ignis is a basic spell for creating fire. You will start with this one.” He then returned to his position behind you. \n\n“Start practicing. Since you are beginners, keep both hands focused on your target and maintain regular breathing to calm yourselves.” \n\nWhat will you do?\n"
-              },
-              {
-                "choices": [
-                  {
-                    "id": 0,
-                    "nextdialog": 27,
-                    "text": "Quickly attack the puppet. “Ignis.”"
-                  },
-                  {
-                    "id": 1,
-                    "nextdialog": 28,
-                    "text": "Take a deep breath, calm down, and focus."
-                  }
-                ],
-                "id": 26,
-                "image": "train",
-                "save": false,
-                "text": "Nothing happened; it was a frustrating situation. \n\n“First, take a deep breath and try again,” Getes said, and it was time to try again after his words. \n\nWhat will you do?\n"
-              },
-              {
-                "id": 27,
-                "image": "train",
-                "nextdialog": 29,
-                "save": true,
-                "text": "There was no hint of even the slightest reddish glow in your hands, while others at least managed to produce sparks. \n\n“Fenrik, you can't even follow the most basic instructions. Your practice is over for today, and you're on punishment. You will clean the toilets all day,” Teğmen Getes shouted at you. With the given order, you left the training field and went to clean the toilets. The first day ended in complete failure. After this first day, you started performing spells correctly at the right time.\n"
-              },
-              {
-                "id": 28,
-                "image": "train",
-                "save": true,
-                "text": "You took a deep breath, calmed yourself down, and focused. In your imagination, you saw flames flickering between your hands as the words slipped out of your mouth. \n\n“Ignis.” \n\nTiny sparks appeared between your hands. It was a great achievement for your first day, as you were the only novice who managed to produce even the smallest spark. You didn't expect perfect fires like Getes, but seeing a small sign of satisfaction on his face made you happy. That's how your magic training began. Although none of you could create a real fire on the first day, you managed to produce small sparks by the end of the day, and the days continued in this way.\n"
-              },
-              {
-                "id": 29,
-                "image": "train",
-                "save": false,
-                "text": "Your days were spent in a challenging and exhausting process that started with sunrise and lasted until sunset. You were slowly bonding with your friends in the unit, and during this time, new recruits kept arriving. \n\nAfter about a week, you had surpassed 15 people in the novice barracks, and more than half of you were receiving sword training. \n\nAt the end of the week, you had become accustomed to the daily routines and your body had slowly begun to adapt to the rigorous training.\n"
-              },
-              {
-                "id": 30,
-                "image": "train",
-                "save": false,
-                "text": "You had gradually begun to create fires in your hands and even throw small fireballs using the Ignis Incantatio spell. You were the fastest progressing among the novices. Within a week, you had learned a basic defensive spell called Praesidium, apart from Ignis. While it was not very functional with close-range weapons like swords or axes, the defensive spell you performed could protect the area and block a few long-range attacks before it shattered.\n"
-              },
-              {
-                "id": 31,
-                "text": "Your daily training had ended, and you had already eaten your dinner. As you walked towards the dormitory with your comrades, the thought of having a night shift crossed your mind... \n\nTo be continued...",
-                "save": false
-              }
-            ],
-            "name": "Let M a Legend - English"
-          }
-    ]
+          "text": "Pyro",
+          "fontstyle": "Bold"
+        }
+      ],
+      "save": false
+    },
+    {
+      "dialogs": [
+        {
+          "id": 0,
+          "image": "train",
+          "save": true,
+          "text": "You slowly opened your eyes, jolted by the shaking of the car. You were met with a view of the night sky, cloudless and filled with stars. As you sat up, you noticed a few other youths your age sleeping beside you. In the distance, torchlights started to become visible. \n\n“Wake up,” The driver shouted, jolting everyone awake. Shortly after, the car stopped and a soldier wearing chain armor approached the vehicle. \n\n“Get out and follow me.” \n\nYou got out of the car and started to follow the man. As you followed him, you noticed that you were passing by training areas. The first training area was almost empty, with only a few people engaging in sword fights and looking quite tired. When you arrived at the second training area, the soldier leading you stopped. Two more soldiers approached him, one of whom handed him a parchment and a quill to give to the soldier who had brought you there. The soldier in charge took the parchment and turned to you. \n\n“Get in line, we will be taking your information one by one.”\n"
+        },
+        {
+          "choices": [
+            {
+              "id": 0,
+              "nextdialog": 3,
+              "text": "I know how to use a sword."
+            },
+            {
+              "id": 1,
+              "nextdialog": 17,
+              "text": "I can perform magic."
+            },
+            {
+              "id": 2,
+              "nextdialog": 2,
+              "text": "I don't have any skills related to war."
+            }
+          ],
+          "id": 1,
+          "image": "train",
+          "save": false,
+          "text": "You got in line, and after two more people, it was your turn. The soldier began to ask questions from memory. \n\n“Your name, age, and the village you came from.” The soldier's voice was monotonous and bored. \n\n“Fenrik, 20, Sami Village,” you replied. \n\nThe soldier wrote everything down on the parchment and continued. “So, what is your skill?” \n\nYou had learned how to answer this question from the two previous youths.\n"
+        },
+        {
+          "choices": [
+            {
+              "id": 0,
+              "nextdialog": 3,
+              "text": "I want to learn how to use a sword."
+            },
+            {
+              "id": 1,
+              "nextdialog": 17,
+              "text": "I want to learn how to perform magic."
+            }
+          ],
+          "id": 2,
+          "image": "train",
+          "save": false,
+          "text": "The soldier looked up from the parchment, first at the two soldiers beside him, and then at you. \n\n“So, you want to fight for the kingdom without any prior training. Brave move, Fenrik. I will ask you then, do you want to learn how to use a sword or how to perform magic?”\n"
+        },
+        {
+          "id": 3,
+          "image": "train",
+          "save": true,
+          "text": "After taking note of your answer, the soldier nodded his head towards the other two youths and moved on to the next person in line to take their information. Once everyone's information had been collected, the soldier in charge rolled up the parchment and closed it. He cleared his throat and addressed the group. \n\n“I thank all of you on behalf of the Zenith Kingdom. You left your homes to serve as volunteer soldiers in the war against the Delfia Kingdom. Rest well tonight, as your training will begin tomorrow.”\n"
+        },
+        {
+          "id": 4,
+          "image": "bed",
+          "save": false,
+          "text": "The soldier in charge left with the parchment, and the other two soldiers led you to where you would be sleeping. The sleeping quarters were in a small building with ten bunk beds, while there were at most six people in the carriage you had come in. You didn't think that experienced soldiers would be sleeping with you, so you couldn't have been the only group to arrive. However, for now, the sleeping quarters were empty except for you. \n\nYou changed into sleeping clothes and lay down on a bed. Even though you had dozed off during the journey, you wanted to be fully energized for what lay ahead, so you forced yourself to sleep and eventually drifted off into a dreamless slumber.\n"
+        },
+        {
+          "id": 5,
+          "image": "bed",
+          "save": false,
+          "text": "“You rookies, wake up!” \n\nYou suddenly jump out of your bed accompanied by the shouting. As your eyes slowly open, you start looking around. When you remember where you are, you quickly stand up and get in line with the other seven people. As your consciousness comes back, you see three soldiers in the dormitory. They were the ones you saw yesterday. The one in the middle takes your information, while the other two stand on his right and left. The one on the right has a green cloth in his hand, while the one on the left has an orange one. \n\n“Your workout clothes have been placed in front of your lockers. Get ready immediately!” \n\nThe lockers are lined up on both sides of the dormitory door. As you move towards them, you see that each locker has a name written on it. When you find your own locker with your name on it, you put on the clothes in front of it and place your old clothes in the locker.\n"
+        },
+        {
+          "id": 6,
+          "image": "bed",
+          "save": false,
+          "text": "After everyone is dressed, you line up in front of the waiting soldiers, and the man in the middle starts speaking. \n\n“I am Captain Harbender Torse, and these are my Lieutenants Orion Getes and Darian Bendola,” \n\nHe said, pointing to the soldiers on his right and left respectively. \n\n“From now on, we are responsible for your training, rookies. Now, those who will receive magic training, form a single line in front of Lieutenant Getes, and those who will receive sword training, form a single line in front of Lieutenant Bendola.”\n"
+        },
+        {
+          "id": 7,
+          "image": "train",
+          "save": true,
+          "text": "The other day, you lined up with the others in front of Lieutenant Bendola because you chose sword training. By chance, you were divided into groups of three from the six people. The lieutenant handed you an orange fabric. \n\n“You must tie these to your waist during your training so that others can understand which field you are trained in.” \n\nAs he said, you wrapped the fabric around your waist and tied it. You felt ready now. \n\n“Follow me,” said Lieutenant Bendola, and led you and the other two novices outside. The sun must have just risen, as the redness in the sky had not yet faded. While following the lieutenant, you began to hear the clinking of knives and forks. Shortly after, you understood the reason. Lieutenant had brought you to the mess hall.\n"
+        },
+        {
+          "id": 8,
+          "image": "train",
+          "save": false,
+          "text": "You lined up behind him and, when it was your turn, took your breakfast tray and sat down with Lieutenant Bendola at a table. One of you was a blonde green-eyed girl. “My name is Aurelia. I'm 19 years old and from the city of Teresta,” She said, introducing herself. \n\nAfter her, others started introducing themselves. “Tanith, I'm 20 years old, and I'm from Winterfalls.” \n\nThis time, it was a red-haired boy. You could easily see the hardness in his gaze; he seemed like someone who could grab and hold onto something firmly. The third novice spoke after him.\n"
+        },
+        {
+          "id": 9,
+          "image": "train",
+          "save": false,
+          "text": "“I'm Keira. I'm 18 years old and from the town of Thalassa. My twin, Kaelen, came with me, and he also joined the magic training.” He was a child with brown hair that looked like a hedgehog's. He probably inherited this hair style from his family. You couldn't help but wonder if Keira, who she mentioned as her twin, had hair like this too. \n\nYou were the last one to introduce yourself, and you began to do so. “I'm Fenrik, and I came from the village of Sami. I'm 20 years old.” \n\nKeira had opened her mouth to say something when Lieutenant Bendola stood up and said, “Enough talking. It's time for training.” You all stood up, giving your trays to the mess hall staff, and began to follow Bendola.\n"
+        },
+        {
+          "choices": [
+            {
+              "id": 0,
+              "nextdialog": 11,
+              "text": "Quickly attack the puppet."
+            },
+            {
+              "id": 1,
+              "nextdialog": 14,
+              "text": "Maintain your balance."
+            }
+          ],
+          "id": 10,
+          "image": "train",
+          "save": false,
+          "text": "You arrived at the training field under the leadership of Bendola. You saw people practicing with swords or magic around you. Bendola gave each of you a practice sword and said, “Some of you may already know the basics, but for those who don't, we'll start with the simplest form.” He showed you how to hold the sword and adjust your posture. \n\n“When using a sword, the most important thing is to maintain your balance, never forget that. A warrior who loses his balance even for a moment is a dead warrior.” \n\nAfter that, he struck the puppet in front of him with his sword a few times and then pointed at you. \n\n“Try it.” With that command, all of you stood in front of a puppet. \n\nWhat will you do?\n"
+        },
+        {
+          "choices": [
+            {
+              "id": 0,
+              "nextdialog": 12,
+              "text": "Quickly attack the puppet."
+            },
+            {
+              "id": 1,
+              "nextdialog": 14,
+              "text": "Maintain your balance."
+            }
+          ],
+          "id": 11,
+          "image": "train",
+          "save": false,
+          "text": "As soon as you stood in front of the puppet, you swung your sword at it with all your might, but the sword bounced off the puppet and hit your shoulder, making you stumble back. \n\n“Establish your balance first, then attack, Fenrik,” Lieutenant Bendola warned you. \n\nWhat will you do?\n"
+        },
+        {
+          "choices": [
+            {
+              "id": 0,
+              "nextdialog": 13,
+              "text": "Quickly attack the puppet."
+            },
+            {
+              "id": 1,
+              "nextdialog": 14,
+              "text": "Maintain your balance."
+            }
+          ],
+          "id": 12,
+          "image": "train",
+          "save": false,
+          "text": "Once again, you swung your sword at the puppet with all your might, but the sword bounced off the puppet and hit your shoulder, causing you to fall to the ground. \n\n“Are you not listening to what I'm saying, Fenrik?” Lieutenant Bendola shouted at you. \n\n“Again, but do it properly this time.” \n\nWhat will you do?\n"
+        },
+        {
+          "id": 13,
+          "image": "train",
+          "nextdialog": 15,
+          "save": true,
+          "text": "You swung your sword at the puppet with all your might once again, but the sword bounced off the puppet and flew out of your hand. \n\n“Fenrik, you can't even follow the most basic instructions. Your training for today is over, and you're on punishment. You'll be cleaning the toilets all day.” Lieutenant Bendola shouted at you. With that command, you left the training field and went to clean the toilets. The first day ended in a complete failure. After this first day, as the days passed, you began to learn how to swing the sword properly and to finish off the enemy with the right moves at the right time.\n"
+        },
+        {
+          "id": 14,
+          "image": "train",
+          "save": true,
+          "text": "You held the sword tightly in your hand, stood with your legs spread apart, and firmly planted your feet on the ground. You made a few moves similar to Lieutenant Bendola's on the puppet. They weren't as agile and strong as his, but you saw a look of admiration on his face when you looked at him out of the corner of your eye. The entire first day was spent getting used to these basic sword movements and others like them. After this first day, as the days passed, you began to learn how to swing the sword properly and to finish off the enemy with the right moves at the right time.\n"
+        },
+        {
+          "id": 15,
+          "image": "train",
+          "save": false,
+          "text": "Your days were spent in a challenging and exhausting process that started with sunrise and lasted until sunset. You were slowly bonding with your friends in the unit, and during this time, new recruits kept arriving. \n\nAfter about a week, you had surpassed 15 people in the novice barracks, and more than half of you were receiving sword training. \n\nAt the end of the week, you had become accustomed to the daily routines and your body had slowly begun to adapt to the rigorous training.\n"
+        },
+        {
+          "id": 16,
+          "image": "train",
+          "nextdialog": 31,
+          "save": false,
+          "text": "A week had passed, and you had started practicing with real swords, engaging in small duels among yourselves under the supervision of Lieutenant Bendola. With the new recruits, there were a total of nine novices. Among the novices, you generally performed well in duels, with Aurelia being the only novice who was better than you with a sword. \n\nGradually, you had also started using a shield alongside the sword, finding a balance between the two in your body. Lieutenant Darian Bendola seemed to be genuinely helping you. He had shown you a few moves with special names. The attacks named “Whirling Water Lily” and “Snake Bite” had stuck in your mind. As the name implied, Whirling Water Lily was an attack used to sweep multiple enemies around the person. Snake Bite, on the other hand, was used to inflict piercing damage against a single opponent. Although you were not a master in either of them, you could perhaps use them against unsuspecting prey.\n"
+        },
+        {
+          "id": 17,
+          "image": "train",
+          "save": true,
+          "text": "After taking note of your answer, the soldier nodded his head towards the other two youths and moved on to the next person in line to take their information. Once everyone's information had been collected, the soldier in charge rolled up the parchment and closed it. He cleared his throat and addressed the group. \n\n“I thank all of you on behalf of the Zenith Kingdom. You left your homes to serve as volunteer soldiers in the war against the Delfia Kingdom. Rest well tonight, as your training will begin tomorrow.”\n"
+        },
+        {
+          "id": 18,
+          "image": "bed",
+          "save": false,
+          "text": "The soldier in charge left with the parchment, and the other two soldiers led you to where you would be sleeping. The sleeping quarters were in a small building with ten bunk beds, while there were at most six people in the carriage you had come in. You didn't think that experienced soldiers would be sleeping with you, so you couldn't have been the only group to arrive. However, for now, the sleeping quarters were empty except for you. \n\nYou changed into sleeping clothes and lay down on a bed. Even though you had dozed off during the journey, you wanted to be fully energized for what lay ahead, so you forced yourself to sleep and eventually drifted off into a dreamless slumber.\n"
+        },
+        {
+          "id": 19,
+          "image": "bed",
+          "save": false,
+          "text": "“You rookies, wake up!” \n\nYou suddenly jump out of your bed accompanied by the shouting. As your eyes slowly open, you start looking around. When you remember where you are, you quickly stand up and get in line with the other seven people. As your consciousness comes back, you see three soldiers in the dormitory. They were the ones you saw yesterday. The one in the middle takes your information, while the other two stand on his right and left. The one on the right has a green cloth in his hand, while the one on the left has an orange one. \n\n“Your workout clothes have been placed in front of your lockers. Get ready immediately!” \n\nThe lockers are lined up on both sides of the dormitory door. As you move towards them, you see that each locker has a name written on it. When you find your own locker with your name on it, you put on the clothes in front of it and place your old clothes in the locker.\n"
+        },
+        {
+          "id": 20,
+          "image": "bed",
+          "save": false,
+          "text": "After everyone is dressed, you line up in front of the waiting soldiers, and the man in the middle starts speaking. \n\n“I am Captain Harbender Torse, and these are my Lieutenants Orion Getes and Darian Bendola,” He said, pointing to the soldiers on his right and left respectively. \n\n“From now on, we are responsible for your training, rookies. Now, those who will receive magic training, form a single line in front of Lieutenant Getes, and those who will receive sword training, form a single line in front of Lieutenant Bendola.”\n"
+        },
+        {
+          "id": 21,
+          "image": "eat",
+          "save": true,
+          "text": "The other day, you had chosen to attend the magic training and lined up in front of Lieutenant Getes with the others. By chance, you were divided into groups of three from the six people. Lieutenant Getes handed you a green cloth. \n\n“You must tie these around your waist during your training so that others can tell which field you are studying in.” \n\nAs instructed, you wrapped the cloth around your waist. You now felt ready. \n\n“Follow me,” said Lieutenant Getes, leading you and two other recruits outside. The sun must have just risen, as the reddish hue in the sky had not yet faded. As you followed the lieutenant, you began to hear the sound of cutlery. Shortly thereafter, you realized the reason - Lieutenant Getes had brought you to the mess hall.\n"
+        },
+        {
+          "id": 22,
+          "image": "eat",
+          "save": false,
+          "text": "You lined up behind him, and when it was your turn, you took your breakfast tray and sat down at a table with Lieutenant Getes to eat. One of you was a black-haired, blue-eyed girl named Althea. \n\n“My name is Althea. I'm 18 years old, and I'm from Stonefort city,” she said, introducing herself. \n\nAfter her, the others began to introduce themselves. “I'm Aevar, 19 years old, and I'm from Silverhold,” said the next recruit, a black-haired man with wounds on his forehead and eyebrows. You could easily tell that he had been in fights before. Then, the third recruit spoke.\n"
+        },
+        {
+          "id": 23,
+          "image": "eat",
+          "save": false,
+          "text": "“I'm Kaelen, 18 years old, and I'm from the town of Thalassa. My twin sister Keira came with me, and she also joined the sword training.” He was a child with brown hair that stood up like a hedgehog's. He must have inherited this hairstyle from his family. You couldn't help but wonder if his twin, Keira, had the same hair. \n\nLastly, it was your turn to introduce yourself. “I'm Fenrik, and I come from the village of Sami. I'm 20 years old.” \n\nKaelen was about to say something when Lieutenant Getes interrupted with, “Enough talking, it's time for training.” You all got up and followed Getes, handing your trays over to the mess hall staff.\n"
+        },
+        {
+          "id": 24,
+          "image": "train",
+          "save": false,
+          "text": "You arrived at the training field under Getes' leadership. You could see people practicing with swords and spells around you. Getes lined all of you up in front of the puppets and stood behind you, starting to speak. \n\n“Some of you may already have some knowledge, but for those who don't, we will start from the simplest form,” he said, pausing briefly and then continuing. \n\n“The most important thing in using magic is to breathe and maintain your composure. Magic performed without calmness becomes imbalanced, and emotions can alter the structure of spells. This can lead to negative or positive outcomes in different situations. However, for beginners, the easiest way to start is by practicing with calmness and detachment from emotions.” \n\nAs you heard footsteps behind you, you realized that Getes was walking back and forth while speaking. \n\n“The second important thing is confidence in yourself. To make magic real, you must first imagine and then verbalize what you imagine, having faith in your ability to perform the spell.”\n"
+        },
+        {
+          "choices": [
+            {
+              "id": 0,
+              "nextdialog": 26,
+              "text": "Quickly attack the puppet. “Ignis.”"
+            },
+            {
+              "id": 1,
+              "nextdialog": 28,
+              "text": "Take a deep breath, calm down, and focus."
+            }
+          ],
+          "id": 25,
+          "image": "train",
+          "save": false,
+          "text": "He then stepped in front of you and turned one of his hands towards the puppets in front of him. \n\n“Spells progress step by step, and with each word, the purpose of the spell changes. Watch closely. Ignis.” \n\nAs he uttered the spell, flames suddenly appeared in front of his hand. \n\n“Ignis Incantatio.” \n\nA large fireball shot from Getes' palm, hitting the puppets and setting them on fire. After a few seconds, while still looking at the burning puppets, he said, “Ignis Extinguere.” \n\nImmediately, the flames slowly extinguished. “Ignis is a basic spell for creating fire. You will start with this one.” He then returned to his position behind you. \n\n“Start practicing. Since you are beginners, keep both hands focused on your target and maintain regular breathing to calm yourselves.” \n\nWhat will you do?\n"
+        },
+        {
+          "choices": [
+            {
+              "id": 0,
+              "nextdialog": 27,
+              "text": "Quickly attack the puppet. “Ignis.”"
+            },
+            {
+              "id": 1,
+              "nextdialog": 28,
+              "text": "Take a deep breath, calm down, and focus."
+            }
+          ],
+          "id": 26,
+          "image": "train",
+          "save": false,
+          "text": "Nothing happened; it was a frustrating situation. \n\n“First, take a deep breath and try again,” Getes said, and it was time to try again after his words. \n\nWhat will you do?\n"
+        },
+        {
+          "id": 27,
+          "image": "train",
+          "nextdialog": 29,
+          "save": true,
+          "text": "There was no hint of even the slightest reddish glow in your hands, while others at least managed to produce sparks. \n\n“Fenrik, you can't even follow the most basic instructions. Your practice is over for today, and you're on punishment. You will clean the toilets all day,” Teğmen Getes shouted at you. With the given order, you left the training field and went to clean the toilets. The first day ended in complete failure. After this first day, you started performing spells correctly at the right time.\n"
+        },
+        {
+          "id": 28,
+          "image": "train",
+          "save": true,
+          "text": "You took a deep breath, calmed yourself down, and focused. In your imagination, you saw flames flickering between your hands as the words slipped out of your mouth. \n\n“Ignis.” \n\nTiny sparks appeared between your hands. It was a great achievement for your first day, as you were the only novice who managed to produce even the smallest spark. You didn't expect perfect fires like Getes, but seeing a small sign of satisfaction on his face made you happy. That's how your magic training began. Although none of you could create a real fire on the first day, you managed to produce small sparks by the end of the day, and the days continued in this way.\n"
+        },
+        {
+          "id": 29,
+          "image": "train",
+          "save": false,
+          "text": "Your days were spent in a challenging and exhausting process that started with sunrise and lasted until sunset. You were slowly bonding with your friends in the unit, and during this time, new recruits kept arriving. \n\nAfter about a week, you had surpassed 15 people in the novice barracks, and more than half of you were receiving sword training. \n\nAt the end of the week, you had become accustomed to the daily routines and your body had slowly begun to adapt to the rigorous training.\n"
+        },
+        {
+          "id": 30,
+          "image": "train",
+          "save": false,
+          "text": "You had gradually begun to create fires in your hands and even throw small fireballs using the Ignis Incantatio spell. You were the fastest progressing among the novices. Within a week, you had learned a basic defensive spell called Praesidium, apart from Ignis. While it was not very functional with close-range weapons like swords or axes, the defensive spell you performed could protect the area and block a few long-range attacks before it shattered.\n"
+        },
+        {
+          "id": 31,
+          "text": "Your daily training had ended, and you had already eaten your dinner. As you walked towards the dormitory with your comrades, the thought of having a night shift crossed your mind... \n\nTo be continued...",
+          "save": false
+        }
+      ],
+      "name": "Let M a Legend - English"
+    }
+  ]
 }

@@ -3,9 +3,9 @@ import 'package:get/get.dart';
 
 import 'package:google_fonts/google_fonts.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:story_app/arayuz_main.dart';
 import 'package:story_app/data.dart';
 import 'package:story_app/utils/audio_background.dart';
+import 'package:story_app/widgets/cards.dart';
 import 'package:story_app/widgets/setting.dart';
 
 import '../story_choice_page.dart';
@@ -52,10 +52,10 @@ class _MainMenuPageState extends State<MainMenuPage> {
                 backgroundColor: Colors.transparent,
                 onPressed: () {
                   //Navigator.pop(context, true);
-                  Navigator.push(
+                  Navigator.pushReplacement(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => ArayuzMainIskele(),
+                      builder: (context) => const CardListView(),
                     ),
                   );
                 },
@@ -102,7 +102,11 @@ class _MainMenuPageState extends State<MainMenuPage> {
             key: _key,
             backgroundColor: Colors.transparent,
             body: _mainMenuButton(),
-            bottomNavigationBar: GetSettings(sckey: _key, menuVisible: false),
+            bottomNavigationBar: GetSettings(
+              sckey: _key,
+              menuVisible: false,
+              girisVisible: true,
+            ),
             endDrawer: const MySettingDrawer(),
           ),
         ],
@@ -142,7 +146,7 @@ class _MainMenuPageState extends State<MainMenuPage> {
               final chapterId = prefs.getInt('chapterId') ?? 0;
               final dialogId = prefs.getInt('dialogId') ?? 0;
               // ignore: use_build_context_synchronously
-              Navigator.of(context).push(
+              Navigator.of(context).pushReplacement(
                 MaterialPageRoute(
                   builder: (context) => StoryChoicePage(
                     chapterNum: chapterId,
@@ -163,6 +167,7 @@ class _MainMenuPageState extends State<MainMenuPage> {
           onPressed: () async {
             final prefs = await SharedPreferences.getInstance();
             final chapterId = prefs.getInt('chapterId') ?? 0;
+            // ignore: use_build_context_synchronously
             Navigator.push(
               context,
               MaterialPageRoute(

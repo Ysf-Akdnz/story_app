@@ -251,7 +251,7 @@ class _StoryChoicePageState extends State<StoryChoicePage> {
             );
           },
         ),
-        bottomNavigationBar: GetSettings(sckey: _key, menuVisible: true),
+        bottomNavigationBar: GetSettings(sckey: _key, menuVisible: true,girisVisible: true,),
         endDrawer: const MySettingDrawer(),
       ),
     );

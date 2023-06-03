@@ -4,18 +4,19 @@ import 'package:shared_preferences/shared_preferences.dart';
 import 'package:story_app/data.dart';
 import 'package:story_app/widgets/main_menu.dart';
 import 'package:story_app/widgets/setting.dart';
+import 'package:story_app/widgets/story_olusturma.dart';
 
 import 'get_settings.dart';
 
-class CardListView extends StatefulWidget {
-  const CardListView({super.key});
+class CardListViewUser extends StatefulWidget {
+  const CardListViewUser({super.key});
 
   @override
-  State<CardListView> createState() => _CardListViewState();
+  State<CardListViewUser> createState() => _CardListViewUserState();
 }
 
-class CardButtons extends StatefulWidget {
-  const CardButtons(
+class CardButtonsUser extends StatefulWidget {
+  const CardButtonsUser(
       {Key? key, required this.id, required this.name, required this.imageUrl})
       : super(key: key);
 
@@ -24,10 +25,10 @@ class CardButtons extends StatefulWidget {
   final String imageUrl;
 
   @override
-  State<CardButtons> createState() => _CardButtonsState();
+  State<CardButtonsUser> createState() => _CardButtonsUserState();
 }
 
-class _CardButtonsState extends State<CardButtons> {
+class _CardButtonsUserState extends State<CardButtonsUser> {
   bool _isTapped = false;
   late SharedPreferences prefs;
 
@@ -100,7 +101,7 @@ class _CardButtonsState extends State<CardButtons> {
   }
 }
 
-class _CardListViewState extends State<CardListView> {
+class _CardListViewUserState extends State<CardListViewUser> {
   final storyData = StoryData();
   final GlobalKey<ScaffoldState> _key = GlobalKey();
 
@@ -133,19 +134,21 @@ class _CardListViewState extends State<CardListView> {
               if (snapshot.hasData) {
                 var stories = snapshot.data;
                 List<Widget> storyWidget = (stories as List<dynamic>)
-                    .map((story) => CardButtons(
+                    .map((story) => CardButtonsUser(
                           id: story["id"],
                           name: story["name"],
                           imageUrl: story["imageUrl"],
                         ))
                     .toList();
                 return GridView.count(
-                    crossAxisCount: 2,
-                    padding: const EdgeInsets.all(10.0),
-                    childAspectRatio: 9.0 / 13.9,
-                    children: [
-                      ...storyWidget,
-                    ]);
+                  crossAxisCount: 2,
+                  padding: const EdgeInsets.all(10.0),
+                  childAspectRatio: 9.0 / 13.9,
+                  children: [
+                    ...storyWidget,
+                    const HikEkleButonu(),
+                  ],
+                );
               } else if (snapshot.hasError) {
                 children = <Widget>[
                   const Icon(
@@ -184,6 +187,70 @@ class _CardListViewState extends State<CardListView> {
                     children: children),
               );
             },
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+class HikEkleButonu extends StatefulWidget {
+  const HikEkleButonu({super.key});
+
+  @override
+  State<HikEkleButonu> createState() => _HikEkleButonuState();
+}
+
+class _HikEkleButonuState extends State<HikEkleButonu> {
+  bool _isTapped = false;
+  @override
+  Widget build(BuildContext context) {
+    return GestureDetector(
+      onLongPress: () {
+        Navigator.of(context).pushReplacement(
+          MaterialPageRoute(
+            builder: (context) => const StoryOlusturma(),
+          ),
+        );
+      },
+      onTapDown: ((details) {
+        setState(() {
+          _isTapped = true;
+        });
+      }),
+      onTapUp: (details) {
+        setState(() {
+          _isTapped = false;
+        });
+      },
+      onTapCancel: () {
+        setState(() {
+          _isTapped = false;
+        });
+      },
+      child: Container(
+        margin: const EdgeInsets.all(5.0),
+        clipBehavior: Clip.hardEdge,
+        decoration: BoxDecoration(
+            color: Colors.grey.withOpacity(0.1),
+            shape: BoxShape.rectangle,
+            borderRadius: BorderRadius.circular(10),
+            boxShadow: _isTapped
+                ? [
+                    BoxShadow(
+                      color: Colors.grey.withOpacity(0.5),
+                      blurRadius: 10,
+                      spreadRadius: 3,
+                      offset: const Offset(0, 3),
+                    )
+                  ]
+                : null),
+        child: Align(
+          alignment: Alignment.center,
+          child: Icon(
+            Icons.add_circle_outline,
+            color: Colors.black.withOpacity(0.5),
+            size: 50,
           ),
         ),
       ),

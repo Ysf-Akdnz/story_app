@@ -29,7 +29,7 @@ class _VolumeButtonState extends State<VolumeButton> {
       backgroundColor: Colors.transparent,
       child: Icon(
         muteMusic ? Icons.volume_off : Icons.volume_up_outlined,
-        color: Colors.yellow.shade700,
+        color: Colors.white.withOpacity(0.75),
         size: 40,
       ),
     );
