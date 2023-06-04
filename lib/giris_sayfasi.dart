@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:story_app/widgets/cards.dart';
 import 'package:story_app/widgets/get_settings.dart';
+import 'package:story_app/widgets/main_menu.dart';
 import 'package:story_app/widgets/setting.dart';
 import 'package:story_app/widgets/user_stories.dart';
+import 'package:get/get.dart';
 
 class GirisSayfasi extends StatefulWidget {
   const GirisSayfasi({super.key});
@@ -14,6 +17,7 @@ class GirisSayfasi extends StatefulWidget {
 
 class _GirisSayfasiState extends State<GirisSayfasi> {
   final GlobalKey<ScaffoldState> _key = GlobalKey();
+
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -41,6 +45,52 @@ class GirissSayfasi extends StatefulWidget {
 }
 
 class _GirissSayfasiState extends State<GirissSayfasi> {
+  Future<dynamic> exitDialog() {
+    return showDialog(
+      context: context,
+      builder: (context) => AlertDialog(
+        backgroundColor: Colors.grey[900],
+        title: Text(
+          'Exit'.tr,
+          style: const TextStyle(
+              color: Colors.white, fontSize: 25, fontFamily: 'Quintessential'),
+        ),
+        actions: [
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              FloatingActionButton(
+                backgroundColor: Colors.transparent,
+                onPressed: () => Navigator.pop(context, false),
+                child: Text(
+                  'Nöö'.tr,
+                  style: const TextStyle(
+                      fontSize: 18,
+                      fontWeight: FontWeight.bold,
+                      fontFamily: 'Quintessential'),
+                ),
+              ),
+              const SizedBox(width: 50),
+              FloatingActionButton(
+                backgroundColor: Colors.transparent,
+                onPressed: () {
+                  SystemChannels.platform.invokeMethod('SystemNavigator.pop');
+                },
+                child: Text(
+                  'Yesnt'.tr,
+                  style: const TextStyle(
+                      fontSize: 18,
+                      fontWeight: FontWeight.bold,
+                      fontFamily: 'Quintessential'),
+                ),
+              ),
+            ],
+          ),
+        ],
+      ),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -119,7 +169,7 @@ class _GirissSayfasiState extends State<GirissSayfasi> {
                         ],
                       ),
                       child: Text(
-                        "Bizim Hikayelerimiz",
+                        'hg'.tr,
                         textAlign: TextAlign.center,
                         style: GoogleFonts.quintessential(
                             color: Colors.white, fontSize: 22),
@@ -128,6 +178,42 @@ class _GirissSayfasiState extends State<GirissSayfasi> {
                   ),
                 ),
                 Container(
+                  margin: const EdgeInsets.only(top: 20),
+                  child: InkWell(
+                    onTap: () {
+                      exitDialog();
+                    },
+                    child: Container(
+                      width: MediaQuery.of(context).size.width / 1.5,
+                      padding: const EdgeInsets.all(10),
+                      decoration: BoxDecoration(
+                        gradient: const LinearGradient(
+                            colors: [
+                              Color.fromARGB(221, 157, 0, 0),
+                              Color.fromARGB(255, 255, 130, 130)
+                            ],
+                            begin: Alignment.topCenter,
+                            end: Alignment.bottomRight),
+                        borderRadius: BorderRadius.circular(13),
+                        // ignore: prefer_const_literals_to_create_immutables
+                        boxShadow: [
+                          const BoxShadow(
+                            color: Colors.black54,
+                            offset: Offset(0, 6),
+                            blurRadius: 5,
+                          )
+                        ],
+                      ),
+                      child: Text(
+                        'Çıkış'.tr,
+                        textAlign: TextAlign.center,
+                        style: GoogleFonts.quintessential(
+                            color: Colors.white, fontSize: 22),
+                      ),
+                    ),
+                  ),
+                ),
+                /*Container(
                   margin: const EdgeInsets.only(top: 20),
                   child: InkWell(
                     onTap: () {
@@ -166,7 +252,7 @@ class _GirissSayfasiState extends State<GirissSayfasi> {
                       ),
                     ),
                   ),
-                ),
+                ),*/
               ],
             ),
           ),

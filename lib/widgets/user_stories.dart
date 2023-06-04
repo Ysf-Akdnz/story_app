@@ -145,7 +145,7 @@ class _CardListViewUserState extends State<CardListViewUser> {
                   padding: const EdgeInsets.all(10.0),
                   childAspectRatio: 9.0 / 13.9,
                   children: [
-                    ...storyWidget,
+                    //...storyWidget,
                     const HikEkleButonu(),
                   ],
                 );

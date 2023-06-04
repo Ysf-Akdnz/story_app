@@ -392,60 +392,435 @@
     },
     {
       "id": 1,
-      "name": "Hk2",
+      "name": "Out Of Dark",
       "imageUrl": "assets/images/training-area.jpeg",
       "texts": {
         "tr-TR": {
-          "dg000": "asdasdasdasdasd",
-          "dg001": "asdasdasdadaswqeqweqweqwe",
-          "c0dg1ch1": "Kılıç kulrwerwerlanmayı biliyorum.",
-          "c0dg1ch2": "Büyü yapatrtyutybiliyorum.",
-          "c0dg1ch3": "Savaş kon57657657usunda bir becerim yok"
+          "dg000": "Saatlerdir ormanda dolaşıyor, ne yapacağını bilmiyordun. Nereden geldiğini, nasıl geldiğini, burada ne işin olduğunu bilmiyordun, hiçbir şey hatırlamıyordun. Kasvetli karanlığın çevrelediği ağaçlar arasında umutsuzca koşuyordun. Görebildiğin tek şey, aysız gökteki yıldızların cılız ışıklarının, ölü ağaçlarının arasından geçerken oluşturduğu devasa gölgelerdi. Nefes nefese kalmış vaziyette bir ağaca yaslandığın sırada ormanın içinden gelen sesler, içindeki korkuyu arttırıyor, gözlerinin istemsizce etrafa bakmasına neden oluyorlardı. \n\nYapabileceğin tek şey ilerlemek, ilerlemek ve ilerlemekti. Ayakların senden izinsiz hareket etmeye başladığında omurgandan aşağı soğuk bir ter damlasının indiğini hissettin. Nefeslerin sessizleşirken korku bedenini parça parça ele geçiriyordu. Nihayetinde ayaklarının kontrolünü ele geçirdiğinde önünde çok fazla seçenek olmadığını fark ettin.\n",
+          "dg001": "Arkanı döndü ve geldiğini düşündüğün yöne doğru ilerlemeye başladın. İlerledin, ilerledin ve ilerledin. Yol sonsuz gibiydi adeta ve içinden istemsizce sessiz çığlıklar yükseliyordu. Zaman mefhumunu kaybetmiştin. Ne kadar süre ilerlediğini bilmiyordun. Tek bildiğin şey karanlığın seni sarmaladığıydı ve artık hiçbir şey hissetmiyordun. Huzura erişebilmiş miydin? Bu sorunun cevabı muhtemelen olumsuzdu, artık gerçeklik senin için yok olmuştu. Unuttuğun hatıraların seninle birlikte yok oluşa sürüklenmişti. \n\n\n-Öldün- >>>\n",
+          "dg002": "Beklemeye başladın. Saatin kaç olduğunu bilmiyordun, ne zaman sabah olacağını bilmiyordun. Ne kadar beklemen gerektiğini bilmiyordun. Hiçbir şey bilmediğin bu yerde beklemeye devam edecek misin?\n",
+          "dg003": "Gökteki cılız yıldızlar parlamaya devam ediyor, uğursuz bir rüzgar, tayin edemediğin bir yönden esiyordu. Ormandaki iç karartan sesler zaman zaman yükseliyor zaman zaman alçalıyordu. Ne yapacağını bilemeyen bir âcizlik bedenini sarmalıyordu.\n",
+          "dg004": "Kararlıydın, güneş yükseldiğinde buradan kurtulacağını, puslu anılarının geri döneceğini ve hatırlayamadığın zamanlardaki gizemlerin çözümünü bulacağını düşünüyordun. Bekledin. Bekledin. Bekledin. Ne kadar zaman geçmişti bilmiyordun. Yıllar sonra iskeletlerin bir grup ormancı tarafından bulunduğunda hala oturur pozisyonda kurtuluşunu bekliyordun… \n\n\n-Öldün- >>>\n",
+          "dg005": "Hayatını etkileyen bir karar verdiğini hissettin. Ne kadar doğru ne kadar yanlış şu an için kestiremiyordun ancak geçmişine ışık tutup geleceğini eline almak için yapman gerekenin pes etmemek olduğunu düşünüyordun. İlerlemeye başladın. Cılız yıldız ışıklarının oluşturduğu derin gölgeler arasında adımlıyordun. Etraftan gelen sesler artık nedense daha az korkutucu gelmeye başlamıştı. \n\nİlerlerken sıcak bir rüzgar hissettin. Yüzüne çarpan bu esinti, beraberinde sana karnının acıktığını hatırlatan kokular getiriyordu. Bir süre sonra da gelen kokuların kaynağını görmüştün. Karanlık ormanın ilerisinde, ormanın içindeki bir açıklığın ortasında, küçük bir kulübe duruyordu. Pencerelerin birinden ışık geliyor ve kulübenin bacasından duman çıkıyordu.\n",
+          "dg006": "Kapıyı tıkladığında, kapı kendiliğinden açıldı ve gördüğün en son şey yüzüne gelen, parlak ve keskin bir şeyin görüntüsü olmuştu. Sonrasında bir anlık acı ve bir an sonra da sonsuz karanlıktaydın.\n",
+          "dg007": "Kulübeyi es geçtin. Ne olduğunu bilmediğin bir yere gitmek, karanlık ormanda dolaşmaktan daha ürkütücü gelmişti belki de sana kim bilir. Ancak durmadın. Daha önce verdiğin karar gibi aynı, ilerlemeye devam ettin. En sonunda ışığa ulaşacağına inanıyordun. Nihayetinde ulaştın da. İki parıltılı nokta görmüştün karanlık ormanda. İki parıltının hareket edişini göremeden göğsünde bir acı hissettin ve ardından boynuna gelen ısırıkla birlikte bir hayvanın akşam yemeği oldun.\n",
+          "dg008": "Kulübeye yaklaştın ve etrafında dönmeye başladın. Bir yandan da kulübeyi inceliyordun. Sonunda perdesi kapalı olmayan ve yarı açık bir pencere buldun. İçeriye baktığında, kapının arkasında tavana iple bağlanmış bir şey gördün. Ne olduğunu tam göremiyordun buradan.\n",
+          "dg009": "Pencereyi sessizce açarak içeri girdin. İçerisi loş bir ışıkla aydınlanmıştı. Gözlerini küçük kulübede gezdirince ışığın sebebinin bir şöminede pişen yemeğin altındaki ateşten geldiğini gördün. Aldığın kokularda ateşin üstündeki kazandan geliyordu. Yavaşça kazana yaklaştın. Aldığın kokular daha da bir güzel geliyordu artık. Kazanın içindeki kepçeyi tutup yemeği karıştırdığında en sevdiğin güvece benzediğini gördün. \n\nHemen kulübeyi aradın ve tabak, kaşık bulup kendine yemek koydun ve karnını doyurdun. Sonrasında kulübeyi incelemeye başladı. Bu sırada duvarlarda fotoğraflar olduğunu fark ettin. Sıska, sakallı bir adamın yanında şişman, iri yarı bir kadın ve önlerinde de üç küçük kız durmuştu. \n\nGerek yüz ifadeleri, gerek giyinişleri, gerek içinde bulunduğun durum, hepsi birlikte daha da ürkmene sebep olmuştu. Fotoğrafların diğerleri de bu aile olduğunu düşündüğün insanlarla ilgiliydi. \n\nHızla fotoğrafların olduğu duvardan ayrıldın ve evi incelemeye devam ettin. Bu sırada bir duvara asılı bir fener buldun. Eline alıp açmayı denediğinde hala çalıştığını anlamıştın. Gülümseyerek evi incelemeye devam ettin.\n",
+          "dg010": "Devam Edecek...",
+          "ch01": "İlerlemeye devam edebilirdin.",
+          "ch02": "Olduğun yerde sabaha kadar bekleyebilirdin.",
+          "ch03": "Geri dönebilirdin. Artık geri neresi ise…",
+          "beforeChoice": "Önceki seçeneğe dön.",
+          "restart": "Oyunu yeniden başlat.",
+          "ch04": "Beklemeye devam et.",
+          "ch05": "Beklemekten vaz geçme.",
+          "ch06": "Kulübeye gidip kapısını çal.",
+          "ch07": "Kulübeye gidip etrafında dolanarak kulübeyi incele.",
+          "ch08": "Kulübeye gitmeden etrafında dolaş ve ormanda ilerlemeye devam et.",
+          "ch09": "Pencereden içeri gir.",
+          "ch10": "Çocuk odası olduğunu düşündüğün yeri incele.",
+          "ch11": "Yatak odası olduğunu düşündüğün yeri incele."
         },
         "en-US": {
-          "dg000": "asdasdasdasdasjhkjhkhjkjhkd",
-          "dg001": "asdasdasdadaswqeqwhjkhjkhjkhjkhjkeqweqwe",
-          "c0dg1ch1": "I know hoasdasdw to use a sword.",
-          "c0dg1ch2": "I can perfasdaorm magic.",
-          "c0dg1ch3": "I don't haveasdasd any skills related to war."
+          "dg000": "You had been wandering in the forest for hours, not knowing what to do. You didn't know where you came from, how you got there, or why you were there. You couldn't remember anything. Desperately, you ran through the trees shrouded in gloomy darkness. The only thing you could see were the massive shadows formed by the faint lights of the stars in the moonless sky, passing through the dead trees. As you leaned against a tree, gasping for breath, the sounds coming from the depths of the forest increased your fear, causing your eyes to involuntarily scan the surroundings. \n\nThe only thing you could do was to keep moving forward. When your feet started moving without your permission, you felt a cold sweat drop down your spine. As your breaths grew silent, fear began to take hold of your body piece by piece. Finally, when your feet took control, you realized you didn't have many options in front of you.\n",
+          "dg001": "You turned around and started moving in the direction you thought you had come from. You moved, and moved, and moved. The path seemed endless, and involuntary silent screams rose from within you. You had lost the concept of time. You didn't know how long you had been moving. All you knew was that darkness enveloped you, and you no longer felt anything. Had you found peace? The answer to that question was probably negative; reality had vanished for you. The forgotten memories had been dragged into non-existence along with you. \n\n\n-You're dead- >>>\n",
+          "dg002": "You started to wait. You didn't know what time it was, you didn't know when morning would come. You didn't know how long you had to wait. Will you continue to wait in this place where you know nothing?\n",
+          "dg003": "The faint stars in the sky continued to shine, an ominous wind was blowing from a direction you could not identify. The depressing voices in the forest rose from time to time and fell from time to time. A feeling of helplessness that didn't know what to do was gripping his body.\n",
+          "dg004": "You were determined, thinking that when the sun rises you will get out of here, your hazy memories will return, and you will find the solution to the mysteries of the times you can't remember. You waited. You waited. You waited. You didn't know how much time had passed. Years later, when your skeletons were found by a group of junglers, you were still sitting in a sitting position waiting for your salvation… \n\n\n-You're dead- >>>\n",
+          "dg005": "You felt you had made a decision that affected your life. You couldn't predict how right or wrong it was, but you thought that all you had to do to shed light on your past and take over your future was not to give up. You started to move forward. You were stepping through the deep shadows cast by the faint starlight. The sounds around him were starting to sound less frightening for some reason now. \n\n\nYou felt a warm wind as you drove. The breeze that hit your face brought with it scents that reminded you that you were hungry. After a while, you saw the source of the smells. Beyond the dark forest, in the middle of a clearing in the forest, stood a small hut. Light was coming from one of the windows and smoke was coming out of the chimney of the cottage.\n",
+          "dg006": "When you knocked on the door, it opened by itself, and the last thing you saw was the image of something bright and sharp coming into your face. Then one moment you were in pain and the next you were in eternal darkness.\n",
+          "dg007": "You missed the hut. Maybe it was more frightening to go to a place where you didn't know what it was, than walking around in the dark forest, who knows. But you didn't stop. Just like the decision you made before, you kept moving forward. You believed you would finally reach the light. You finally got it. You saw two glowing dots in the dark forest. Before you could see the two glows move, you felt a pain in your chest, and then, with the bite on your neck, you became an animal's dinner. \n\n\n-You're dead- >>>\n",
+          "dg008": "You approached the hut and began to spin around it. Meanwhile, you were inspecting the hut. You finally found a half-open window with no curtains closed. When you looked inside, you saw something behind the door tied to the ceiling with a string. You couldn't quite see what was going on from here.\n",
+          "dg009": "You opened the window silently and entered. The interior was dimly lit. As you looked around the small cottage, you saw that the light was caused by the fire under the food being cooked in a fireplace. The smells you took were coming from the cauldron on the fire. You slowly approached the cauldron. The scents you smelled were even more beautiful now. When you grabbed the ladle in the cauldron and stirred the food, you saw that it looked like your favorite casserole. \n\n\nYou immediately searched the hut and found a plate and spoon, poured yourself some food, and fed yourself. Then he began to inspect the hut. At this time, you noticed that there were photographs on the walls. Next to a skinny, bearded man stood a stout, burly woman and three little girls in front of them. \n\n\nBoth your facial expressions, your dressing, and the situation you were in all made you even more frightened. The rest of the photos were about people you thought were this family. \n\n\nYou quickly left the wall with the photos and continued to examine the house. Meanwhile, you found a lantern hanging on a wall. When you took it and tried to open it, you realized that it was still working. Smiling, you continued to survey the house.\n",
+          "dg010": "To be continued…",
+          "ch01": "You could continue moving forward.",
+          "ch02": "You could wait where you were until morning.",
+          "ch03": "You could go back. Wherever “back” is now...",
+          "beforeChoice": "Go back to the previous choice.",
+          "restart": "Restart the game.",
+          "ch04": "You could continue waiting.",
+          "ch05": "Don't stop waiting.",
+          "ch06": "Go to the cottage and knock on its door.",
+          "ch07": "Go to the hut and walk around it to examine the hut.",
+          "ch08": "Move around and continue through the forest without going to the hut.",
+          "ch09": "Go in through the window.",
+          "ch10": "Examine what you think is the nursery.",
+          "ch11": "Examine what you think is the bedroom."
         }
       },
       "dialogs": [
         {
+          "choices": [
+            {
+              "id": 0,
+              "nextdialog": 1,
+              "text": "ch01"
+            },
+            {
+              "id": 1,
+              "nextdialog": 2,
+              "text": "ch02"
+            },
+            {
+              "id": 2,
+              "nextdialog": 6,
+              "text": "ch03"
+            }
+          ],
           "id": 0,
           "image": "train",
-          "save": true,
+          "save": false,
           "text": "dg000"
         },
         {
           "choices": [
             {
               "id": 0,
-              "nextdialog": 3,
-              "text": "c0dg1ch1"
+              "nextdialog": 8,
+              "text": "ch06"
             },
             {
               "id": 1,
-              "nextdialog": 17,
-              "text": "c0dg1ch2"
+              "nextdialog": 4,
+              "text": "ch07"
+            },
+            {
+              "id": 2,
+              "nextdialog": 9,
+              "text": "ch08"
+            }
+          ],
+          "id": 1,
+          "image": "train",
+          "save": false,
+          "text": "dg005"
+        },
+        {
+          "choices": [
+            {
+              "id": 0,
+              "nextdialog": 1,
+              "text": "ch01"
+            },
+            {
+              "id": 1,
+              "nextdialog": 3,
+              "text": "ch04"
+            }
+          ],
+          "id": 2,
+          "image": "train",
+          "save": false,
+          "text": "dg002"
+        },
+        {
+          "choices": [
+            {
+              "id": 0,
+              "nextdialog": 1,
+              "text": "ch01"
+            },
+            {
+              "id": 1,
+              "nextdialog": 7,
+              "text": "ch05"
+            }
+          ],
+          "id": 3,
+          "image": "train",
+          "save": false,
+          "text": "dg003"
+        },
+        {
+          "choices": [
+            {
+              "id": 0,
+              "nextdialog": 8,
+              "text": "ch06"
+            },
+            {
+              "id": 1,
+              "nextdialog": 5,
+              "text": "ch09"
+            }
+          ],
+          "id": 4,
+          "image": "train",
+          "save": false,
+          "text": "dg008"
+        },
+        {
+          "choices": [],
+          "id": 5,
+          "nextdialog": 10,
+          "image": "train",
+          "save": false,
+          "text": "dg009"
+        },
+        {
+          "choices": [
+            {
+              "id": 0,
+              "nextdialog": 0,
+              "text": "beforeChoice"
+            },
+            {
+              "id": 1,
+              "nextdialog": 0,
+              "text": "restart"
+            }
+          ],
+          "id": 6,
+          "image": "train",
+          "save": false,
+          "text": "dg001"
+        },
+        {
+          "choices": [
+            {
+              "id": 0,
+              "nextdialog": 3,
+              "text": "beforeChoice"
+            },
+            {
+              "id": 1,
+              "nextdialog": 0,
+              "text": "restart"
+            }
+          ],
+          "id": 7,
+          "image": "train",
+          "save": false,
+          "text": "dg004"
+        },
+        {
+          "choices": [
+            {
+              "id": 0,
+              "nextdialog": 1,
+              "text": "beforeChoice"
+            },
+            {
+              "id": 1,
+              "nextdialog": 0,
+              "text": "restart"
+            }
+          ],
+          "id": 8,
+          "image": "train",
+          "save": false,
+          "text": "dg006"
+        },
+        {
+          "choices": [
+            {
+              "id": 0,
+              "nextdialog": 1,
+              "text": "beforeChoice"
+            },
+            {
+              "id": 1,
+              "nextdialog": 0,
+              "text": "restart"
+            }
+          ],
+          "id": 9,
+          "image": "train",
+          "save": false,
+          "text": "dg007"
+        },
+        {
+          "choices": [],
+          "id": 10,
+          "image": "train",
+          "save": false,
+          "text": "dg010"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Future Life",
+      "imageUrl": "assets/images/yemekhane.jpeg",
+      "texts": {
+        "tr-TR": {
+          "dg000": "Çalan alarm sesiyle gözlerini açmıştın. “Leona, alarmı kapat.” Dedin yatağından kalkarak. Leona senin kişisel yapay zeka asistanındı. “Günaydın Mark, saat 07.16. Hava parçalı bulutlu ve 18 derece.” Yavaşça boynunu kıtlattın ve banyoya doğru ilerledin. Banyoda, ellerini lavaboya dayayarak, aynada kendine baktın. Dünden kalmış küçük bir morluk gözünün altında solmaya yüz tutmuştu. Başını iki yana sallayıp kendini toparladın ve yüzünü yıkadın. \n\n“Kahven hazır Mark.” Leona’nın cümlesiyle banyodan çıktın ve mutfağa ilerledin. Siyah mermerden yapılmış tezgahın üstündeki makinadan dumanlar tüten kahveni bir bardağa doldurdun. “Bugün için iki görüşmen var Mark. İkisi de zamanı senin belirlemeni istedi. Birisi Cyber Readers. Askeri bakımdan hizmetinden faydalanmak istiyorlar. Diğeri ise Techno Line. Ağ Gezerlik yeteneklerine ihtiyaç duyduklarına dair not düşmüşler. Önce hangisiyle görüşmek istersin?”\n",
+          "dg001": "“Randevu notlarına göre, Cyber Readers’ın merkezinden bir bellek çalınmış. Bunu geri almanı istiyorlar. Çalan kişi yada kişiler yazılmamış.” Tezgaha yaslanarak kahveni içmeye başladı. “Techno Line’ın derdi neymiş?” Sen kahveni içmeye devam ederken Leona’da soruna cevap verdi. “Techno Line dün saat 18.35’den beri siber saldırı altındaymış. Eklediği nota göre, kendi Ağ Gezerleri savunma durumundaymış ancak sürekli saldırı sebebiyle saldıranlara karşı harekete geçememişler. Saldıran kişi yada kişiler yazılmamış.”",
+          "dg002": "“Techno Line’ı önce görelim Leona. Nerede buluşmak istiyorlar?” Kahveni hızlıca bitirip kıyafetlerini değiştirmek için yatak odana gittin. “Şehrin Tellesa Bölgesi’ndeki merkezlerinde onlarla görüşeceksin Mark. Yaklaşık 47 dakika da orada olursun. Saat şu anda 07.32. Randevuyu saat kaça almamı istersin?” \n\nÜzerini değiştirmiş ve ekipman odana ilerlemiştin. “08.30 ideal Leona, teşekkürler.” Dedin ve Ağ Gezerlik ekipmanların arasından sinirsel bağlantı çipini, şakağındaki bellek yuvasına taktın. Gözlerindeki sibernetik bilgisayar üzerinde kod akışı geçtikten sonra görüşün tekrar geri geldi. Kulağına kulaklığını taktın ve ceketini alarak evinden çıktın. Garajında duran motoruna binerek randevu konumuna doğru ilerlemeye başladın.\n",
+          "dg003": "40 dakikalık bir yolculuğun ardından Techno Line’ın merkezine gelmiştin. Motorunu park edip binadan içeri girdin. Girişteki sensörleri seni baştan aşağı taradı ve sonunda bir adamın “Hoş geldiniz Mark Ian Blue. Direktör Temura Naradasi sizi 17. Katta, Ağ Labirenti biriminde bekliyor.” Konuşan kişi Techno Line’ın yapay zekasıydı. \n\nBaşınla anladığını belirterek asansöre ilerledin. Asansöre binip 17’ye bastın ve yukarı çıkarken kulağına dolan hafif müziği dinlemeye başladın. 17. Kata geldiğinde kapılar iki yana açıldı ve asansörden çıktın. Duvardaki tabelalara bakarak Ağ Labirenti birimine ilerlemeye başladın. Sen yaklaştığında birimin kapısı açıldı ve içeri girdin. \n\nSıradan bir ana kontrol odasına benzemiyordu. Daha çok siber dalış odası gibiydi. Odaya dağılmış olan birkaç potun içinde Ağ Gezerlerin, siber dünyaya girmiş olduğunu gördün. Gözlerin etrafta gezinirken orta yaşlarda, siyahi ve hafif çekik gözlü birisi sana yaklaşarak elini uzattı. “Ah Mark, tam zamanında geldin, teşekkürler.”\n",
+          "dg004": "Hafifçe gülümsedin. “Anlaşılan her ne kadar, en iyi 5 siber savunma şirketinden biri olsanız dışarıdan yardıma muhtaç duruma düşebiliyorsunuz Bay Naradasi.” Direktör kaşlarını hafifçe çattı. “Hazırlıksız yakalandığımız doğru, anca şu anda zaman önemli, boş konuşmanın sırası değil. Benimle gel.”\n",
+          "dg005": "Adamın uzattığı elini sıkarak onu selamladın. “Sanırım saldırı altındaymışsınız Direktör Naradasi. Sorun ne? Saldıranlar kim biliyor musunuz?” Direkt olarak işe girmen direktörün hoşuna gitmiş olacak ki hafifçe gülümsedi. “Evet Mark, şu ana kadar dayanabildik ancak kesinlikle yardım gerekiyor. Benimle gel.”\n",
+          "dg006": "Direktörü takip ederek alandaki büyük monitörlerin önüne doğru ilerledin. Ekranlarda akan kodlar ara sıra eksilse de hemen yerine yenisi geçiyordu. “Dünden beri bununla uğraşıyoruz. Çok yoğun bir saldırı altında olduğumuz için ancak savunmaya yetecek adamımız var. Senden istediğimiz şey, siber dünyaya girip, biz savunma ile düşmanı oyalarken onlara saldıracak bir açıklık bulman ve onları indirmen.” Direktörün sözleri bittiğinde çeneni hafifçe kaşıdın. \n\n“Bahsettiğiniz kadar yoğunsa dediğiniz şeyi yapmak kolay olmayacak.” \n\n“Alacağın ücrette bununla paralel olacak Mark, merak etme.” \n\nPara konusu açıldığında hafifçe gülümsedin. “Gireceğim potu gösterin.”\n",
+          "dg007": "“Cyber Readers’a öncelik ver Leona. Nerede buluşmak istiyorlar?” Kahveni hızlıca bitirip kıyafetlerini değiştirmek için yatak odana gittin. “Şehrin Pacigeon Bölgesi’ndeki merkezlerinde onlarla görüşeceksin Mark. Yaklaşık 33 dakika da orada olursun. Saat şu anda 07.32. Randevuyu saat kaça almamı istersin?” \n\nÜzerini değiştirmiş ve ekipman odana ilerlemiştin. “08.30 ideal Leona, teşekkürler.” Dedin. Ardından silah dolabını açarak önce tabanca kemerini taktın ve sonrasında sırtına asabileceğin bir tüfek çıkardın dolaptan. Tabancanı ve tüfeğini kuşandığında dolabın kenarında duran mühimmat çantanı da sırtına atarak odadan çıktın. Kulağına kulaklığını taktın ve ceketini alarak evinden çıktın. Garajında duran motoruna binerek randevu konumuna doğru ilerlemeye başladın. \n\nSkyset City, ülkedeki en bozuk şehirlerden biriydi ve burada paralı askerlik yaygın. Bu yüzden yolda, sırtında silah bulunan birisi kolay kolay polis tarafından durdurulmazdı. Sende bu sayede saat 08.01’de Cyber Readers’ın merkezine gelebilmiştin.\n",
+          "dg008": "Motorunu park edip binadan içeri girdin. Girişteki sensörleri seni baştan aşağı taradı ve sonunda bir kadının “Hoş geldiniz Mark Ian Blue. Direktör Andrew Autera sizi 13. Katta, Ağ Çarpışması biriminde bekliyor.” Konuşan kişi Cyber Readers’ın yapay zekasıydı. \n\nBaşınla anladığını belirterek asansöre ilerledin. Asansöre binip 13’e bastın ve yukarı çıkarken kulağına dolan hafif müziği dinlemeye başladın. 13. Kata geldiğinde kapılar iki yana açıldı ve asansörden çıktın. Duvardaki tabelalara bakarak Ağ Çarpışması birimine ilerlemeye başladın. Sen yaklaştığında birimin kapısı açıldı ve içeri girdin. \n\nSıradan bir ana kontrol odasına benziyordu. Gayet sakin gibiydi, herkes işinin başında sessizce çalışıyordu. Gözlerin etrafta gezinirken orta yaşlarda, açık tenli ve mavi gözlü birisi sana yaklaşarak elini uzattı. “Ah Mark, tam zamanında geldin, teşekkürler.”\n",
+          "dg009": "Hafifçe gülümsedin. “Anlaşılan her ne kadar, en iyi 5 paralı asker şirketinden biri olsanız dışarıdan yardıma muhtaç duruma düşebiliyorsunuz Bay Autera.” Direktör kaşlarını hafifçe çattı. “Hazırlıksız yakalandığımız doğru, anca şu anda zaman önemli, boş konuşmanın sırası değil. Benimle gel.”\n",
+          "dg010": "Adamın uzattığı elini sıkarak onu selamladın. “Sanırım bir hırsızlık söz konusu Direktör Autera. Sorun ne? Hırsızın kim olduğunu biliyor musunuz?” Direkt olarak işe girmen direktörün hoşuna gitmiş olacak ki hafifçe gülümsedi. “Evet Mark, bu işi kendi askerlerimize yaptırırsak çok büyük ses çıkar ve halk bu durumu öğrenir bu yüzden bizim dışımızdan birine ihtiyacımız vardı. Benimle gel.”\n",
+          "dg011": "Direktörü takip ederek kontrol odasından çıktın ve onun kişisel ofisine girdin. Direktör masasının önüne geçtiğinde masaya dokundu ve bir kamera görüntüsü oynamaya başladı. Görüntüde bir adama saldıran yaklaşık 7 8 kişi vardı. “Alfred Torick. On yılı aşkın süredir şirketin iç halkasında. Dün gece darp edildi ve benim dışımda onda olduğunu kimsenin bilmediği bir bellek çalındı. Görüntülerdeki kişiler ise gece içinde kayıplara karıştılar. Sende istediğimiz de bu kişilerden hangisinin belleği çaldığını öğrenmen ve onu geri getirmen.” \n\nÇeneni hafifçe kaşıdın. “Kolay olmayacak ancak yapabilirim. Öncelikle Bay Torick ile konuşmak istiyorum.” Diyerek direktöre döndün ancak direktörün yüzünde kasvetli bir hava vardı. “Alfred Torick bugün hastanede öldü. Aldığı darbelerin birçoğu hayati organına gelmiş. Normal insan gücüyle yapılamayacak hasarlar olduğu için saldırganların-“ derken direktörün sözünü kestin. \n\n“Saldırganların sibernetik uzuv geliştirmelerine sahip olduğunu düşünüyorsunuz. İşi daha da zorlaştıracak bir durum.” \n\n“Alacağın ücrette bununla paralel olacak Mark, merak etme.” \n\nPara konusu açıldığında hafifçe gülümsedin. “O halde bana darp mahalinin yerini gösterin.”\n",
+          "dg012": "Devam Edecek...",
+          "ch01": "“Sorunlarını biliyor musun Leona?”",
+          "ch02": "“Cyber Readers’ları önce koy.”",
+          "ch03": "“Techno Line’la ilk önce göreşelim.”",
+          "ch04": "Alaycı ol.",
+          "ch05": "Ciddi ol."
+        },
+        "en-US": {
+          "dg000": "You opened your eyes to the sound of the alarm. “Leona, turn off the alarm.” You said getting up from your bed. Leona was your personal AI assistant. “Good morning Mark, it's 7:16 am. Partly cloudy and 18 degrees.” You cracked your neck slowly and made your way to the bathroom. In the bathroom, you put your hands on the sink and looked at yourself in the mirror. A small bruise from yesterday was fading under his eye. You shook your head, collected yourself, and washed your face. \n\n“Your coffee is ready, Mark.” With Leona's sentence, you left the bathroom and proceeded to the kitchen. You poured a steaming coffee from the machine on the black marble counter into a glass. “You have two meetings for today, Mark. Both wanted you to set the time. One is Cyber Readers. They want to benefit from your military service. The other is Techno Line. They made a note that they need Network Roaming abilities. Who would you like to meet first?”\n",
+          "dg001": "“According to the appointment notes, a memory was stolen from the Cyber Readers headquarters. They want you to take this back. The person or persons who stole it are not written.” Leaning on the counter, he started drinking his coffee. “What's wrong with Techno Line?” While you were drinking your coffee, Leona answered your question. “Techno Line has been under cyber attack since 6:35 pm yesterday. According to the note he added, their Network Wanderers were on the defensive, but could not take action against the attackers due to the constant attack. The attacker or persons were not written.”\n",
+          "dg002": "“Let's see Techno Line first, Leona. Where do they want to meet?” You quickly finished your coffee and went to your bedroom to change your clothes. “You will meet them at their city center in the Tellesa District, Mark. You'll be there in about 47 minutes. The time is now 07:32. What time do you want me to make the appointment?” \n\nYou changed and proceeded to your equipment room. “08.30 is ideal Leona, thanks.” You said and inserted the neural interconnection chip into the memory slot in your temple through the Network Mobility equipment. After the stream of code passed over the cybernetic computer in your eyes, your vision was back again. You put on your earphones and took your jacket and left the house. You got into your car parked in your garage and started to make your way to the rendezvous location.\n",
+          "dg003": "After a 40-minute journey, you came to the center of Techno Line. You parked your engine and entered the building. The sensors at the entrance scanned you from head to toe, and finally a man said, “Welcome, Mark Ian Blue. Director Temura Naradasi is waiting for you on the 17th Floor, in the Net Maze unit.” The person speaking was the artificial intelligence of Techno Line. \n\nYou nodded and proceeded to the elevator. You got into the elevator and pressed 17 and started listening to the soft music that filled your ears as you went up. When you got to the 17th floor, the doors opened and you stepped out of the elevator. Looking at the signs on the wall, you started to move towards the Net Maze unit. As you approached, the door to the unit opened and you walked in. \n\nIt didn't look like an ordinary master control room. It was more like a cyber diving room. In a few pots scattered around the room, you saw that the Network Walkers had entered the cyber world. While your eyes were wandering around, a middle-aged black man with slightly slanted eyes approached you and held out his hand. “Oh Mark, you're just in time, thank you.”\n",
+          "dg004": "You smiled slightly. “It seems that although you are one of the top 5 cyber defense companies, you may be in need of outside help, Mr. Naradasi.” The director frowned slightly. “It is true that we were caught off guard, but right now time is of the essence, not the time for idle talk. Come with me.”\n",
+          "dg005": "You shook the man's outstretched hand and greeted him. “I think you are under attack, Director Naradasi. What's the problem? Do you know who the attackers are?” The director must have been pleased that you were hired directly, as he smiled slightly. “Yes Mark, we've been able to hold on so far, but we definitely need help. Come with me.”\n",
+          "dg006": "You followed the director towards the large monitors in the space. Even though the codes flowing on the screens were reduced from time to time, they were replaced immediately. “We have been dealing with this since yesterday. Since we are under heavy attack, we only have enough men to defend. What we're asking you to do is enter the cyber world, find an opening to attack them while we stall the enemy with defense, and take them down.” You lightly scratched your chin as the director finished. \n\n“It won't be easy to do what you say if it's as intense as you say it is.” \n\n“Your pay will be in line with that, Mark, don't worry.” \n\nYou smiled slightly when the topic of money came up. “Show me the pot I'm going in.”\n",
+          "dg007": "“Prioritize Cyber Readers, Leona. Where do they want to meet?” You quickly finished your coffee and went to your bedroom to change your clothes. “You will meet them at their city center in the Pacigeon District, Mark. You'll be there in about 33 minutes. The time is now 07:32. What time do you want me to make the appointment?” \n\nYou changed and proceeded to your equipment room. “08.30 is ideal Leona, thanks.” You said. Then you opened the gun cabinet, first put on your gun belt and then took out a rifle that you could hang on your back. When you were armed with your pistol and rifle, you threw your ammunition bag on your back and left the room. You put on your earphones and took your jacket and left the house. You got into your car parked in your garage and started to make your way to the rendezvous location. \n\nSkyset City was one of the most corrupt cities in the country, and mercenaries are common here. Therefore, on the road, someone with a gun on his back would not be easily stopped by the police. Thanks to this, you were able to come to the center of Cyber Readers at 08.01.\n",
+          "dg008": "You parked your engine and entered the building. The sensors at the entrance scanned you from head to toe, and finally a woman said, “Welcome, Mark Ian Blue. Director Andrew Autera awaits you in the Network Crash unit on Floor 13.” The person speaking was the artificial intelligence of Cyber Readers. \n\nYou nodded and proceeded to the elevator. You got into the elevator and pressed 13 and started listening to the soft music that filled your ears as you went up. When you reached the 13th floor, the doors opened and you stepped out of the elevator. Looking at the signs on the wall, you started to advance towards the Network Skirmish unit. As you approached, the door to the unit opened and you walked in. \n\nIt looked like an ordinary master control room. It seemed quite calm, everyone was working quietly at their work. While your eyes were wandering around, a middle-aged, fair-skinned and blue-eyed person approached you and held out his hand. “Oh Mark, you're just in time, thank you.”\n",
+          "dg009": "You smiled slightly. “It seems that although you are one of the top 5 companies of mercenaries, you may be in need of outside help, Mr. Autera.” The director frowned slightly. “It is true that we were caught off guard, but right now time is of the essence, not the time for idle talk. Come with me.”\n",
+          "dg010": "You shook the man's outstretched hand and greeted him. “I think there's been a theft, Director Autera. What's the problem? Do you know who the thief is?” The director must have been pleased that you were hired directly, as he smiled slightly. “Yes Mark, it would be a big deal if we had our own soldiers do this job and the public would know about it, so we needed someone outside of us. Come with me.”\n",
+          "dg011": "You followed the director out of the control room and into his personal office. When the director stepped in front of his desk, he touched the desk and a footage began to play. There were about 7 8 people in the footage attacking a man. “Alfred Torick. In the inner circle of the company for over ten years. He was beaten last night, and a memory was stolen that no one knew he had except me. The people in the images disappeared during the night. What we want is for you to find out which of these people stole the memory and bring it back.” \n\nYou scratched your chin lightly. “It won't be easy, but I can do it. I would like to speak to Mr. Torick first.” You turned to the director, but the director had a gloomy look on his face. “Alfred Torick died in hospital today. Many of the blows he received were on his vital organ. You interrupted the director when you said that the attackers-“, since there is damage that cannot be done with normal human power. \n\n“You think the attackers have cybernetic limb enhancements. It is a situation that will make the job even more difficult.” \n\n“Your pay will be in line with that, Mark, don't worry.” \n\nYou smiled slightly when the topic of money came up. “Then show me the location of the assault.”\n",
+          "dg012": "To be continued…",
+          "ch01": "“Do you know your problems Leona?”",
+          "ch02": "“Put the Cyber Readers first.”",
+          "ch03": "“Let's talk to Techno Line first.”",
+          "ch04": "Be sarcastic.",
+          "ch05": "Be serious."
+        }
+      },
+      "dialogs": [
+        {
+          "choices": [
+            {
+              "id": 0,
+              "nextdialog": 1,
+              "text": "ch01"
+            },
+            {
+              "id": 1,
+              "nextdialog": 7,
+              "text": "ch02"
             },
             {
               "id": 2,
               "nextdialog": 2,
-              "text": "c0dg1ch3"
+              "text": "ch03"
+            }
+          ],
+          "id": 0,
+          "image": "train",
+          "save": false,
+          "text": "dg000"
+        },
+        {
+          "choices": [
+            {
+              "id": 0,
+              "nextdialog": 7,
+              "text": "ch02"
+            },
+            {
+              "id": 1,
+              "nextdialog": 2,
+              "text": "ch03"
             }
           ],
           "id": 1,
           "image": "train",
           "save": false,
           "text": "dg001"
+        },
+        {
+          "id": 2,
+          "image": "train",
+          "save": false,
+          "text": "dg002"
+        },
+        {
+          "choices": [
+            {
+              "id": 0,
+              "nextdialog": 4,
+              "text": "ch04"
+            },
+            {
+              "id": 1,
+              "nextdialog": 5,
+              "text": "ch05"
+            }
+          ],
+          "id": 3,
+          "image": "train",
+          "save": false,
+          "text": "dg003"
+        },
+        {
+          "id": 4,
+          "nextdialog": 6,
+          "image": "train",
+          "save": false,
+          "text": "dg004"
+        },
+        {
+          "id": 5,
+          "nextdialog": 6,
+          "image": "train",
+          "save": false,
+          "text": "dg005"
+        },
+        {
+          "id": 6,
+          "nextdialog": 12,
+          "image": "train",
+          "save": false,
+          "text": "dg006"
+        },
+        {
+          "id": 7,
+          "image": "train",
+          "save": false,
+          "text": "dg007"
+        },
+        {
+          "choices": [
+            {
+              "id": 0,
+              "nextdialog": 9,
+              "text": "ch04"
+            },
+            {
+              "id": 1,
+              "nextdialog": 10,
+              "text": "ch05"
+            }
+          ],
+          "id": 8,
+          "image": "train",
+          "save": false,
+          "text": "dg008"
+        },
+        {
+          "id": 9,
+          "nextdialog": 11,
+          "image": "train",
+          "save": false,
+          "text": "dg009"
+        },
+        {
+          "id": 10,
+          "image": "train",
+          "save": false,
+          "text": "dg010"
+        },
+        {
+          "id": 11,
+          "image": "train",
+          "save": false,
+          "text": "dg011"
+        },
+        {
+          "id": 12,
+          "image": "train",
+          "save": false,
+          "text": "dg012"
         }
       ]
-    },
-    {
-      "id": 2,
-      "name": "Hk3",
-      "imageUrl": "assets/images/yemekhane.jpeg"
     }
   ],
   "images": {

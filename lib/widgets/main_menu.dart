@@ -7,7 +7,7 @@ import 'package:story_app/data.dart';
 import 'package:story_app/utils/audio_background.dart';
 import 'package:story_app/widgets/cards.dart';
 import 'package:story_app/widgets/setting.dart';
-
+import 'package:story_app/giris_sayfasi.dart';
 import '../story_choice_page.dart';
 import 'get_settings.dart';
 
@@ -55,7 +55,7 @@ class _MainMenuPageState extends State<MainMenuPage> {
                   Navigator.pushReplacement(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => const CardListView(),
+                      builder: (context) => const GirisSayfasi(),
                     ),
                   );
                 },

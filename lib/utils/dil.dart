@@ -20,6 +20,8 @@ class Dil extends Translations {
           'Çıkış': 'Çıkış',
           'dil': 'tr-TR',
           'speechRate': '0.4',
+          'hg': 'Hoş Geldiniz',
+          'kf': 'Kapak Fotoğrafı'
         },
         'en_US': {
           'Duraklat': 'Pause',
@@ -32,6 +34,8 @@ class Dil extends Translations {
           'Çıkış': 'Exit',
           'dil': 'en-US',
           'speechRate': '0.3',
+          'hg': 'Welcome',
+          'kf': 'Cover Photo'
         },
       };
 }

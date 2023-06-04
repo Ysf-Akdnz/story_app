@@ -38,12 +38,12 @@ dependencies:
   cupertino_icons: ^1.0.2
   floating_action_bubble: ^1.1.4
   flutter_arc_speed_dial: ^2.0.1
-  google_fonts: ^3.0.1
+  google_fonts: ^4.0.4
   json_serializable: ^6.6.0
   shared_preferences: ^2.0.15
   json_annotation: ^4.8.0
   build_runner: ^2.3.3
-  flame_audio: ^1.4.0
+  flame_audio: ^2.0.2
   firebase_database: ^10.0.15
   firebase_core: ^2.7.1
   just_audio: ^0.9.31

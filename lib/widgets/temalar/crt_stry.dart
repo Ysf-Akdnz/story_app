@@ -1,5 +1,12 @@
+import 'dart:ffi';
+
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:story_app/widgets/temalar/add_choice_btn.dart';
+import 'package:story_app/widgets/temalar/choice_btn.dart';
+import 'dialog_data.dart';
+import '../user_stories.dart';
 
 class CrtStryBtn {
   storyButton(String hintText) {
@@ -60,7 +67,7 @@ class _Btn1State extends State<Btn1> {
         });
       },
       child: Container(
-        margin: const EdgeInsets.only(right: 15),
+        margin: const EdgeInsets.only(right: 15, left: 15),
         height: 225,
         width: 150,
         clipBehavior: Clip.hardEdge,
@@ -78,90 +85,126 @@ class _Btn1State extends State<Btn1> {
                     )
                   ]
                 : null),
-        child: Align(
-          alignment: Alignment.center,
-          child: Icon(
-            Icons.add_circle_outline,
-            color: Colors.black.withOpacity(0.5),
-            size: 50,
+        child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
+          Text(
+            'kf'.tr,
+            style: GoogleFonts.quintessential(
+              color: Colors.white.withOpacity(0.5),
+              fontSize: 20,
+            ),
           ),
-        ),
+          Align(
+            alignment: Alignment.center,
+            child: Icon(
+              Icons.add_circle_outline,
+              color: Colors.black.withOpacity(0.5),
+              size: 50,
+            ),
+          ),
+        ]),
       ),
     );
   }
 }
 
 class DlgNo {
-  dlgNo() {
+  dlgNo(hintText1, hintText2) {
     return Column(
       children: [
         InkWell(
           onTap: () {},
+          child: SizedBox(
+            width: double.infinity, // Genişlik sınırlaması
+            child: Container(
+              margin: const EdgeInsets.only(
+                  left: 15, bottom: 25, top: 5, right: 15),
+              padding: const EdgeInsets.symmetric(horizontal: 50, vertical: 10),
+              width: 175,
+              decoration: BoxDecoration(
+                color: Colors.grey.withOpacity(0.2),
+                borderRadius: BorderRadius.circular(15),
+                boxShadow: const [
+                  BoxShadow(
+                    color: Colors.black54,
+                    offset: Offset(0, 6),
+                    blurRadius: 5,
+                  )
+                ],
+              ),
+              child: Text(
+                "Oluştur",
+                textAlign: TextAlign.center,
+                style: GoogleFonts.quintessential(
+                  color: Colors.white.withOpacity(0.5),
+                  fontSize: 15,
+                ),
+              ),
+            ),
+          ),
+        ),
+        SizedBox(
+          width: 150,
+          //width: double.infinity, // Genişlik sınırlaması
           child: Container(
-            margin: const EdgeInsets.only(left: 10, bottom: 25, top: 5),
-            padding: const EdgeInsets.symmetric(horizontal: 50, vertical: 10),
-            width: 200,
             decoration: BoxDecoration(
               color: Colors.grey.withOpacity(0.2),
-              borderRadius: BorderRadius.circular(15),
-              // ignore: prefer_const_literals_to_create_immutables
-              boxShadow: [
-                const BoxShadow(
-                  color: Colors.black54,
-                  offset: Offset(0, 6),
-                  blurRadius: 5,
-                )
-              ],
+              borderRadius: BorderRadius.circular(20),
             ),
-            child: Text(
-              "Oluştur",
+            margin: const EdgeInsets.only(right: 50, left: 0, bottom: 10),
+            //padding: const EdgeInsets.symmetric(horizontal: 10),
+            child: TextFormField(
+              style: GoogleFonts.quintessential(color: Colors.white),
               textAlign: TextAlign.center,
-              style: GoogleFonts.quintessential(
-                  color: Colors.white.withOpacity(0.5), fontSize: 15),
+              decoration: InputDecoration(
+                border: InputBorder.none,
+                hintText: hintText1,
+                hintStyle: GoogleFonts.quintessential(
+                  color: Colors.white.withOpacity(0.5),
+                ),
+              ),
             ),
           ),
         ),
-        Container(
-          decoration: BoxDecoration(
-            color: Colors.grey.withOpacity(0.2),
-            borderRadius: BorderRadius.circular(20),
-          ),
-          margin: const EdgeInsets.only(bottom: 5, top: 5),
-          padding: const EdgeInsets.symmetric(horizontal: 50, vertical: 10),
-          child: Text(
-            "Dlg No",
-            style: GoogleFonts.quintessential(
-              color: Colors.white.withOpacity(0.5),
+        SizedBox(
+          width: 150,
+          //width: double.infinity, // Genişlik sınırlaması
+          child: Container(
+            decoration: BoxDecoration(
+              color: Colors.grey.withOpacity(0.2),
+              borderRadius: BorderRadius.circular(20),
+            ),
+            margin: const EdgeInsets.only(right: 50, bottom: 10),
+            padding: const EdgeInsets.symmetric(horizontal: 10),
+            child: TextFormField(
+              style: GoogleFonts.quintessential(color: Colors.white),
+              textAlign: TextAlign.center,
+              decoration: InputDecoration(
+                border: InputBorder.none,
+                hintText: hintText2,
+                hintStyle: GoogleFonts.quintessential(
+                  color: Colors.white.withOpacity(0.5),
+                ),
+              ),
             ),
           ),
         ),
-        Container(
-          decoration: BoxDecoration(
-            color: Colors.grey.withOpacity(0.2),
-            borderRadius: BorderRadius.circular(20),
-          ),
-          margin: const EdgeInsets.only(bottom: 30, top: 5),
-          padding: const EdgeInsets.symmetric(horizontal: 39, vertical: 10),
-          child: Text(
-            "NxtDlg No",
-            style: GoogleFonts.quintessential(
-              color: Colors.white.withOpacity(0.5),
-            ),
-          ),
-        )
       ],
     );
   }
 }
 
+
+
 class DialogsView {
-  dialogsView() {
-    return const DialogsViews();
+  dialogsView(hintText1) {
+    return DialogsViews();
   }
 }
 
 class DialogsViews extends StatefulWidget {
-  const DialogsViews({super.key});
+  const DialogsViews({
+    super.key,
+  });
 
   @override
   State<DialogsViews> createState() => _DialogsViewsState();
@@ -169,131 +212,135 @@ class DialogsViews extends StatefulWidget {
 
 class _DialogsViewsState extends State<DialogsViews> {
   bool _isTapped = false;
+
   @override
   Widget build(BuildContext context) {
-    return Expanded(
-      child: Container(
-        margin: const EdgeInsets.symmetric(horizontal: 15),
-        width: MediaQuery.of(context).size.width,
-        padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 10),
-        decoration: BoxDecoration(
-          shape: BoxShape.rectangle,
-          color: Colors.grey.withOpacity(0.2),
-          borderRadius: BorderRadiusDirectional.circular(16.0),
-        ),
-        child: Column(
-          children: [
-            Center(
-              child: GestureDetector(
-                onTap: () {},
-                onTapDown: ((details) {
-                  setState(() {
-                    _isTapped = true;
-                  });
-                }),
-                onTapUp: (details) {
-                  setState(() {
-                    _isTapped = false;
-                  });
-                },
-                onTapCancel: () {
-                  setState(() {
-                    _isTapped = false;
-                  });
-                },
-                child: Container(
-                  //margin: const EdgeInsets.only(right: ),
-                  height: 200,
+    return SafeArea(
+      child: Scaffold(
+        key: widget.key,
+        body: Expanded(
+          child: Container(
+            margin: const EdgeInsets.symmetric(horizontal: 15),
+            width: MediaQuery.of(context).size.width,
+            padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 10),
+            decoration: BoxDecoration(
+              shape: BoxShape.rectangle,
+              color: Colors.grey.withOpacity(0.2),
+              borderRadius: BorderRadiusDirectional.circular(16.0),
+            ),
+            child: Column(
+              children: [
+                Center(
+                  child: GestureDetector(
+                    onTap: () {},
+                    onTapDown: ((details) {
+                      setState(() {
+                        _isTapped = true;
+                      });
+                    }),
+                    onTapUp: (details) {
+                      setState(() {
+                        _isTapped = false;
+                      });
+                    },
+                    onTapCancel: () {
+                      setState(() {
+                        _isTapped = false;
+                      });
+                    },
+                    child: Expanded(
+                      child: Container(
+                        //margin: const EdgeInsets.only(right: ),
+                        height: 200,
+                        width: MediaQuery.of(context).size.width,
+                        clipBehavior: Clip.hardEdge,
+                        decoration: BoxDecoration(
+                            color: Colors.grey.withOpacity(0.1),
+                            shape: BoxShape.rectangle,
+                            borderRadius: BorderRadius.circular(10),
+                            boxShadow: _isTapped
+                                ? [
+                                    BoxShadow(
+                                      color: Colors.grey.withOpacity(0.1),
+                                      blurRadius: 10,
+                                      spreadRadius: 3,
+                                      offset: const Offset(0, 3),
+                                    )
+                                  ]
+                                : null),
+                        child: Align(
+                          alignment: Alignment.center,
+                          child: Icon(
+                            Icons.add_circle_outline,
+                            color: Colors.black.withOpacity(0.5),
+                            size: 50,
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+                SizedBox(
                   width: MediaQuery.of(context).size.width,
-                  clipBehavior: Clip.hardEdge,
-                  decoration: BoxDecoration(
-                      color: Colors.grey.withOpacity(0.1),
+                  child: Container(
+                    margin: const EdgeInsets.only(top: 10),
+                    //width: MediaQuery.of(context).size.width,
+                    height: 200,
+                    padding: const EdgeInsets.symmetric(
+                        horizontal: 20, vertical: 10),
+                    decoration: BoxDecoration(
                       shape: BoxShape.rectangle,
-                      borderRadius: BorderRadius.circular(10),
-                      boxShadow: _isTapped
-                          ? [
-                              BoxShadow(
-                                color: Colors.grey.withOpacity(0.1),
-                                blurRadius: 10,
-                                spreadRadius: 3,
-                                offset: const Offset(0, 3),
-                              )
-                            ]
-                          : null),
-                  child: Align(
-                    alignment: Alignment.center,
-                    child: Icon(
-                      Icons.add_circle_outline,
-                      color: Colors.black.withOpacity(0.5),
-                      size: 50,
+                      color: Colors.grey.withOpacity(0.2),
+                      borderRadius: BorderRadiusDirectional.circular(16.0),
+                    ),
+                    child: TextFormField(
+                      style: GoogleFonts.quintessential(color: Colors.white),
+                      textAlign: TextAlign.center,
+                      decoration: InputDecoration(
+                        border: InputBorder.none,
+                        hintText: "sadasda",
+                        hintStyle: GoogleFonts.quintessential(
+                          color: Colors.white.withOpacity(0.5),
+                        ),
+                      ),
                     ),
                   ),
                 ),
-              ),
-            ),
-            Container(
-              margin: const EdgeInsets.only(top: 10),
-              width: MediaQuery.of(context).size.width,
-              height: 200,
-              padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
-              decoration: BoxDecoration(
-                shape: BoxShape.rectangle,
-                color: Colors.grey.withOpacity(0.2),
-                borderRadius: BorderRadiusDirectional.circular(16.0),
-              ),
-              child: Text(
-                "Hikayeni Yaz",
-                textAlign: TextAlign.center,
-                style: GoogleFonts.quintessential(
-                  fontSize: Theme.of(context).textTheme.headline6?.fontSize,
-                  color: Colors.white.withOpacity(0.75),
+                SizedBox(
+                  width: 100,
+                  child: Container(
+                    margin: const EdgeInsets.only(top: 10),
+                    //width: MediaQuery.of(context).size.width,
+                    height: 50,
+                    padding: const EdgeInsets.symmetric(
+                        horizontal: 10, vertical: 10),
+                    decoration: BoxDecoration(
+                      shape: BoxShape.rectangle,
+                      color: Colors.grey.withOpacity(0.2),
+                      borderRadius: BorderRadiusDirectional.circular(16.0),
+                    ),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      mainAxisSize: MainAxisSize.max,
+                      children: [
+                        Icon(
+                          Icons.close,
+                          color: Colors.white.withOpacity(0.5),
+                        ),
+                      ],
+                    ),
+                  ),
                 ),
-              ),
+              ],
             ),
-            Container(
-              margin: const EdgeInsets.only(top: 10),
-              width: MediaQuery.of(context).size.width,
-              height: 50,
-              padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
-              decoration: BoxDecoration(
-                shape: BoxShape.rectangle,
-                color: Colors.grey.withOpacity(0.2),
-                borderRadius: BorderRadiusDirectional.circular(16.0),
-              ),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                mainAxisSize: MainAxisSize.max,
-                children: [
-                  Icon(
-                    Icons.close,
-                    color: Colors.white.withOpacity(0.5),
-                  ),
-                  Text(
-                    "Seçim Ekle",
-                    textAlign: TextAlign.center,
-                    style: GoogleFonts.quintessential(
-                      fontSize: Theme.of(context).textTheme.headline6?.fontSize,
-                      color: Colors.white.withOpacity(0.75),
-                    ),
-                  ),
-                  Text(
-                    "13",
-                    style: GoogleFonts.quintessential(
-                      fontSize: Theme.of(context).textTheme.headline6?.fontSize,
-                      color: Colors.white.withOpacity(0.5),
-                    ),
-                  ),
-                ],
-              ),
-            ),
-          ],
+          ),
         ),
       ),
     );
   }
 }
 
-class AfBfbutton {
+/*class AfBfbutton {
   abButton() {
     return const BeforeAfterButtons();
   }
@@ -388,4 +435,99 @@ class _BeforeAfterButtonsState extends State<BeforeAfterButtons> {
       ],
     );
   }
+}*/
+
+/*class DialogList {
+  abButton() {
+    return;
+  }
 }
+
+class DialogListt extends StatefulWidget {
+  const DialogListt({super.key});
+
+  @override
+  State<DialogListt> createState() => _DialogListtState();
+}
+
+class _DialogListtState extends State<DialogListt> {
+  Future<dynamic> getdialogs() async {
+    await Future.delayed(Duration.zero);
+    return [];
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      width: MediaQuery.of(context).size.width,
+      margin: const EdgeInsets.all(10),
+      padding: const EdgeInsets.all(8.0),
+      decoration: BoxDecoration(
+        shape: BoxShape.rectangle,
+        color: Colors.grey[900],
+        borderRadius: BorderRadiusDirectional.circular(16.0),
+      ),
+      child: FutureBuilder<dynamic>(
+        future: getdialogs(),
+        builder: (context, snapshot) {
+          List<Widget> children;
+          if (snapshot.hasData) {
+            var stories = snapshot.data;
+            List<Widget> storyWidget = (stories as List<dynamic>)
+                .map((story) => CardButtonsUser(
+                      id: story["id"],
+                      name: story["name"],
+                      imageUrl: story["imageUrl"],
+                    ))
+                .toList();
+            return GridView.count(
+              crossAxisCount: 2,
+              padding: const EdgeInsets.all(10.0),
+              childAspectRatio: 9.0 / 13.9,
+              children: [
+                //...storyWidget,
+                const HikEkleButonu(),
+              ],
+            );
+          } else if (snapshot.hasError) {
+            children = <Widget>[
+              const Icon(
+                Icons.error_outline,
+                color: Colors.red,
+                size: 60,
+              ),
+              Padding(
+                padding: const EdgeInsets.only(top: 16),
+                child: Text('Error: ${snapshot.error}'),
+              ),
+            ];
+          } else {
+            children = <Widget>[
+              const SizedBox(
+                width: 60,
+                height: 60,
+                child: CircularProgressIndicator(),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(top: 16),
+                child: Text(
+                  'Loading',
+                  style: GoogleFonts.quintessential(
+                    color: Colors.white,
+                    fontWeight: FontWeight.bold,
+                    fontStyle: FontStyle.italic,
+                  ),
+                ),
+              ),
+            ];
+          }
+          return Center(
+            child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: children),
+          );
+        },
+      ),
+    );
+  }
+}*/

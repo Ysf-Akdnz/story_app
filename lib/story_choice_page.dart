@@ -170,16 +170,19 @@ class _StoryChoicePageState extends State<StoryChoicePage> {
                           var chText = textData[dil][choice["text"]];
                           return SizedBox(
                             width: MediaQuery.of(context).size.width,
-                            child: GestureDetector(
-                              onLongPress: () {
-                                setState(() {
-                                  currentDialog = choice["nextdialog"];
-                                });
-                              },
-                              child: ElevatedButton(
-                                style: style,
-                                onPressed: () {},
-                                child: Text(chText),
+                            child: Container(
+                              padding: const EdgeInsets.only(top: 5),
+                              child: GestureDetector(
+                                onLongPress: () {
+                                  setState(() {
+                                    currentDialog = choice["nextdialog"];
+                                  });
+                                },
+                                child: ElevatedButton(
+                                  style: style,
+                                  onPressed: () {},
+                                  child: Text(chText),
+                                ),
                               ),
                             ),
                           );
@@ -251,7 +254,11 @@ class _StoryChoicePageState extends State<StoryChoicePage> {
             );
           },
         ),
-        bottomNavigationBar: GetSettings(sckey: _key, menuVisible: true,girisVisible: true,),
+        bottomNavigationBar: GetSettings(
+          sckey: _key,
+          menuVisible: true,
+          girisVisible: true,
+        ),
         endDrawer: const MySettingDrawer(),
       ),
     );

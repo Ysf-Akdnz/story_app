@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:story_app/widgets/temalar/crt_stry.dart';
+import 'package:story_app/widgets/temalar/dialogCards.dart';
 
 class StoryOlusturma extends StatefulWidget {
   const StoryOlusturma({super.key});
@@ -22,7 +23,8 @@ class _StoryOlusturmaState extends State<StoryOlusturma> {
 }
 
 class CreateStory extends StatefulWidget {
-  const CreateStory({super.key});
+  // ignore: use_key_in_widget_constructors
+  const CreateStory({Key? key});
 
   @override
   State<CreateStory> createState() => _CreateStoryState();
@@ -32,33 +34,26 @@ class _CreateStoryState extends State<CreateStory> {
   CrtStryBtn btn1 = CrtStryBtn();
   CrtStryImgView view1 = CrtStryImgView();
   DlgNo dlgNo = DlgNo();
-  DialogsView dialogsView = DialogsView();
-  AfBfbutton afBfbutton = AfBfbutton();
+  //DialogsView dialogsView = DialogsView();
+  //AfBfbutton afBfbutton = AfBfbutton();
 
   @override
   Widget build(BuildContext context) {
-    return CustomScrollView(
-      slivers: [
-        SliverFillRemaining(
-          hasScrollBody: false,
-          child: Column(
-            children: [
-              btn1.storyButton("Hikayenin Başlığını Giriniz"),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                mainAxisSize: MainAxisSize.max,
-                children: [
-                  dlgNo.dlgNo(),
-                  view1.imageView(),
-                ],
-              ),
-              const SizedBox(height: 10),
-              dialogsView.dialogsView(),
-              afBfbutton.abButton(),
-            ],
-          ),
-        ),
-      ],
+    return SizedBox(
+      width: MediaQuery.of(context).size.width,
+      //height: MediaQuery.of(context).size.height,
+      child: ListView(
+        physics: ScrollPhysics(),
+        shrinkWrap: true,
+        children: [
+          btn1.storyButton("Hikayenin Başlığını Giriniz"),
+          view1.imageView(),
+          const SizedBox(height: 10),
+          const DialogCards()
+          //dialogsView.dialogsView("Hikayeni Yaz"),
+          //afBfbutton.abButton(),
+        ],
+      ),
     );
   }
 }
