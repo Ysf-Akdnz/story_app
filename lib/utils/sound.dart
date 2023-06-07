@@ -1,4 +1,4 @@
 bool muteMusic = false;
-bool playSpeak = true;
+bool playSpeak = false;
 //global değişkenlerdir. ekran değişse bile diğişmeyecek değişkenlerdir.
 

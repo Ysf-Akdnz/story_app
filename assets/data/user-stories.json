@@ -1,0 +1,42 @@
+{
+    "chapters": [
+        {"id": "",
+        "name": "",
+        "imageUrl": "",
+        "music": "",
+        "dialogs": [
+            {
+              "id": 0,
+              "image": "",
+              "save": true,
+              "text": "",
+              "music": "",
+              "volume": 0
+            },
+            {
+              "choices": [
+                {
+                  "id": 0,
+                  "nextdialog": 3,
+                  "text": ""
+                },
+                {
+                  "id": 1,
+                  "nextdialog": 17,
+                  "text": ""
+                },
+                {
+                  "id": 2,
+                  "nextdialog": 2,
+                  "text": ""
+                }
+              ],
+              "id": 1,
+              "image": "",
+              "save": false,
+              "text": ""
+            }
+          ]
+        }
+    ]
+}

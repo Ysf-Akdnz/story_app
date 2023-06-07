@@ -2,6 +2,9 @@
   "chapters": [
     {
       "id": 0,
+      "name": "Let M a Legend",
+      "imageUrl": "assets/images/let-me-a-legend.jpeg",
+      "music": "assets/musics/main-menu-music.ogg",
       "texts": {
         "tr-TR": {
           "dg000": "At arabasının sallantılarıyla gözlerini yavaşça araladın. Gece göğünün altında bulutsuz ve yıldızlı bir manzarayla karşılaştın. Yavaşça doğrulduğunda yanında, senin yaşlarında birkaç gencin daha uyuduğunu gördün. İleride meşale ışıkları gözükmeye başlamıştı. \n\n“Uyanın!” diye bağırdı sürücü ve uyumakta olanlar herkesi uyandırdı. Kısa süre sonra araba durduğunda örme zincir zırh giymiş bir asker arabaya yaklaştı. \n\n“İnin ve beni takip edin.” \n\nArabadan inip adamı takip etmeye başladın. Onu takip ederken talim alanlarının etrafından geçtiğinizi fark ettin. İlk talim alanı neredeyse boştu. Sadece birkaç kişi birbirleriyle kılıç mücadelesindeydi ve bir hayli yorulmuş görünüyorlardı. İkinci talim alanına geldiğinizde takip ettiğiniz asker durdu. Yanına iki asker daha geldi ve birisi elindeki parşömen ve kalemi, sizi oraya götüren askere uzattı. Başınızdaki asker parşömen ve kağıdı aldı ve size döndü. \n\n“Sıraya girin, sırayla bilgileriniz alınacak.”\n",
@@ -107,7 +110,9 @@
           "id": 0,
           "image": "train",
           "save": true,
-          "text": "dg000"
+          "text": "dg000",
+          "music": "assets/musics/skyrim.mp3",
+          "volume": 0.9
         },
         {
           "choices": [
@@ -386,14 +391,13 @@
           "text": "dg031",
           "save": false
         }
-      ],
-      "name": "Let M a Legend",
-      "imageUrl": "assets/images/let-me-a-legend.jpeg"
+      ]
     },
     {
       "id": 1,
       "name": "Out Of Dark",
-      "imageUrl": "assets/images/training-area.jpeg",
+      "imageUrl": "assets/images/kapak-foto.jpeg",
+      "music": "assets/musics/main-menu-music.ogg",
       "texts": {
         "tr-TR": {
           "dg000": "Saatlerdir ormanda dolaşıyor, ne yapacağını bilmiyordun. Nereden geldiğini, nasıl geldiğini, burada ne işin olduğunu bilmiyordun, hiçbir şey hatırlamıyordun. Kasvetli karanlığın çevrelediği ağaçlar arasında umutsuzca koşuyordun. Görebildiğin tek şey, aysız gökteki yıldızların cılız ışıklarının, ölü ağaçlarının arasından geçerken oluşturduğu devasa gölgelerdi. Nefes nefese kalmış vaziyette bir ağaca yaslandığın sırada ormanın içinden gelen sesler, içindeki korkuyu arttırıyor, gözlerinin istemsizce etrafa bakmasına neden oluyorlardı. \n\nYapabileceğin tek şey ilerlemek, ilerlemek ve ilerlemekti. Ayakların senden izinsiz hareket etmeye başladığında omurgandan aşağı soğuk bir ter damlasının indiğini hissettin. Nefeslerin sessizleşirken korku bedenini parça parça ele geçiriyordu. Nihayetinde ayaklarının kontrolünü ele geçirdiğinde önünde çok fazla seçenek olmadığını fark ettin.\n",
@@ -468,9 +472,11 @@
             }
           ],
           "id": 0,
-          "image": "train",
+          "image": "c1_1",
           "save": false,
-          "text": "dg000"
+          "text": "dg000",
+          "music": "assets/musics/horror-ambiance.mp3",
+          "volume": 0.9
         },
         {
           "choices": [
@@ -491,7 +497,7 @@
             }
           ],
           "id": 1,
-          "image": "train",
+          "image": "c1_2",
           "save": false,
           "text": "dg005"
         },
@@ -509,7 +515,7 @@
             }
           ],
           "id": 2,
-          "image": "train",
+          "image": "c1_1",
           "save": false,
           "text": "dg002"
         },
@@ -527,7 +533,7 @@
             }
           ],
           "id": 3,
-          "image": "train",
+          "image": "c1_6",
           "save": false,
           "text": "dg003"
         },
@@ -545,7 +551,7 @@
             }
           ],
           "id": 4,
-          "image": "train",
+          "image": "c1_2",
           "save": false,
           "text": "dg008"
         },
@@ -553,7 +559,7 @@
           "choices": [],
           "id": 5,
           "nextdialog": 10,
-          "image": "train",
+          "image": "c1_5",
           "save": false,
           "text": "dg009"
         },
@@ -571,7 +577,7 @@
             }
           ],
           "id": 6,
-          "image": "train",
+          "image": "dead",
           "save": false,
           "text": "dg001"
         },
@@ -589,7 +595,7 @@
             }
           ],
           "id": 7,
-          "image": "train",
+          "image": "dead",
           "save": false,
           "text": "dg004"
         },
@@ -607,7 +613,7 @@
             }
           ],
           "id": 8,
-          "image": "train",
+          "image": "dead",
           "save": false,
           "text": "dg006"
         },
@@ -625,14 +631,14 @@
             }
           ],
           "id": 9,
-          "image": "train",
+          "image": "dead",
           "save": false,
           "text": "dg007"
         },
         {
           "choices": [],
           "id": 10,
-          "image": "train",
+          "image": "tobicon",
           "save": false,
           "text": "dg010"
         }
@@ -641,22 +647,24 @@
     {
       "id": 2,
       "name": "Future Life",
-      "imageUrl": "assets/images/yemekhane.jpeg",
+      "imageUrl": "assets/images/cyber.jpg",
+      "music": "assets/musics/main-menu-music.ogg",
       "texts": {
         "tr-TR": {
-          "dg000": "Çalan alarm sesiyle gözlerini açmıştın. “Leona, alarmı kapat.” Dedin yatağından kalkarak. Leona senin kişisel yapay zeka asistanındı. “Günaydın Mark, saat 07.16. Hava parçalı bulutlu ve 18 derece.” Yavaşça boynunu kıtlattın ve banyoya doğru ilerledin. Banyoda, ellerini lavaboya dayayarak, aynada kendine baktın. Dünden kalmış küçük bir morluk gözünün altında solmaya yüz tutmuştu. Başını iki yana sallayıp kendini toparladın ve yüzünü yıkadın. \n\n“Kahven hazır Mark.” Leona’nın cümlesiyle banyodan çıktın ve mutfağa ilerledin. Siyah mermerden yapılmış tezgahın üstündeki makinadan dumanlar tüten kahveni bir bardağa doldurdun. “Bugün için iki görüşmen var Mark. İkisi de zamanı senin belirlemeni istedi. Birisi Cyber Readers. Askeri bakımdan hizmetinden faydalanmak istiyorlar. Diğeri ise Techno Line. Ağ Gezerlik yeteneklerine ihtiyaç duyduklarına dair not düşmüşler. Önce hangisiyle görüşmek istersin?”\n",
-          "dg001": "“Randevu notlarına göre, Cyber Readers’ın merkezinden bir bellek çalınmış. Bunu geri almanı istiyorlar. Çalan kişi yada kişiler yazılmamış.” Tezgaha yaslanarak kahveni içmeye başladı. “Techno Line’ın derdi neymiş?” Sen kahveni içmeye devam ederken Leona’da soruna cevap verdi. “Techno Line dün saat 18.35’den beri siber saldırı altındaymış. Eklediği nota göre, kendi Ağ Gezerleri savunma durumundaymış ancak sürekli saldırı sebebiyle saldıranlara karşı harekete geçememişler. Saldıran kişi yada kişiler yazılmamış.”",
-          "dg002": "“Techno Line’ı önce görelim Leona. Nerede buluşmak istiyorlar?” Kahveni hızlıca bitirip kıyafetlerini değiştirmek için yatak odana gittin. “Şehrin Tellesa Bölgesi’ndeki merkezlerinde onlarla görüşeceksin Mark. Yaklaşık 47 dakika da orada olursun. Saat şu anda 07.32. Randevuyu saat kaça almamı istersin?” \n\nÜzerini değiştirmiş ve ekipman odana ilerlemiştin. “08.30 ideal Leona, teşekkürler.” Dedin ve Ağ Gezerlik ekipmanların arasından sinirsel bağlantı çipini, şakağındaki bellek yuvasına taktın. Gözlerindeki sibernetik bilgisayar üzerinde kod akışı geçtikten sonra görüşün tekrar geri geldi. Kulağına kulaklığını taktın ve ceketini alarak evinden çıktın. Garajında duran motoruna binerek randevu konumuna doğru ilerlemeye başladın.\n",
-          "dg003": "40 dakikalık bir yolculuğun ardından Techno Line’ın merkezine gelmiştin. Motorunu park edip binadan içeri girdin. Girişteki sensörleri seni baştan aşağı taradı ve sonunda bir adamın “Hoş geldiniz Mark Ian Blue. Direktör Temura Naradasi sizi 17. Katta, Ağ Labirenti biriminde bekliyor.” Konuşan kişi Techno Line’ın yapay zekasıydı. \n\nBaşınla anladığını belirterek asansöre ilerledin. Asansöre binip 17’ye bastın ve yukarı çıkarken kulağına dolan hafif müziği dinlemeye başladın. 17. Kata geldiğinde kapılar iki yana açıldı ve asansörden çıktın. Duvardaki tabelalara bakarak Ağ Labirenti birimine ilerlemeye başladın. Sen yaklaştığında birimin kapısı açıldı ve içeri girdin. \n\nSıradan bir ana kontrol odasına benzemiyordu. Daha çok siber dalış odası gibiydi. Odaya dağılmış olan birkaç potun içinde Ağ Gezerlerin, siber dünyaya girmiş olduğunu gördün. Gözlerin etrafta gezinirken orta yaşlarda, siyahi ve hafif çekik gözlü birisi sana yaklaşarak elini uzattı. “Ah Mark, tam zamanında geldin, teşekkürler.”\n",
-          "dg004": "Hafifçe gülümsedin. “Anlaşılan her ne kadar, en iyi 5 siber savunma şirketinden biri olsanız dışarıdan yardıma muhtaç duruma düşebiliyorsunuz Bay Naradasi.” Direktör kaşlarını hafifçe çattı. “Hazırlıksız yakalandığımız doğru, anca şu anda zaman önemli, boş konuşmanın sırası değil. Benimle gel.”\n",
-          "dg005": "Adamın uzattığı elini sıkarak onu selamladın. “Sanırım saldırı altındaymışsınız Direktör Naradasi. Sorun ne? Saldıranlar kim biliyor musunuz?” Direkt olarak işe girmen direktörün hoşuna gitmiş olacak ki hafifçe gülümsedi. “Evet Mark, şu ana kadar dayanabildik ancak kesinlikle yardım gerekiyor. Benimle gel.”\n",
-          "dg006": "Direktörü takip ederek alandaki büyük monitörlerin önüne doğru ilerledin. Ekranlarda akan kodlar ara sıra eksilse de hemen yerine yenisi geçiyordu. “Dünden beri bununla uğraşıyoruz. Çok yoğun bir saldırı altında olduğumuz için ancak savunmaya yetecek adamımız var. Senden istediğimiz şey, siber dünyaya girip, biz savunma ile düşmanı oyalarken onlara saldıracak bir açıklık bulman ve onları indirmen.” Direktörün sözleri bittiğinde çeneni hafifçe kaşıdın. \n\n“Bahsettiğiniz kadar yoğunsa dediğiniz şeyi yapmak kolay olmayacak.” \n\n“Alacağın ücrette bununla paralel olacak Mark, merak etme.” \n\nPara konusu açıldığında hafifçe gülümsedin. “Gireceğim potu gösterin.”\n",
-          "dg007": "“Cyber Readers’a öncelik ver Leona. Nerede buluşmak istiyorlar?” Kahveni hızlıca bitirip kıyafetlerini değiştirmek için yatak odana gittin. “Şehrin Pacigeon Bölgesi’ndeki merkezlerinde onlarla görüşeceksin Mark. Yaklaşık 33 dakika da orada olursun. Saat şu anda 07.32. Randevuyu saat kaça almamı istersin?” \n\nÜzerini değiştirmiş ve ekipman odana ilerlemiştin. “08.30 ideal Leona, teşekkürler.” Dedin. Ardından silah dolabını açarak önce tabanca kemerini taktın ve sonrasında sırtına asabileceğin bir tüfek çıkardın dolaptan. Tabancanı ve tüfeğini kuşandığında dolabın kenarında duran mühimmat çantanı da sırtına atarak odadan çıktın. Kulağına kulaklığını taktın ve ceketini alarak evinden çıktın. Garajında duran motoruna binerek randevu konumuna doğru ilerlemeye başladın. \n\nSkyset City, ülkedeki en bozuk şehirlerden biriydi ve burada paralı askerlik yaygın. Bu yüzden yolda, sırtında silah bulunan birisi kolay kolay polis tarafından durdurulmazdı. Sende bu sayede saat 08.01’de Cyber Readers’ın merkezine gelebilmiştin.\n",
-          "dg008": "Motorunu park edip binadan içeri girdin. Girişteki sensörleri seni baştan aşağı taradı ve sonunda bir kadının “Hoş geldiniz Mark Ian Blue. Direktör Andrew Autera sizi 13. Katta, Ağ Çarpışması biriminde bekliyor.” Konuşan kişi Cyber Readers’ın yapay zekasıydı. \n\nBaşınla anladığını belirterek asansöre ilerledin. Asansöre binip 13’e bastın ve yukarı çıkarken kulağına dolan hafif müziği dinlemeye başladın. 13. Kata geldiğinde kapılar iki yana açıldı ve asansörden çıktın. Duvardaki tabelalara bakarak Ağ Çarpışması birimine ilerlemeye başladın. Sen yaklaştığında birimin kapısı açıldı ve içeri girdin. \n\nSıradan bir ana kontrol odasına benziyordu. Gayet sakin gibiydi, herkes işinin başında sessizce çalışıyordu. Gözlerin etrafta gezinirken orta yaşlarda, açık tenli ve mavi gözlü birisi sana yaklaşarak elini uzattı. “Ah Mark, tam zamanında geldin, teşekkürler.”\n",
-          "dg009": "Hafifçe gülümsedin. “Anlaşılan her ne kadar, en iyi 5 paralı asker şirketinden biri olsanız dışarıdan yardıma muhtaç duruma düşebiliyorsunuz Bay Autera.” Direktör kaşlarını hafifçe çattı. “Hazırlıksız yakalandığımız doğru, anca şu anda zaman önemli, boş konuşmanın sırası değil. Benimle gel.”\n",
-          "dg010": "Adamın uzattığı elini sıkarak onu selamladın. “Sanırım bir hırsızlık söz konusu Direktör Autera. Sorun ne? Hırsızın kim olduğunu biliyor musunuz?” Direkt olarak işe girmen direktörün hoşuna gitmiş olacak ki hafifçe gülümsedi. “Evet Mark, bu işi kendi askerlerimize yaptırırsak çok büyük ses çıkar ve halk bu durumu öğrenir bu yüzden bizim dışımızdan birine ihtiyacımız vardı. Benimle gel.”\n",
-          "dg011": "Direktörü takip ederek kontrol odasından çıktın ve onun kişisel ofisine girdin. Direktör masasının önüne geçtiğinde masaya dokundu ve bir kamera görüntüsü oynamaya başladı. Görüntüde bir adama saldıran yaklaşık 7 8 kişi vardı. “Alfred Torick. On yılı aşkın süredir şirketin iç halkasında. Dün gece darp edildi ve benim dışımda onda olduğunu kimsenin bilmediği bir bellek çalındı. Görüntülerdeki kişiler ise gece içinde kayıplara karıştılar. Sende istediğimiz de bu kişilerden hangisinin belleği çaldığını öğrenmen ve onu geri getirmen.” \n\nÇeneni hafifçe kaşıdın. “Kolay olmayacak ancak yapabilirim. Öncelikle Bay Torick ile konuşmak istiyorum.” Diyerek direktöre döndün ancak direktörün yüzünde kasvetli bir hava vardı. “Alfred Torick bugün hastanede öldü. Aldığı darbelerin birçoğu hayati organına gelmiş. Normal insan gücüyle yapılamayacak hasarlar olduğu için saldırganların-“ derken direktörün sözünü kestin. \n\n“Saldırganların sibernetik uzuv geliştirmelerine sahip olduğunu düşünüyorsunuz. İşi daha da zorlaştıracak bir durum.” \n\n“Alacağın ücrette bununla paralel olacak Mark, merak etme.” \n\nPara konusu açıldığında hafifçe gülümsedin. “O halde bana darp mahalinin yerini gösterin.”\n",
-          "dg012": "Devam Edecek...",
+          "dg000": "Çalan alarm sesiyle gözlerini açmıştın. “Leona, alarmı kapat.” Dedin yatağından kalkarak. Leona senin kişisel yapay zeka asistanındı. “Günaydın Mark, saat 07.16. Hava parçalı bulutlu ve 18 derece.” Yavaşça boynunu kıtlattın ve banyoya doğru ilerledin. Banyoda, ellerini lavaboya dayayarak, aynada kendine baktın. Dünden kalmış küçük bir morluk gözünün altında solmaya yüz tutmuştu. Başını iki yana sallayıp kendini toparladın ve yüzünü yıkadın.\n",
+          "dg001": "“Kahven hazır Mark.” Leona’nın cümlesiyle banyodan çıktın ve mutfağa ilerledin. Siyah mermerden yapılmış tezgahın üstündeki makinadan dumanlar tüten kahveni bir bardağa doldurdun. “Bugün için iki görüşmen var Mark. İkisi de zamanı senin belirlemeni istedi. Birisi Cyber Readers. Askeri bakımdan hizmetinden faydalanmak istiyorlar. Diğeri ise Techno Line. Ağ Gezerlik yeteneklerine ihtiyaç duyduklarına dair not düşmüşler. Önce hangisiyle görüşmek istersin?”\n",
+          "dg002": "“Randevu notlarına göre, Cyber Readers’ın merkezinden bir bellek çalınmış. Bunu geri almanı istiyorlar. Çalan kişi yada kişiler yazılmamış.” Tezgaha yaslanarak kahveni içmeye başladı. “Techno Line’ın derdi neymiş?” Sen kahveni içmeye devam ederken Leona’da soruna cevap verdi. “Techno Line dün saat 18.35’den beri siber saldırı altındaymış. Eklediği nota göre, kendi Ağ Gezerleri savunma durumundaymış ancak sürekli saldırı sebebiyle saldıranlara karşı harekete geçememişler. Saldıran kişi yada kişiler yazılmamış.”\n",
+          "dg003": "“Techno Line’ı önce görelim Leona. Nerede buluşmak istiyorlar?” Kahveni hızlıca bitirip kıyafetlerini değiştirmek için yatak odana gittin. “Şehrin Tellesa Bölgesi’ndeki merkezlerinde onlarla görüşeceksin Mark. Yaklaşık 47 dakika da orada olursun. Saat şu anda 07.32. Randevuyu saat kaça almamı istersin?” \n\nÜzerini değiştirmiş ve ekipman odana ilerlemiştin. “08.30 ideal Leona, teşekkürler.” Dedin ve Ağ Gezerlik ekipmanların arasından sinirsel bağlantı çipini, şakağındaki bellek yuvasına taktın. Gözlerindeki sibernetik bilgisayar üzerinde kod akışı geçtikten sonra görüşün tekrar geri geldi. Kulağına kulaklığını taktın ve ceketini alarak evinden çıktın. Garajında duran motoruna binerek randevu konumuna doğru ilerlemeye başladın.\n",
+          "dg004": "40 dakikalık bir yolculuğun ardından Techno Line’ın merkezine gelmiştin. Motorunu park edip binadan içeri girdin. Girişteki sensörleri seni baştan aşağı taradı ve sonunda bir adamın “Hoş geldiniz Mark Ian Blue. Direktör Temura Naradasi sizi 17. Katta, Ağ Labirenti biriminde bekliyor.” Konuşan kişi Techno Line’ın yapay zekasıydı. \n\nBaşınla anladığını belirterek asansöre ilerledin. Asansöre binip 17’ye bastın ve yukarı çıkarken kulağına dolan hafif müziği dinlemeye başladın. 17. Kata geldiğinde kapılar iki yana açıldı ve asansörden çıktın. Duvardaki tabelalara bakarak Ağ Labirenti birimine ilerlemeye başladın. Sen yaklaştığında birimin kapısı açıldı ve içeri girdin. \n\nSıradan bir ana kontrol odasına benzemiyordu. Daha çok siber dalış odası gibiydi. Odaya dağılmış olan birkaç potun içinde Ağ Gezerlerin, siber dünyaya girmiş olduğunu gördün. Gözlerin etrafta gezinirken orta yaşlarda, siyahi ve hafif çekik gözlü birisi sana yaklaşarak elini uzattı. “Ah Mark, tam zamanında geldin, teşekkürler.”\n",
+          "dg005": "Hafifçe gülümsedin. “Anlaşılan her ne kadar, en iyi 5 siber savunma şirketinden biri olsanız dışarıdan yardıma muhtaç duruma düşebiliyorsunuz Bay Naradasi.” Direktör kaşlarını hafifçe çattı. “Hazırlıksız yakalandığımız doğru, anca şu anda zaman önemli, boş konuşmanın sırası değil. Benimle gel.”\n",
+          "dg006": "Adamın uzattığı elini sıkarak onu selamladın. “Sanırım saldırı altındaymışsınız Direktör Naradasi. Sorun ne? Saldıranlar kim biliyor musunuz?” Direkt olarak işe girmen direktörün hoşuna gitmiş olacak ki hafifçe gülümsedi. “Evet Mark, şu ana kadar dayanabildik ancak kesinlikle yardım gerekiyor. Benimle gel.”\n",
+          "dg007": "Direktörü takip ederek alandaki büyük monitörlerin önüne doğru ilerledin. Ekranlarda akan kodlar ara sıra eksilse de hemen yerine yenisi geçiyordu. “Dünden beri bununla uğraşıyoruz. Çok yoğun bir saldırı altında olduğumuz için ancak savunmaya yetecek adamımız var. Senden istediğimiz şey, siber dünyaya girip, biz savunma ile düşmanı oyalarken onlara saldıracak bir açıklık bulman ve onları indirmen.” Direktörün sözleri bittiğinde çeneni hafifçe kaşıdın. \n\n“Bahsettiğiniz kadar yoğunsa dediğiniz şeyi yapmak kolay olmayacak.” \n\n“Alacağın ücrette bununla paralel olacak Mark, merak etme.” \n\nPara konusu açıldığında hafifçe gülümsedin. “Gireceğim potu gösterin.”\n",
+          "dg008": "“Cyber Readers’a öncelik ver Leona. Nerede buluşmak istiyorlar?” Kahveni hızlıca bitirip kıyafetlerini değiştirmek için yatak odana gittin. “Şehrin Pacigeon Bölgesi’ndeki merkezlerinde onlarla görüşeceksin Mark. Yaklaşık 33 dakika da orada olursun. Saat şu anda 07.32. Randevuyu saat kaça almamı istersin?” \n\nÜzerini değiştirmiş ve ekipman odana ilerlemiştin. “08.30 ideal Leona, teşekkürler.” Dedin. Ardından silah dolabını açarak önce tabanca kemerini taktın ve sonrasında sırtına asabileceğin bir tüfek çıkardın dolaptan. Tabancanı ve tüfeğini kuşandığında dolabın kenarında duran mühimmat çantanı da sırtına atarak odadan çıktın. Kulağına kulaklığını taktın ve ceketini alarak evinden çıktın. Garajında duran motoruna binerek randevu konumuna doğru ilerlemeye başladın. \n\nSkyset City, ülkedeki en bozuk şehirlerden biriydi ve burada paralı askerlik yaygın. Bu yüzden yolda, sırtında silah bulunan birisi kolay kolay polis tarafından durdurulmazdı. Sende bu sayede saat 08.01’de Cyber Readers’ın merkezine gelebilmiştin.\n",
+          "dg009": "Motorunu park edip binadan içeri girdin. Girişteki sensörleri seni baştan aşağı taradı ve sonunda bir kadının “Hoş geldiniz Mark Ian Blue. Direktör Andrew Autera sizi 13. Katta, Ağ Çarpışması biriminde bekliyor.” Konuşan kişi Cyber Readers’ın yapay zekasıydı. \n\nBaşınla anladığını belirterek asansöre ilerledin. Asansöre binip 13’e bastın ve yukarı çıkarken kulağına dolan hafif müziği dinlemeye başladın. 13. Kata geldiğinde kapılar iki yana açıldı ve asansörden çıktın. Duvardaki tabelalara bakarak Ağ Çarpışması birimine ilerlemeye başladın. Sen yaklaştığında birimin kapısı açıldı ve içeri girdin. \n\nSıradan bir ana kontrol odasına benziyordu. Gayet sakin gibiydi, herkes işinin başında sessizce çalışıyordu. Gözlerin etrafta gezinirken orta yaşlarda, açık tenli ve mavi gözlü birisi sana yaklaşarak elini uzattı. “Ah Mark, tam zamanında geldin, teşekkürler.”\n",
+          "dg010": "Hafifçe gülümsedin. “Anlaşılan her ne kadar, en iyi 5 paralı asker şirketinden biri olsanız dışarıdan yardıma muhtaç duruma düşebiliyorsunuz Bay Autera.” Direktör kaşlarını hafifçe çattı. “Hazırlıksız yakalandığımız doğru, anca şu anda zaman önemli, boş konuşmanın sırası değil. Benimle gel.”\n",
+          "dg011": "Adamın uzattığı elini sıkarak onu selamladın. “Sanırım bir hırsızlık söz konusu Direktör Autera. Sorun ne? Hırsızın kim olduğunu biliyor musunuz?” Direkt olarak işe girmen direktörün hoşuna gitmiş olacak ki hafifçe gülümsedi. “Evet Mark, bu işi kendi askerlerimize yaptırırsak çok büyük ses çıkar ve halk bu durumu öğrenir bu yüzden bizim dışımızdan birine ihtiyacımız vardı. Benimle gel.”\n",
+          "dg012": "Direktörü takip ederek kontrol odasından çıktın ve onun kişisel ofisine girdin. Direktör masasının önüne geçtiğinde masaya dokundu ve bir kamera görüntüsü oynamaya başladı. Görüntüde bir adama saldıran yaklaşık 7 8 kişi vardı. “Alfred Torick. On yılı aşkın süredir şirketin iç halkasında. Dün gece darp edildi ve benim dışımda onda olduğunu kimsenin bilmediği bir bellek çalındı. Görüntülerdeki kişiler ise gece içinde kayıplara karıştılar. Sende istediğimiz de bu kişilerden hangisinin belleği çaldığını öğrenmen ve onu geri getirmen.” \n\nÇeneni hafifçe kaşıdın. “Kolay olmayacak ancak yapabilirim. Öncelikle Bay Torick ile konuşmak istiyorum.” Diyerek direktöre döndün ancak direktörün yüzünde kasvetli bir hava vardı. “Alfred Torick bugün hastanede öldü. Aldığı darbelerin birçoğu hayati organına gelmiş. Normal insan gücüyle yapılamayacak hasarlar olduğu için saldırganların-“ derken direktörün sözünü kestin. \n\n“Saldırganların sibernetik uzuv geliştirmelerine sahip olduğunu düşünüyorsunuz. İşi daha da zorlaştıracak bir durum.” \n\n“Alacağın ücrette bununla paralel olacak Mark, merak etme.” \n\nPara konusu açıldığında hafifçe gülümsedin. “O halde bana darp mahalinin yerini gösterin.”\n",
+          "dg013": "Devam Edecek...",
           "ch01": "“Sorunlarını biliyor musun Leona?”",
           "ch02": "“Cyber Readers’ları önce koy.”",
           "ch03": "“Techno Line’la ilk önce göreşelim.”",
@@ -686,139 +694,149 @@
       },
       "dialogs": [
         {
+          "id": 0,
+          "image": "c2_1",
+          "save": false,
+          "text": "dg000",
+          "music": "assets/musics/cyber.mp3",
+          "volume": 0.1
+        },
+        {
           "choices": [
             {
               "id": 0,
-              "nextdialog": 1,
+              "nextdialog": 2,
               "text": "ch01"
             },
             {
               "id": 1,
-              "nextdialog": 7,
+              "nextdialog": 8,
               "text": "ch02"
             },
             {
               "id": 2,
-              "nextdialog": 2,
-              "text": "ch03"
-            }
-          ],
-          "id": 0,
-          "image": "train",
-          "save": false,
-          "text": "dg000"
-        },
-        {
-          "choices": [
-            {
-              "id": 0,
-              "nextdialog": 7,
-              "text": "ch02"
-            },
-            {
-              "id": 1,
-              "nextdialog": 2,
+              "nextdialog": 3,
               "text": "ch03"
             }
           ],
           "id": 1,
-          "image": "train",
+          "image": "c2_5",
           "save": false,
-          "text": "dg001"
-        },
-        {
-          "id": 2,
-          "image": "train",
-          "save": false,
-          "text": "dg002"
+          "text": "dg001",
+          "music": "assets/musics/cyber.mp3",
+          "volume": 0.5
         },
         {
           "choices": [
             {
               "id": 0,
-              "nextdialog": 4,
+              "nextdialog": 8,
+              "text": "ch02"
+            },
+            {
+              "id": 1,
+              "nextdialog": 3,
+              "text": "ch03"
+            }
+          ],
+          "id": 2,
+          "image": "c2_5",
+          "save": false,
+          "text": "dg002"
+        },
+        {
+          "id": 3,
+          "image": "c2_4",
+          "save": true,
+          "text": "dg003"
+        },
+        {
+          "choices": [
+            {
+              "id": 0,
+              "nextdialog": 5,
               "text": "ch04"
             },
             {
               "id": 1,
-              "nextdialog": 5,
+              "nextdialog": 6,
               "text": "ch05"
             }
           ],
-          "id": 3,
-          "image": "train",
-          "save": false,
-          "text": "dg003"
-        },
-        {
           "id": 4,
-          "nextdialog": 6,
-          "image": "train",
+          "image": "c2_3",
           "save": false,
           "text": "dg004"
         },
         {
           "id": 5,
-          "nextdialog": 6,
-          "image": "train",
+          "nextdialog": 7,
+          "image": "c2_3",
           "save": false,
           "text": "dg005"
         },
         {
           "id": 6,
-          "nextdialog": 12,
-          "image": "train",
+          "nextdialog": 7,
+          "image": "c2_3",
           "save": false,
           "text": "dg006"
         },
         {
           "id": 7,
-          "image": "train",
-          "save": false,
+          "nextdialog": 13,
+          "image": "c2_2",
+          "save": true,
+          "text": "dg007"
+        },
+        {
+          "id": 8,
+          "image": "c2_4",
+          "save": true,
           "text": "dg007"
         },
         {
           "choices": [
             {
               "id": 0,
-              "nextdialog": 9,
+              "nextdialog": 10,
               "text": "ch04"
             },
             {
               "id": 1,
-              "nextdialog": 10,
+              "nextdialog": 11,
               "text": "ch05"
             }
           ],
-          "id": 8,
-          "image": "train",
-          "save": false,
-          "text": "dg008"
-        },
-        {
           "id": 9,
-          "nextdialog": 11,
-          "image": "train",
+          "image": "c2_2",
           "save": false,
           "text": "dg009"
         },
         {
           "id": 10,
-          "image": "train",
+          "nextdialog": 12,
+          "image": "c2_2",
           "save": false,
           "text": "dg010"
         },
         {
           "id": 11,
-          "image": "train",
+          "image": "c2_2",
           "save": false,
           "text": "dg011"
         },
         {
           "id": 12,
-          "image": "train",
-          "save": false,
+          "image": "c2_6",
+          "save": true,
           "text": "dg012"
+        },
+        {
+          "id": 13,
+          "image": "tobicon",
+          "save": false,
+          "text": "dg013"
         }
       ]
     }
@@ -826,6 +844,20 @@
   "images": {
     "bed": "https://firebasestorage.googleapis.com/v0/b/tezprojesi-3ea5d.appspot.com/o/yatakhane.jpeg?alt=media&token=0744ddae-aa22-4f63-9b7c-641d7ad3a91c",
     "eat": "https://firebasestorage.googleapis.com/v0/b/tezprojesi-3ea5d.appspot.com/o/yemekhane.jpeg?alt=media&token=30fa4236-3ede-4f83-9b3c-1ed0ce33c19b",
-    "train": "https://firebasestorage.googleapis.com/v0/b/tezprojesi-3ea5d.appspot.com/o/training-area.jpeg?alt=media&token=0322c8ab-73b2-41ea-a19b-d1e33b509aff"
+    "train": "https://firebasestorage.googleapis.com/v0/b/tezprojesi-3ea5d.appspot.com/o/training-area.jpeg?alt=media&token=0322c8ab-73b2-41ea-a19b-d1e33b509aff",
+    "c1_1": "https://firebasestorage.googleapis.com/v0/b/tezprojesi-3ea5d.appspot.com/o/Out%20of%20Dark%2F1.jpg?alt=media&token=03afeb02-c053-421c-95e3-c3daf5396e43",
+    "c1_2": "https://firebasestorage.googleapis.com/v0/b/tezprojesi-3ea5d.appspot.com/o/Out%20of%20Dark%2F2.jpg?alt=media&token=55538f16-2c09-4e22-9342-e2f8631a65ab",
+    "c1_3": "https://firebasestorage.googleapis.com/v0/b/tezprojesi-3ea5d.appspot.com/o/Out%20of%20Dark%2F3.jpg?alt=media&token=62a339e9-c831-4a6d-ba7c-08109547b43d",
+    "c1_4": "https://firebasestorage.googleapis.com/v0/b/tezprojesi-3ea5d.appspot.com/o/Out%20of%20Dark%2F4.jpg?alt=media&token=d389e947-8778-4138-a7dd-c62a97b1bbf4",
+    "c1_5": "https://firebasestorage.googleapis.com/v0/b/tezprojesi-3ea5d.appspot.com/o/Out%20of%20Dark%2F5.jpg?alt=media&token=0f422183-c35c-4a58-9304-8e8b0ca4f764",
+    "c1_6": "https://firebasestorage.googleapis.com/v0/b/tezprojesi-3ea5d.appspot.com/o/Out%20of%20Dark%2F6.jpg?alt=media&token=e36e76fc-5176-4ca5-997e-7b5754a12cae",
+    "dead": "https://firebasestorage.googleapis.com/v0/b/tezprojesi-3ea5d.appspot.com/o/Out%20of%20Dark%2Fu-ar-dead.jpg?alt=media&token=3af87de2-2cce-41fc-a3d7-6d696185912b",
+    "tobicon": "https://firebasestorage.googleapis.com/v0/b/tezprojesi-3ea5d.appspot.com/o/to-be-con.jpg?alt=media&token=42259da6-f785-4b31-83ff-b4c4fb7803ce",
+    "c2_1": "https://firebasestorage.googleapis.com/v0/b/tezprojesi-3ea5d.appspot.com/o/Future%20Life%2F1.jpg?alt=media&token=3a4c25ec-f342-4376-ba36-f1f9c727cc8b",
+    "c2_2": "https://firebasestorage.googleapis.com/v0/b/tezprojesi-3ea5d.appspot.com/o/Future%20Life%2F2.jpg?alt=media&token=25916b89-ef98-49b1-a138-cfaac02e4c73",
+    "c2_3": "https://firebasestorage.googleapis.com/v0/b/tezprojesi-3ea5d.appspot.com/o/Future%20Life%2F3.jpg?alt=media&token=57ffda7c-f2d2-4d20-8039-93360190f388",
+    "c2_4": "https://firebasestorage.googleapis.com/v0/b/tezprojesi-3ea5d.appspot.com/o/Future%20Life%2F4.jpg?alt=media&token=c3b872b1-73d2-442c-b0f2-389c76f47dcc",
+    "c2_5": "https://firebasestorage.googleapis.com/v0/b/tezprojesi-3ea5d.appspot.com/o/Future%20Life%2F5.jpg?alt=media&token=fdfedc92-2c4a-491f-9fae-0594c01ed209",
+    "c2_6": "https://firebasestorage.googleapis.com/v0/b/tezprojesi-3ea5d.appspot.com/o/Future%20Life%2F6.jpg?alt=media&token=08a7cce8-aefa-455e-a186-80d68e7d2a5b"
   }
 }
