@@ -5,7 +5,7 @@ import 'package:story_app/data/data.dart';
 import 'package:story_app/sayfalar/stories_menu_page.dart';
 import 'package:story_app/model/setting.dart';
 
-import 'setting_widgets.dart';
+import 'bottom_navigatorbar_button_list.dart';
 
 class StoryListWidget extends StatefulWidget {
   const StoryListWidget({super.key});
@@ -16,12 +16,12 @@ class StoryListWidget extends StatefulWidget {
 
 class CardButtons extends StatefulWidget {
   const CardButtons(
-      {Key? key, required this.id, required this.name, required this.imageUrl})
+      {Key? key, required this.id, required this.name, this.imageUrl})
       : super(key: key);
 
   final int id;
   final String name;
-  final String imageUrl;
+  final String? imageUrl;
 
   @override
   State<CardButtons> createState() => _CardButtonsState();
@@ -34,7 +34,7 @@ class _CardButtonsState extends State<CardButtons> {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onLongPress: () async {
+      onTap: () async {
         final prefs = await SharedPreferences.getInstance();
         await prefs.setInt('chapterId', widget.id);
         await prefs.setInt('dialogId', 0);
@@ -67,7 +67,7 @@ class _CardButtonsState extends State<CardButtons> {
             shape: BoxShape.rectangle,
             borderRadius: BorderRadius.circular(10),
             image: DecorationImage(
-              image: AssetImage(widget.imageUrl),
+              image: AssetImage(widget.imageUrl ?? "assets/images/adsiz.jpg"),
               fit: BoxFit.fill,
             ),
             boxShadow: _isTapped
@@ -107,84 +107,90 @@ class _StoryListWidgetState extends State<StoryListWidget> {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
-      child: Scaffold(
-        key: _key,
-        backgroundColor: Colors.black87,
-        bottomNavigationBar: GetSettings(
-          sckey: _key,
-          menuVisible: false,
-          girisVisible: true,
-          userStories: true,
-        ),
-        endDrawer: const Settings(),
-        resizeToAvoidBottomInset: false,
-        body: Container(
-          width: MediaQuery.of(context).size.width,
-          margin: const EdgeInsets.all(10),
-          padding: const EdgeInsets.all(8.0),
-          decoration: BoxDecoration(
-            shape: BoxShape.rectangle,
-            color: Colors.grey[900],
-            borderRadius: BorderRadiusDirectional.circular(16.0),
+      child: WillPopScope(
+        onWillPop: () async {
+          return false;
+        },
+        child: Scaffold(
+          key: _key,
+          backgroundColor: Colors.black87,
+          bottomNavigationBar: GetSettings(
+            sckey: _key,
+            menuVisible: false,
+            settingVisible: true,
+            userStories: true,
+            geriButonu: false,
           ),
-          child: FutureBuilder<dynamic>(
-            future: storyData.getStories(),
-            builder: (context, snapshot) {
-              List<Widget> children;
-              if (snapshot.hasData) {
-                var stories = snapshot.data;
-                List<Widget> storyWidget = (stories as List<dynamic>)
-                    .map((story) => CardButtons(
-                          id: story["id"],
-                          name: story["name"],
-                          imageUrl: story["imageUrl"],
-                        ))
-                    .toList();
-                return GridView.count(
-                    crossAxisCount: 2,
-                    padding: const EdgeInsets.all(10.0),
-                    childAspectRatio: 9.0 / 13.9,
-                    children: [
-                      ...storyWidget,
-                    ]);
-              } else if (snapshot.hasError) {
-                children = <Widget>[
-                  const Icon(
-                    Icons.error_outline,
-                    color: Colors.red,
-                    size: 60,
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.only(top: 16),
-                    child: Text('Error: ${snapshot.error}'),
-                  ),
-                ];
-              } else {
-                children = <Widget>[
-                  const SizedBox(
-                    width: 60,
-                    height: 60,
-                    child: CircularProgressIndicator(),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.only(top: 16),
-                    child: Text(
-                      'Loading',
-                      style: GoogleFonts.quintessential(
-                        color: Colors.white,
-                        fontWeight: FontWeight.bold,
-                        fontStyle: FontStyle.italic,
+          endDrawer: const Settings(),
+          resizeToAvoidBottomInset: false,
+          body: Container(
+            width: MediaQuery.of(context).size.width,
+            margin: const EdgeInsets.all(10),
+            padding: const EdgeInsets.all(8.0),
+            decoration: BoxDecoration(
+              shape: BoxShape.rectangle,
+              color: Colors.grey[900],
+              borderRadius: BorderRadiusDirectional.circular(16.0),
+            ),
+            child: FutureBuilder<dynamic>(
+              future: storyData.getStories(userStories: false),
+              builder: (context, snapshot) {
+                List<Widget> children;
+                if (snapshot.hasData) {
+                  var stories = snapshot.data;
+                  List<Widget> storyWidget = (stories as List<dynamic>)
+                      .map((story) => CardButtons(
+                            id: story["id"],
+                            name: story["name"],
+                            imageUrl: story["imageUrl"],
+                          ))
+                      .toList();
+                  return GridView.count(
+                      crossAxisCount: 2,
+                      padding: const EdgeInsets.all(10.0),
+                      childAspectRatio: 9.0 / 13.9,
+                      children: [
+                        ...storyWidget,
+                      ]);
+                } else if (snapshot.hasError) {
+                  children = <Widget>[
+                    const Icon(
+                      Icons.error_outline,
+                      color: Colors.red,
+                      size: 60,
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.only(top: 16),
+                      child: Text('Error: ${snapshot.error}'),
+                    ),
+                  ];
+                } else {
+                  children = <Widget>[
+                    const SizedBox(
+                      width: 60,
+                      height: 60,
+                      child: CircularProgressIndicator(),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.only(top: 16),
+                      child: Text(
+                        'Loading',
+                        style: GoogleFonts.quintessential(
+                          color: Colors.white,
+                          fontWeight: FontWeight.bold,
+                          fontStyle: FontStyle.italic,
+                        ),
                       ),
                     ),
-                  ),
-                ];
-              }
-              return Center(
-                child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: children),
-              );
-            },
+                  ];
+                }
+                return Center(
+                  child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: children),
+                );
+              },
+            ),
           ),
         ),
       ),

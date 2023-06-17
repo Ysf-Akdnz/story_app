@@ -3,8 +3,9 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import '../data/dialog_data.dart';
+import 'package:story_app/data/user_story.dart';
 import 'dialog_editing.dart';
+
 
 class DialogCards extends StatefulWidget {
   const DialogCards({super.key});
@@ -40,31 +41,35 @@ class _DialogCardsState extends State<DialogCards> {
           crossAxisCount: 2,
           childAspectRatio: 2.5,
           children: [
-            ...dialogList.map((e) => DailogCardsButtons(
+            ...userChapter["dialogs"].map((e) => DailogCardsButtons(
                   id: e["id"],
-                  name: "name",
-                  image: "image",
-                  nextDialog: 1,
-                  save: true,
+                  onLongPress: () {
+                    setState(() {
+                      deleteDialogFromJson(e["id"]);
+                    });
+                  },
                   onTap: () {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => const DialogEditing(),
+                        builder: (context) => DialogEditing(dialogId: e["id"]),
                       ),
                     );
                   },
                 )),
             DailogCardsButtons(
-              id: 1,
-              name: "asdsa",
-              image: "adasd",
-              nextDialog: 0,
-              save: false,
               isAddBtn: true,
               onTap: () {
                 setState(() {
-                  dialogList.add({"id": dialogList.length});
+                  userChapter["dialogs"].add({
+                    "id": userChapter["dialogs"].length,
+                    "save": true,
+                    "music": "assets/musics/no-sound.mp3",
+                    "volume": 0.0,
+                    "choices": [
+                      {"id": 0, "text": '', "nextdialog": 0}
+                    ]
+                  });
                 });
               },
             )
@@ -78,21 +83,23 @@ class _DialogCardsState extends State<DialogCards> {
 class DailogCardsButtons extends StatefulWidget {
   const DailogCardsButtons(
       {Key? key,
-      required this.id,
-      required this.name,
-      required this.image,
-      required this.nextDialog,
-      required this.save,
-      required this.onTap,
-      this.isAddBtn = false})
+      this.id,
+      this.name,
+      this.image,
+      this.nextDialog,
+      this.save,
+      this.onTap,
+      this.isAddBtn = false,
+      this.onLongPress})
       : super(key: key);
 
-  final int id;
-  final int nextDialog;
-  final bool save;
-  final String name;
-  final String image;
+  final int? id;
+  final int? nextDialog;
+  final bool? save;
+  final String? name;
+  final String? image;
   final void Function()? onTap;
+  final void Function()? onLongPress;
   final bool isAddBtn;
 
   @override
@@ -107,6 +114,7 @@ class _DailogCardsButtonsState extends State<DailogCardsButtons> {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: widget.onTap,
+      onLongPress: widget.onLongPress,
       onTapDown: ((details) {
         setState(() {
           _isTapped = true;

@@ -49,10 +49,21 @@ dependencies:
   just_audio: ^0.9.31
   flutter_tts: ^3.6.3
   get: ^4.6.5
+  image_picker: ^0.8.8
+  path_provider: ^2.0.15
+  flutter_launcher_icons: ^0.9.2
+  
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
+  
+
+flutter_icons:
+  android: true
+  image_path: "assets/images/gece-logo.png"
+  adaptive_icon_background: "#ffffff"
+  adaptive_icon_foreground: "assets/images/gece-logo-background.png"
 
   # The "flutter_lints" package below contains a set of recommended lints to
   # encourage good coding practices. The lint set provided by the package is

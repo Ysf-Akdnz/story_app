@@ -28,7 +28,11 @@ class Dil extends Translations {
           'ws': 'Hikaye Metni',
           'save': 'Kaydet',
           'choiceText': 'Seçim Yazısı',
-          'hikayeleriniz': 'Hikayeleriniz'
+          'hikayeleriniz': 'Hikayeleriniz',
+          'geri': 'Geri',
+          'düzenle': 'Düzenle',
+          'sil': 'Sil',
+          'sonraki': 'Sonraki...'
         },
         'en_US': {
           'Duraklat': 'Pause',
@@ -49,7 +53,11 @@ class Dil extends Translations {
           'ws': 'Story Text',
           'save': 'Save',
           'choiceText': 'Choice Text',
-          'hikayeleriniz': 'Your Stories'
+          'hikayeleriniz': 'Your Stories',
+          'geri': 'Back',
+          'düzenle': 'Edit',
+          'sil': 'Delete',
+          'sonraki': 'Next...'
         },
       };
 }

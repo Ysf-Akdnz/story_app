@@ -1,12 +1,13 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:story_app/utils/audio_background.dart';
 import 'package:story_app/utils/language.dart';
 import 'firebase_options.dart';
 import 'package:get/get.dart';
 import 'model/setting.dart';
 import 'sayfalar/main_menu_page.dart';
-import 'widgets/setting_widgets.dart';
+import 'widgets/bottom_navigatorbar_button_list.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -16,11 +17,20 @@ void main() async {
   runApp(const StoryApp());
 }
 
-class StoryApp extends StatelessWidget {
+class StoryApp extends StatelessWidget with WidgetsBindingObserver {
   const StoryApp({super.key});
+  @override
+  void didChangeAppLifecycleState(AppLifecycleState state) {
+    if (state != AppLifecycleState.resumed) {
+      //setStop();
+      setMute();
+    }
+    super.didChangeAppLifecycleState(state);
+  }
 
   @override
   Widget build(BuildContext context) {
+    WidgetsBinding.instance.addObserver(this);
     return GetMaterialApp(
       translations: Dil(),
       locale: Get.locale ?? Get.deviceLocale,
@@ -45,8 +55,9 @@ class ArayuzMainIskele extends StatelessWidget {
         bottomNavigationBar: GetSettings(
           sckey: _key,
           menuVisible: false,
-          girisVisible: false,
+          settingVisible: false,
           userStories: false,
+          geriButonu: false,
         ),
         endDrawer: const Settings(),
         resizeToAvoidBottomInset: false,

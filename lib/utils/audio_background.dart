@@ -25,3 +25,9 @@ void setMute() async {
 void setLastVolume() async {
   await player.setVolume(lastVolume);
 }
+
+void setStop(path) async {
+  if (player.playing && currentMusic == path) return;
+  currentMusic = path;
+  await player.stop();
+}

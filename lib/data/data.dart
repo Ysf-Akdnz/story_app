@@ -1,4 +1,6 @@
 import 'dart:convert';
+import 'dart:io';
+import 'package:path_provider/path_provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:firebase_database/firebase_database.dart';
 
@@ -9,6 +11,22 @@ class StoryData {
   late SharedPreferences prefs;
   late DatabaseReference db1;
   late FirebaseDatabase db;
+  static bool loadUserStories = false;
+
+  static Future<Map<String, dynamic>?> readJsonFromFile(String fileName) async {
+    final Directory appDirectory = await getApplicationDocumentsDirectory();
+    final String filePath = '${appDirectory.path}/$fileName.json';
+
+    final File file = File(filePath);
+
+    if (await file.exists()) {
+      final String fileContent = await file.readAsString();
+      final Map<String, dynamic> jsonMap = jsonDecode(fileContent);
+      return jsonMap;
+    } else {
+      return null;
+    }
+  }
 
   Future<dynamic> readFirebaseData() async {
     db = FirebaseDatabase.instance;
@@ -17,9 +35,14 @@ class StoryData {
     return snapshot.value;
   }
 
+  static Future<Map<String, dynamic>?> readUserStories() async {
+    return (await readJsonFromFile("user_story")) ?? {"chapters": []};
+  }
+
   Future<dynamic> readJson() async {
     prefs = await SharedPreferences.getInstance();
-    final dynamic response = await readFirebaseData();
+    final dynamic response =
+        loadUserStories ? await readUserStories() : await readFirebaseData();
     final jsonString = json.encode(response);
     final Map<String, dynamic> datas = json.decode(jsonString);
     return datas;
@@ -54,15 +77,20 @@ class StoryData {
     return dialogView;
   }
 
-  Future<dynamic> getStories() async {
-    data ??= await readJson();
-    if (data["chapters"].length <= chapterId) {
-      return null;
+  Future<dynamic> getStories(
+      {bool userStories = false, bool reload = false}) async {
+    if (loadUserStories != userStories || data == null || reload) {
+      loadUserStories = userStories;
+      data = await readJson();
     }
-    return data["chapters"];
+
+    /*  if (data["chapters"].length <= chapterId) {
+      return null;
+    } */
+    return data["chapters"] ?? [];
   }
 
-  Future<String> getStoryImage() async {
+  Future<String?> getStoryImage() async {
     data ??= await readJson();
     final prefs = await SharedPreferences.getInstance();
     final chapterId = prefs.getInt('chapterId') ?? 0;
@@ -72,14 +100,15 @@ class StoryData {
     return data["chapters"][chapterId]["imageUrl"];
   }
 
-  Future<String> getStoryMusic() async {
+  Future<String?> getStoryMusic() async {
     data ??= await readJson();
     final prefs = await SharedPreferences.getInstance();
     final chapterId = prefs.getInt('chapterId') ?? 0;
     if (data["chapters"].length <= chapterId) {
       return "assets/musics/main-menu-music.ogg";
     }
-    return data["chapters"][chapterId]["music"];
+    final chapter = data["chapters"][chapterId];
+    return chapter["music"];
   }
 
   Future<String> getStoryName() async {

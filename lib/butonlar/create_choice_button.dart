@@ -1,10 +1,15 @@
+
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class CreateChoiceButton extends StatefulWidget {
-  const CreateChoiceButton({super.key, required this.id, this.onPressed});
+import '../data/user_story.dart';
 
+class CreateChoiceButton extends StatefulWidget {
+  const CreateChoiceButton(
+      {super.key, required this.id, this.onPressed, required this.dialogId});
+
+  final int dialogId;
   final int id;
   final void Function()? onPressed;
   @override
@@ -13,6 +18,21 @@ class CreateChoiceButton extends StatefulWidget {
 
 class _CreateChoiceButtonState extends State<CreateChoiceButton> {
   String yazi = "";
+
+  List<DropdownMenuItem> get items => getDialogs()
+      .map((value) => DropdownMenuItem(
+            value: value["id"],
+            child: Text(
+              "Dialog ${value["id"]}",
+              style: const TextStyle(color: Colors.white),
+            ),
+          ))
+      .toList();
+
+  List<dynamic> getDialogs() => userChapter["dialogs"] as List<dynamic>;
+  getDialog() => getDialogs()[widget.dialogId];
+  getChoice() => getDialog()["choices"][widget.id];
+  GlobalKey dropdownKey = GlobalKey();
   @override
   Widget build(BuildContext context) {
     return SizedBox(
@@ -38,7 +58,12 @@ class _CreateChoiceButtonState extends State<CreateChoiceButton> {
               color: Colors.white.withOpacity(0.5),
             ),
             Text(
-              yazi,
+              getChoice()["text"],
+              style: GoogleFonts.quintessential(
+                  color: Colors.white.withOpacity(0.5)),
+            ),
+            Text(
+              "${getChoice()["nextdialog"]}",
               style: GoogleFonts.quintessential(
                   color: Colors.white.withOpacity(0.5)),
             ),
@@ -48,14 +73,20 @@ class _CreateChoiceButtonState extends State<CreateChoiceButton> {
                 showDialog(
                   context: context,
                   builder: (context) {
-                    TextEditingController controller = TextEditingController();
+                    TextEditingController controller =
+                        TextEditingController(text: getChoice()["text"]);
+                    //TextEditingController controller2 = TextEditingController();
+                    int nextDialog = getChoice()["nextdialog"] ?? 0;
+
                     return AlertDialog(
                       actions: [
                         TextButton(
                           onPressed: () {
                             setState(
                               () {
-                                yazi = controller.text;
+
+                                getChoice()["text"] = controller.text;
+                                getChoice()["nextdialog"] = nextDialog;
                                 Navigator.pop(context);
                               },
                             );
@@ -75,21 +106,47 @@ class _CreateChoiceButtonState extends State<CreateChoiceButton> {
                           color: Colors.white.withOpacity(0.5),
                         ),
                       ),
-                      content: Form(
-                        child: TextFormField(
-                          controller: controller,
-                          style:
-                              GoogleFonts.quintessential(color: Colors.white),
-                          textAlign: TextAlign.center,
-                          decoration: InputDecoration(
-                            border: InputBorder.none,
-                            hintText: "...",
-                            hintStyle: GoogleFonts.quintessential(
-                              color: Colors.white.withOpacity(0.5),
-                            ),
-                          ),
-                        ),
-                      ),
+                      content: StatefulBuilder(
+                          builder: (context, setInnerState) => Form(
+                                child: Column(
+                                  mainAxisSize: MainAxisSize.min,
+                                  children: [
+                                    TextFormField(
+                                      controller: controller,
+                                      //initialValue: getChoice()["text"],
+                                      style: GoogleFonts.quintessential(
+                                          color: Colors.white),
+                                      textAlign: TextAlign.center,
+                                      decoration: InputDecoration(
+                                        border: InputBorder.none,
+                                        hintText: "Seçenek Yazısı",
+                                        hintStyle: GoogleFonts.quintessential(
+                                          color: Colors.white.withOpacity(0.5),
+                                        ),
+                                      ),
+                                    ),
+                                    DropdownButton(
+                                      key: dropdownKey,
+                                      items: items,
+                                      value: nextDialog,
+                                      hint: const Text(
+                                        "Gidilecek Diyalog",
+                                        style: TextStyle(color: Colors.white),
+                                      ),
+                                      dropdownColor: Colors.grey,
+                                      focusColor: Colors.white,
+                                      onChanged: (value) {
+                                        setInnerState(() {
+                                          setState(() {
+                                            nextDialog = value;
+                                          });
+                                          //dropdownKey.currentState?.build(context);
+                                        });
+                                      },
+                                    ),
+                                  ],
+                                ),
+                              )),
                     );
                   },
                 );

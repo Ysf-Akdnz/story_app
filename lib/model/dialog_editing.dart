@@ -1,22 +1,41 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:story_app/model/story_image.dart';
 import '../butonlar/add_choice_btn.dart';
 import '../butonlar/create_choice_button.dart';
-import '../data/dialog_data.dart';
+import '../data/user_story.dart';
 
 class DialogEditing extends StatefulWidget {
-  const DialogEditing({super.key});
+  const DialogEditing({super.key, required this.dialogId});
+  final int dialogId;
 
   @override
   State<DialogEditing> createState() => _DialogEditingState();
 }
 
 class _DialogEditingState extends State<DialogEditing> {
-  bool _isTapped = false;
+  String? imagePath;
+  String test = "";
+  Future<void> uploadImage() async {
+    final String? uploadedImagePath = await saveImageToAppStorage();
+    if (uploadedImagePath == null) {
+      return;
+    }
+    setState(() {
+      getDialog()["image"] = uploadedImagePath;
+    });
+  }
+
+  getDialog() => userChapter["dialogs"][widget.dialogId];
+  List<dynamic> getChoices() => getDialog()["choices"] as List<dynamic>;
   @override
   Widget build(BuildContext context) {
     return SafeArea(
+        child: WillPopScope(
+      onWillPop: () async {
+        return true;
+      },
       child: Scaffold(
         backgroundColor: Colors.black87,
         body: Container(
@@ -34,129 +53,95 @@ class _DialogEditingState extends State<DialogEditing> {
           child: SingleChildScrollView(
             child: Column(
               children: [
-                Center(
-                  child: GestureDetector(
-                    onTap: () {},
-                    onTapDown: ((details) {
-                      setState(() {
-                        _isTapped = true;
-                      });
-                    }),
-                    onTapUp: (details) {
-                      setState(() {
-                        _isTapped = false;
-                      });
-                    },
-                    onTapCancel: () {
-                      setState(() {
-                        _isTapped = false;
-                      });
-                    },
-                    child: Expanded(
-                      child: Container(
-                        //margin: const EdgeInsets.only(right: ),
-                        height: 200,
-                        width: MediaQuery.of(context).size.width,
-                        clipBehavior: Clip.hardEdge,
-                        decoration: BoxDecoration(
-                            color: Colors.grey.withOpacity(0.1),
-                            shape: BoxShape.rectangle,
-                            borderRadius: BorderRadius.circular(10),
-                            boxShadow: _isTapped
-                                ? [
-                                    BoxShadow(
-                                      color: Colors.grey.withOpacity(0.1),
-                                      blurRadius: 10,
-                                      spreadRadius: 3,
-                                      offset: const Offset(0, 3),
-                                    )
-                                  ]
-                                : null),
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          children: [
-                            const SizedBox(height: 50),
-                            Text(
-                              'kf'.tr,
-                              style: GoogleFonts.quintessential(
-                                color: Colors.white.withOpacity(0.5),
-                                fontSize: 20,
-                              ),
-                            ),
-                            Align(
-                              alignment: Alignment.center,
-                              child: Icon(
-                                Icons.add_circle_outline,
-                                color: Colors.black.withOpacity(0.5),
-                                size: 50,
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                    ),
-                  ),
+                // Image Selection
+                StoryImage(
+                  onTap: uploadImage,
+                  imagePath: getDialog()["image"],
                 ),
-                SizedBox(
-                  width: MediaQuery.of(context).size.width,
-                  child: Container(
-                    margin: const EdgeInsets.only(top: 10),
-                    height: 200,
-                    padding: const EdgeInsets.symmetric(
-                        horizontal: 20, vertical: 10),
-                    decoration: BoxDecoration(
-                      shape: BoxShape.rectangle,
-                      color: Colors.grey.withOpacity(0.1),
-                      borderRadius: BorderRadiusDirectional.circular(16.0),
-                    ),
-                    child: TextFormField(
-                      style: GoogleFonts.quintessential(color: Colors.white),
-                      textAlign: TextAlign.center,
-                      decoration: InputDecoration(
-                        border: InputBorder.none,
-                        hintText: 'ws'.tr,
-                        hintStyle: GoogleFonts.quintessential(
-                          color: Colors.white.withOpacity(0.5),
-                        ),
-                      ),
-                    ),
-                  ),
-                ),
-                GridView.count(
-                  physics: const NeverScrollableScrollPhysics(),
-                  shrinkWrap: true,
-                  crossAxisCount: 1,
-                  childAspectRatio: 5,
-                  children: [
-                    ...choiceList.map(
-                      (e) => CreateChoiceButton(
-                        id: e["id"],
-                        onPressed: () {
-                          setState(
-                            () {
-                              choiceList.remove(
-                                choiceList.firstWhere(
-                                    (element) => element["id"] == e["id"]),
-                              );
-                            },
-                          );
-                        },
-                      ),
-                    ),
-                    AddChoiceButton(
-                      onPressed: () {
-                        setState(
-                          () {
-                            if (choiceList.length < 2) {
-                              choiceList.add({"id": choiceList.length});
-                            }
-                          },
-                        );
-                      },
-                    )
-                  ],
-                ),
+                dialogText(context),
+                choices(),
               ],
+            ),
+          ),
+        ),
+      ),
+    ));
+  }
+
+  GridView choices() {
+    return GridView.count(
+      physics: const NeverScrollableScrollPhysics(),
+      shrinkWrap: true,
+      crossAxisCount: 1,
+      childAspectRatio: 5,
+      children: [
+        ...getChoices().map(
+          (e) => CreateChoiceButton(
+            id: e["id"],
+            dialogId: widget.dialogId,
+            onPressed: () {
+              setState(
+                () {
+                  getChoices().remove(
+                    getChoices()
+                        .firstWhere((element) => element["id"] == e["id"]),
+                  );
+                  for (var i = 0; i < getChoices().length; i++) {
+                    getChoices()[i]["id"] = i;
+                  }
+                },
+              );
+            },
+          ),
+        ),
+        AddChoiceButton(
+          onPressed: () {
+            setState(
+              () {
+                if (getChoices().length < 2) {
+                  getChoices().add({
+                    "id": getChoices().length,
+                    "text": "",
+                    "nextdialog": 0
+                  } as dynamic);
+                }
+              },
+            );
+          },
+        )
+      ],
+    );
+  }
+
+  SizedBox dialogText(BuildContext context) {
+    return SizedBox(
+      width: MediaQuery.of(context).size.width,
+      child: Container(
+        margin: const EdgeInsets.only(top: 10),
+        //height: 200,
+        padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+        decoration: BoxDecoration(
+          shape: BoxShape.rectangle,
+          color: Colors.grey.withOpacity(0.1),
+          borderRadius: BorderRadiusDirectional.circular(16.0),
+        ),
+        child: TextFormField(
+          minLines: 2,
+          maxLines: 10,
+          keyboardType: TextInputType.multiline,
+          style: GoogleFonts.quintessential(color: Colors.white),
+          textAlign: TextAlign.start,
+          initialValue: getDialog()["text"],
+          onChanged: (value) {
+            setState(() {
+              getDialog()["text"] = value;
+            });
+          },
+          decoration: InputDecoration(
+            border: InputBorder.none,
+            hintText: 'ws'.tr,
+            hintStyle: GoogleFonts.quintessential(
+              color: Colors.white.withOpacity(0.5),
             ),
           ),
         ),

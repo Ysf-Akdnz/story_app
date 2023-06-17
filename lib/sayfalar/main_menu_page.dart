@@ -2,10 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:story_app/widgets/story_list_widget.dart';
-import 'package:story_app/widgets/setting_widgets.dart';
+import 'package:story_app/widgets/bottom_navigatorbar_button_list.dart';
 import 'package:story_app/model/setting.dart';
 import 'package:get/get.dart';
 
+// Uygulama açıldığında görünen ilk sayfadır
 class GirisSayfasi extends StatefulWidget {
   const GirisSayfasi({super.key});
 
@@ -19,18 +20,24 @@ class _GirisSayfasiState extends State<GirisSayfasi> {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
-      child: Scaffold(
-        key: _key,
-        backgroundColor: Colors.black87,
-        body: const GirissSayfasi(),
-        bottomNavigationBar: GetSettings(
-          sckey: _key,
-          menuVisible: false,
-          girisVisible: false,
-          userStories: false,
+      child: WillPopScope(
+        onWillPop: () async {
+          return false;
+        },
+        child: Scaffold(
+          key: _key,
+          backgroundColor: Colors.black87,
+          body: const GirissSayfasi(),
+          bottomNavigationBar: GetSettings(
+            sckey: _key,
+            menuVisible: false,
+            settingVisible: false,
+            userStories: false,
+            geriButonu: false,
+          ),
+          endDrawer: const Settings(),
+          resizeToAvoidBottomInset: false,
         ),
-        endDrawer: const Settings(),
-        resizeToAvoidBottomInset: false,
       ),
     );
   }
@@ -98,6 +105,8 @@ class _GirissSayfasiState extends State<GirissSayfasi> {
       margin: const EdgeInsets.all(10),
       padding: const EdgeInsets.all(8.0),
       decoration: BoxDecoration(
+        image: const DecorationImage(
+            fit: BoxFit.cover, image: AssetImage("assets/images/anasayfa.jpg")),
         shape: BoxShape.rectangle,
         color: Colors.grey[900],
         borderRadius: BorderRadiusDirectional.circular(16.0),
@@ -107,11 +116,12 @@ class _GirissSayfasiState extends State<GirissSayfasi> {
         children: [
           Container(
             margin: const EdgeInsets.only(top: 125),
-            width: 200,
-            height: 200,
-            padding: const EdgeInsets.all(12),
+            width: 300,
+            height: 100,
+            padding: const EdgeInsets.all(6),
             decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(100),
+              shape: BoxShape.rectangle,
+              borderRadius: BorderRadius.circular(16),
               border: Border.all(
                 color: Colors.white.withOpacity(0.35),
                 width: 1,
@@ -120,16 +130,29 @@ class _GirissSayfasiState extends State<GirissSayfasi> {
             child: Container(
               decoration: BoxDecoration(
                 color: Colors.white.withOpacity(0.7),
-                borderRadius: BorderRadius.circular(100),
+                borderRadius: BorderRadius.circular(16),
                 border: Border.all(
                   color: Colors.black54,
-                  width: 15,
+                  width: 10,
                 ),
               ),
-              child: const Icon(
+              child: Expanded(
+                child: Center(
+                  child: Text(
+                    "Tell Me a Legend",
+                    textAlign: TextAlign.center,
+                    style: GoogleFonts.quintessential(
+                        color: Colors.black,
+                        fontSize: 35,
+                        fontWeight: FontWeight.bold,
+                        fontStyle: FontStyle.italic),
+                  ),
+                ),
+              ),
+              /*const Icon(
                 Icons.landscape,
                 size: 75,
-              ),
+              ),*/
             ),
           ),
           Container(
@@ -140,10 +163,12 @@ class _GirissSayfasiState extends State<GirissSayfasi> {
                   margin: const EdgeInsets.only(top: 20),
                   child: InkWell(
                     onTap: () {
+                      setState(() {
+                      });
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (context) => const StoryListWidget()),
+                            builder: (context) => StoryListWidget()),
                       );
                     },
                     child: Container(

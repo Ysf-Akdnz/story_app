@@ -1,14 +1,20 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:story_app/data/data.dart';
+import 'package:story_app/sayfalar/user_stories_page.dart';
 import 'package:story_app/utils/audio_background.dart';
 import 'package:story_app/model/setting.dart';
 import 'package:story_app/sayfalar/main_menu_page.dart';
+import 'package:story_app/widgets/story_list_widget.dart';
+import '../butonlar/exit_buttons.dart';
 import 'story_choice_page.dart';
-import '../widgets/setting_widgets.dart';
+import '../widgets/bottom_navigatorbar_button_list.dart';
 
+// Story Yeni Devam tuşlarının olduğu yer
 class MainMenuPage extends StatefulWidget {
   const MainMenuPage({super.key});
 
@@ -19,58 +25,8 @@ class MainMenuPage extends StatefulWidget {
 class _MainMenuPageState extends State<MainMenuPage> {
   final GlobalKey<ScaffoldState> _key = GlobalKey();
   final storyData = StoryData();
-
-  Future<dynamic> exitDialog() {
-    return showDialog(
-      context: context,
-      builder: (context) => AlertDialog(
-        backgroundColor: Colors.grey[900],
-        title: Text(
-          'Exit'.tr,
-          style: const TextStyle(
-              color: Colors.white, fontSize: 25, fontFamily: 'Quintessential'),
-        ),
-        actions: [
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              FloatingActionButton(
-                backgroundColor: Colors.transparent,
-                onPressed: () => Navigator.pop(context, false),
-                child: Text(
-                  'Nöö'.tr,
-                  style: const TextStyle(
-                      fontSize: 18,
-                      fontWeight: FontWeight.bold,
-                      fontFamily: 'Quintessential'),
-                ),
-              ),
-              const SizedBox(width: 50),
-              FloatingActionButton(
-                backgroundColor: Colors.transparent,
-                onPressed: () {
-                  //Navigator.pop(context, true);
-                  Navigator.pushReplacement(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => const GirisSayfasi(),
-                    ),
-                  );
-                },
-                child: Text(
-                  'Yesnt'.tr,
-                  style: const TextStyle(
-                      fontSize: 18,
-                      fontWeight: FontWeight.bold,
-                      fontFamily: 'Quintessential'),
-                ),
-              ),
-            ],
-          ),
-        ],
-      ),
-    );
-  }
+  bool showExitStory = true;
+  bool showExitUserStory = false;
 
   @override
   void initState() {
@@ -80,40 +36,56 @@ class _MainMenuPageState extends State<MainMenuPage> {
 
   Future<void> loadStoryMusic() async {
     var music = await storyData.getStoryMusic();
+    if (music == null) {
+      return;
+    }
     playMusic(music);
   }
 
   @override
   Widget build(BuildContext context) {
     return SafeArea(
-      child: Stack(
-        children: [
-          FutureBuilder<dynamic>(
-              future: storyData.getStoryImage(),
-              builder: (context, snapshot) {
-                String imageUrl = snapshot.hasData
-                    ? snapshot.data
-                    : "assets/images/adsiz.jpg";
-                return Image.asset(
-                  imageUrl,
-                  height: MediaQuery.of(context).size.height,
-                  width: MediaQuery.of(context).size.width,
-                  fit: BoxFit.fill,
-                );
-              }),
-          Scaffold(
-            key: _key,
-            backgroundColor: Colors.transparent,
-            body: _mainMenuButton(),
-            bottomNavigationBar: GetSettings(
-              sckey: _key,
-              menuVisible: false,
-              girisVisible: true,
-              userStories: false,
+      child: WillPopScope(
+        onWillPop: () async {
+          return false;
+        },
+        child: Stack(
+          children: [
+            FutureBuilder<dynamic>(
+                future: storyData.getStoryImage(),
+                builder: (context, snapshot) {
+                  String imageUrl = snapshot.hasData
+                      ? snapshot.data
+                      : "assets/images/adsiz.jpg";
+                  return StoryData.loadUserStories && snapshot.hasData
+                      ? Image.file(
+                          File(imageUrl),
+                          height: MediaQuery.of(context).size.height,
+                          width: MediaQuery.of(context).size.width,
+                          fit: BoxFit.fill,
+                        )
+                      : Image.asset(
+                          imageUrl,
+                          height: MediaQuery.of(context).size.height,
+                          width: MediaQuery.of(context).size.width,
+                          fit: BoxFit.fill,
+                        );
+                }),
+            Scaffold(
+              key: _key,
+              backgroundColor: Colors.transparent,
+              body: _mainMenuButton(),
+              bottomNavigationBar: GetSettings(
+                sckey: _key,
+                menuVisible: false,
+                settingVisible: true,
+                userStories: false,
+                geriButonu: false,
+              ),
+              endDrawer: const Settings(),
             ),
-            endDrawer: const Settings(),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }
@@ -187,17 +159,15 @@ class _MainMenuPageState extends State<MainMenuPage> {
           ), //Yeni Oyun
         ),
         const SizedBox(height: 25),
-        ElevatedButton(
-          style: TextButton.styleFrom(
-              textStyle: const TextStyle(fontSize: 30),
-              backgroundColor: Colors.transparent),
-          onPressed: () {
-            exitDialog();
-          },
-          child: Text(
-            'Çıkış'.tr,
-            style: GoogleFonts.quintessential(color: Colors.white),
-          ), //Çıkış
+        if (showExitStory)
+        ExitButtons(
+          exitStory: true,
+          exitUserStory: false,
+        ),
+      if (showExitUserStory)
+        ExitButtons(
+          exitStory: false,
+          exitUserStory: true,
         ),
         const SizedBox(height: 100)
       ],

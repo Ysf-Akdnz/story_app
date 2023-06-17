@@ -1,10 +1,13 @@
+import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class StoryImage extends StatefulWidget {
-  const StoryImage({super.key});
+  const StoryImage({super.key, this.onTap, this.imagePath});
+  final void Function()? onTap;
+  final String? imagePath;
 
   @override
   State<StoryImage> createState() => _StoryImageState();
@@ -15,7 +18,7 @@ class _StoryImageState extends State<StoryImage> {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () {},
+      onTap: widget.onTap,
       onTapDown: ((details) {
         setState(() {
           _isTapped = true;
@@ -32,9 +35,10 @@ class _StoryImageState extends State<StoryImage> {
         });
       },
       child: Container(
-        margin: const EdgeInsets.only(right: 15, left: 15),
+        margin: const EdgeInsets.only(right: 5, left: 5),
         height: 225,
-        width: 150,
+        //height: 225,
+        //width: 150,
         clipBehavior: Clip.hardEdge,
         decoration: BoxDecoration(
             gradient: const LinearGradient(colors: [
@@ -53,23 +57,27 @@ class _StoryImageState extends State<StoryImage> {
                     )
                   ]
                 : null),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.start,
+        child: Stack(
+          //mainAxisAlignment: MainAxisAlignment.start,
           children: [
-            const SizedBox(height: 60),
-            Text(
-              'kf'.tr,
-              style: GoogleFonts.quintessential(
-                color: Colors.white.withOpacity(0.5),
-                fontSize: 20,
-              ),
-            ),
+            //const SizedBox(height: 60),
+
             Align(
-              alignment: Alignment.center,
-              child: Icon(
-                Icons.add_circle_outline,
-                color: Colors.black.withOpacity(0.5),
-                size: 50,
+                alignment: Alignment.center,
+                child: widget.imagePath == null
+                    ? Icon(
+                        Icons.add_circle_outline,
+                        color: Colors.black.withOpacity(0.5),
+                        size: 50,
+                      )
+                    : Image.file(File(widget.imagePath!))),
+            Center(
+              child: Text(
+                'kf'.tr,
+                style: GoogleFonts.quintessential(
+                  color: Colors.white.withOpacity(0.5),
+                  fontSize: 20,
+                ),
               ),
             ),
           ],

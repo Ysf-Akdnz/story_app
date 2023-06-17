@@ -3,8 +3,8 @@ import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class CreateStoryButton extends StatefulWidget {
-  const CreateStoryButton({super.key});
-
+  const CreateStoryButton({super.key, this.onTap});
+  final void Function()? onTap;
   @override
   State<CreateStoryButton> createState() => _CreateStoryButtonState();
 }
@@ -15,7 +15,7 @@ class _CreateStoryButtonState extends State<CreateStoryButton> {
     return Container(
       margin: const EdgeInsets.only(top: 20, left: 15, right: 15),
       child: InkWell(
-        onTap: () {},
+        onTap: widget.onTap,
         child: Container(
           width: MediaQuery.of(context).size.width / 1.5,
           padding: const EdgeInsets.all(10),
