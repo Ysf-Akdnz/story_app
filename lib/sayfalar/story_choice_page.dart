@@ -49,11 +49,35 @@ class _StoryChoicePageState extends State<StoryChoicePage> {
     super.dispose();
   }
 
-  @override
+  /*@override
   void initState() {
     loadDialogMusic();
     currentDialog = widget.dialogNum;
     super.initState();
+  }*/
+
+  @override
+  void initState() {
+    super.initState();
+    currentChapter = widget.chapterNum;
+    loadDialogMusic();
+    currentDialog = widget.dialogNum;
+  }
+
+  @override
+  void didUpdateWidget(StoryChoicePage oldWidget) {
+    super.didUpdateWidget(oldWidget);
+    if (widget.dialogNum != oldWidget.dialogNum) {
+      currentDialog = widget.dialogNum;
+      loadDialogMusic();
+    }
+  }
+
+  void setCurrentDialog(int dialogNum) {
+    if (currentDialog != dialogNum) {
+      currentDialog = dialogNum;
+      loadDialogMusic();
+    }
   }
 
   Future<void> loadDialogMusic() async {
@@ -61,7 +85,19 @@ class _StoryChoicePageState extends State<StoryChoicePage> {
     var dialog = data["dialog"];
     var music = dialog["music"];
     var volume = dialog["volume"];
-    playMusic(music, volume: volume, loopMode: LoopMode.all);
+    var playOnce = dialog["playOnce"];
+    var loopMode;
+
+    if (music != null) {
+      if (playOnce != null && playOnce == true) {
+        loopMode = LoopMode.off;
+      } else {
+        loopMode = LoopMode.all;
+      }
+      playMusic(music, volume: volume, loopMode: loopMode);
+    } else {
+      return;
+    }
   }
 
   var currentMetin = "";
@@ -158,10 +194,10 @@ class _StoryChoicePageState extends State<StoryChoicePage> {
                                         return;
                                       }
                                       if (dialog["nextdialog"] != null) {
-                                        currentDialog = dialog["nextdialog"];
+                                        setCurrentDialog(dialog["nextdialog"]);
                                         return;
                                       }
-                                      currentDialog++;
+                                      setCurrentDialog(currentDialog + 1);
                                     },
                                   );
                                 }

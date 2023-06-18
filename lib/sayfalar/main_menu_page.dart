@@ -6,6 +6,9 @@ import 'package:story_app/widgets/bottom_navigatorbar_button_list.dart';
 import 'package:story_app/model/setting.dart';
 import 'package:get/get.dart';
 
+import '../data/data.dart';
+import '../utils/audio_background.dart';
+
 // Uygulama açıldığında görünen ilk sayfadır
 class GirisSayfasi extends StatefulWidget {
   const GirisSayfasi({super.key});
@@ -16,6 +19,21 @@ class GirisSayfasi extends StatefulWidget {
 
 class _GirisSayfasiState extends State<GirisSayfasi> {
   final GlobalKey<ScaffoldState> _key = GlobalKey();
+  final storyData = StoryData();
+
+  @override
+  void initState() {
+    loadStoryMusic();
+    super.initState();
+  }
+
+  Future<void> loadStoryMusic() async {
+    var music = "assets/musics/main-menu-music.ogg";
+    if (music == null) {
+      return;
+    }
+    playMusic(music);
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -163,8 +181,7 @@ class _GirissSayfasiState extends State<GirissSayfasi> {
                   margin: const EdgeInsets.only(top: 20),
                   child: InkWell(
                     onTap: () {
-                      setState(() {
-                      });
+                      setState(() {});
                       Navigator.push(
                         context,
                         MaterialPageRoute(

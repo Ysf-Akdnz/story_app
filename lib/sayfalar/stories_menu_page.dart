@@ -5,11 +5,8 @@ import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:story_app/data/data.dart';
-import 'package:story_app/sayfalar/user_stories_page.dart';
 import 'package:story_app/utils/audio_background.dart';
 import 'package:story_app/model/setting.dart';
-import 'package:story_app/sayfalar/main_menu_page.dart';
-import 'package:story_app/widgets/story_list_widget.dart';
 import '../butonlar/exit_buttons.dart';
 import 'story_choice_page.dart';
 import '../widgets/bottom_navigatorbar_button_list.dart';
@@ -27,20 +24,6 @@ class _MainMenuPageState extends State<MainMenuPage> {
   final storyData = StoryData();
   bool showExitStory = true;
   bool showExitUserStory = false;
-
-  @override
-  void initState() {
-    loadStoryMusic();
-    super.initState();
-  }
-
-  Future<void> loadStoryMusic() async {
-    var music = await storyData.getStoryMusic();
-    if (music == null) {
-      return;
-    }
-    playMusic(music);
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -160,15 +143,15 @@ class _MainMenuPageState extends State<MainMenuPage> {
         ),
         const SizedBox(height: 25),
         if (showExitStory)
-        ExitButtons(
-          exitStory: true,
-          exitUserStory: false,
-        ),
-      if (showExitUserStory)
-        ExitButtons(
-          exitStory: false,
-          exitUserStory: true,
-        ),
+          ExitButtons(
+            exitStory: true,
+            exitUserStory: false,
+          ),
+        if (showExitUserStory)
+          ExitButtons(
+            exitStory: false,
+            exitUserStory: true,
+          ),
         const SizedBox(height: 100)
       ],
     );

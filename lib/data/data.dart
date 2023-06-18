@@ -62,6 +62,7 @@ class StoryData {
     var dialog = chapter["dialogs"][dialogId];
     var music = dialog["music"];
     var volume = dialog["volume"];
+    var playOnce = dialog["playOnce"];
     bool save = dialog["save"];
     if (save) {
       await prefs.setInt('chapterId', chapterId);
@@ -72,7 +73,8 @@ class StoryData {
       "dialog": dialog,
       "texts": texts,
       "music": music,
-      "volume": volume
+      "volume": volume,
+      "playOnce": playOnce
     };
     return dialogView;
   }
@@ -100,7 +102,7 @@ class StoryData {
     return data["chapters"][chapterId]["imageUrl"];
   }
 
-  Future<String?> getStoryMusic() async {
+  /*Future<String?> getStoryMusic() async {
     data ??= await readJson();
     final prefs = await SharedPreferences.getInstance();
     final chapterId = prefs.getInt('chapterId') ?? 0;
@@ -109,7 +111,7 @@ class StoryData {
     }
     final chapter = data["chapters"][chapterId];
     return chapter["music"];
-  }
+  }*/
 
   Future<String> getStoryName() async {
     data ??= await readJson();

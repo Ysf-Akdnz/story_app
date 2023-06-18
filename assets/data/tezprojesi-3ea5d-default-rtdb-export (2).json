@@ -2,9 +2,8 @@
   "chapters": [
     {
       "id": 0,
-      "name": "Let M a Legend",
-      "imageUrl": "assets/images/let-me-a-legend.jpeg",
-      "music": "assets/musics/main-menu-music.ogg",
+      "name": "Fenrik's Journay",
+      "imageUrl": "assets/images/fenriks-journay.jpeg",
       "texts": {
         "tr-TR": {
           "dg000": "At arabasının sallantılarıyla gözlerini yavaşça araladın. Gece göğünün altında bulutsuz ve yıldızlı bir manzarayla karşılaştın. Yavaşça doğrulduğunda yanında, senin yaşlarında birkaç gencin daha uyuduğunu gördün. İleride meşale ışıkları gözükmeye başlamıştı. \n\n“Uyanın!” diye bağırdı sürücü ve uyumakta olanlar herkesi uyandırdı. Kısa süre sonra araba durduğunda örme zincir zırh giymiş bir asker arabaya yaklaştı. \n\n“İnin ve beni takip edin.” \n\nArabadan inip adamı takip etmeye başladın. Onu takip ederken talim alanlarının etrafından geçtiğinizi fark ettin. İlk talim alanı neredeyse boştu. Sadece birkaç kişi birbirleriyle kılıç mücadelesindeydi ve bir hayli yorulmuş görünüyorlardı. İkinci talim alanına geldiğinizde takip ettiğiniz asker durdu. Yanına iki asker daha geldi ve birisi elindeki parşömen ve kalemi, sizi oraya götüren askere uzattı. Başınızdaki asker parşömen ve kağıdı aldı ve size döndü. \n\n“Sıraya girin, sırayla bilgileriniz alınacak.”\n",
@@ -111,7 +110,7 @@
           "image": "train",
           "save": true,
           "text": "dg000",
-          "music": "assets/musics/skyrim.mp3",
+          "music": "assets/musics/fenrik-camp-ambience.ogg",
           "volume": 0.9
         },
         {
@@ -135,7 +134,8 @@
           "id": 1,
           "image": "train",
           "save": false,
-          "text": "dg001"
+          "text": "dg001",
+          "volume": 0.9
         },
         {
           "choices": [
@@ -153,49 +153,59 @@
           "id": 2,
           "image": "train",
           "save": false,
-          "text": "dg002"
+          "text": "dg002",
+          "volume": 0.9
         },
         {
           "id": 3,
           "image": "train",
           "save": true,
-          "text": "dg003"
+          "text": "dg003",
+          "volume": 0.9
         },
         {
           "id": 4,
           "image": "bed",
           "save": false,
-          "text": "dg004"
+          "text": "dg004",
+          "music": "assets/musics/fenrik-snoring.ogg",
+          "volume": 0.9
         },
         {
           "id": 5,
           "image": "bed",
           "save": false,
-          "text": "dg005"
+          "text": "dg005",
+          "volume": 0.9
         },
         {
           "id": 6,
           "image": "bed",
           "save": false,
-          "text": "dg006"
+          "text": "dg006",
+          "volume": 0.9
         },
         {
           "id": 7,
           "image": "train",
           "save": true,
-          "text": "dg007"
+          "text": "dg007",
+          "volume": 0.1
         },
         {
           "id": 8,
-          "image": "train",
+          "image": "eat",
           "save": false,
-          "text": "dg008"
+          "text": "dg008",
+          "music": "assets/musics/fenrik-dining-hall.ogg",
+          "volume": 0.9
         },
         {
           "id": 9,
-          "image": "train",
+          "image": "eat",
           "save": false,
-          "text": "dg009"
+          "text": "dg009",
+          "volume": 0.9
         },
         {
           "choices": [
@@ -213,7 +223,9 @@
           "id": 10,
           "image": "train",
           "save": false,
-          "text": "dg010"
+          "text": "dg010",
+          "music": "assets/musics/fenrik-training-ground.ogg",
+          "volume": 0.9
         },
         {
           "choices": [
@@ -231,7 +243,8 @@
           "id": 11,
           "image": "train",
           "save": false,
-          "text": "dg011"
+          "text": "dg011",
+          "volume": 0.9
         },
         {
           "choices": [
@@ -249,14 +262,16 @@
           "id": 12,
           "image": "train",
           "save": false,
-          "text": "dg012"
+          "text": "dg012",
+          "volume": 0.9
         },
         {
           "id": 13,
           "image": "train",
           "nextdialog": 15,
           "save": true,
-          "text": "dg013"
+          "text": "dg013",
+          "volume": 0.9
         },
         {
           "id": 14,
@@ -266,64 +281,78 @@
         },
         {
           "id": 15,
-          "image": "train",
+          "image": "night",
           "save": false,
-          "text": "dg015"
+          "text": "dg015",
+          "music":"assets/musics/fenrik-night.ogg",
+          "volume": 0.9
         },
         {
           "id": 16,
-          "image": "train",
+          "image": "night",
           "nextdialog": 31,
           "save": false,
-          "text": "dg016"
+          "text": "dg016",
+          "volume": 0.9
         },
         {
           "id": 17,
           "image": "train",
           "save": true,
-          "text": "dg017"
+          "text": "dg017",
+          "volume": 0.9
         },
         {
           "id": 18,
           "image": "bed",
           "save": false,
-          "text": "dg018"
+          "text": "dg018",
+          "music":"assets/musics/fenrik-snoring.ogg",
+          "volume": 0.9
         },
         {
           "id": 19,
           "image": "bed",
           "save": false,
-          "text": "dg019"
+          "text": "dg019",
+          "volume": 0.9
         },
         {
           "id": 20,
           "image": "bed",
           "save": false,
-          "text": "dg020"
+          "text": "dg020",
+          "volume": 0.9
         },
         {
           "id": 21,
           "image": "eat",
           "save": true,
-          "text": "dg021"
+          "text": "dg021",
+          "music":"assets/musics/fenrik-dining-hall.ogg",
+          "volume": 0.9
         },
         {
           "id": 22,
           "image": "eat",
           "save": false,
-          "text": "dg022"
+          "text": "dg022",
+          "volume": 0.9
         },
         {
           "id": 23,
           "image": "eat",
           "save": false,
-          "text": "dg023"
+          "text": "dg023",
+          "volume": 0.9
         },
         {
           "id": 24,
           "image": "train",
           "save": false,
-          "text": "dg024"
+          "text": "dg024",
+          "music":"assets/musics/fenrik-training-ground.ogg",
+          "volume": 0.9
         },
         {
           "choices": [
@@ -341,7 +370,8 @@
           "id": 25,
           "image": "train",
           "save": false,
-          "text": "dg025"
+          "text": "dg025",
+          "volume": 0.9
         },
         {
           "choices": [
@@ -359,45 +389,52 @@
           "id": 26,
           "image": "train",
           "save": false,
-          "text": "dg026"
+          "text": "dg026",
+          "volume": 0.9
         },
         {
           "id": 27,
           "image": "train",
           "nextdialog": 29,
           "save": true,
-          "text": "dg027"
+          "text": "dg027",
+          "volume": 0.9
         },
         {
           "id": 28,
           "image": "train",
           "save": true,
-          "text": "dg028"
+          "text": "dg028",
+          "volume": 0.9
         },
         {
           "id": 29,
-          "image": "train",
+          "image": "night",
+          "music":"assets/musics/fenrik-night.ogg",
           "save": false,
-          "text": "dg029"
+          "text": "dg029",
+          "volume": 0.9
         },
         {
           "id": 30,
-          "image": "train",
+          "image": "night",
           "save": false,
-          "text": "dg030"
+          "text": "dg030",
+          "volume": 0.9
         },
         {
           "id": 31,
+          "image": "tobicon",
           "text": "dg031",
-          "save": false
+          "save": false,
+          "volume": 0.1
         }
       ]
     },
     {
       "id": 1,
       "name": "Out Of Dark",
-      "imageUrl": "assets/images/kapak-foto.jpeg",
-      "music": "assets/musics/main-menu-music.ogg",
+      "imageUrl": "assets/images/out-of-dark-foto.jpeg",
       "texts": {
         "tr-TR": {
           "dg000": "Saatlerdir ormanda dolaşıyor, ne yapacağını bilmiyordun. Nereden geldiğini, nasıl geldiğini, burada ne işin olduğunu bilmiyordun, hiçbir şey hatırlamıyordun. Kasvetli karanlığın çevrelediği ağaçlar arasında umutsuzca koşuyordun. Görebildiğin tek şey, aysız gökteki yıldızların cılız ışıklarının, ölü ağaçlarının arasından geçerken oluşturduğu devasa gölgelerdi. Nefes nefese kalmış vaziyette bir ağaca yaslandığın sırada ormanın içinden gelen sesler, içindeki korkuyu arttırıyor, gözlerinin istemsizce etrafa bakmasına neden oluyorlardı. \n\nYapabileceğin tek şey ilerlemek, ilerlemek ve ilerlemekti. Ayakların senden izinsiz hareket etmeye başladığında omurgandan aşağı soğuk bir ter damlasının indiğini hissettin. Nefeslerin sessizleşirken korku bedenini parça parça ele geçiriyordu. Nihayetinde ayaklarının kontrolünü ele geçirdiğinde önünde çok fazla seçenek olmadığını fark ettin.\n",
@@ -475,7 +512,7 @@
           "image": "c1_1",
           "save": false,
           "text": "dg000",
-          "music": "assets/musics/horror-ambiance.mp3",
+          "music": "assets/musics/out-of-dark-forest.ogg",
           "volume": 0.9
         },
         {
@@ -499,7 +536,8 @@
           "id": 1,
           "image": "c1_2",
           "save": false,
-          "text": "dg005"
+          "text": "dg005",
+          "volume": 0.9
         },
         {
           "choices": [
@@ -517,7 +555,8 @@
           "id": 2,
           "image": "c1_1",
           "save": false,
-          "text": "dg002"
+          "text": "dg002",
+          "volume": 0.9
         },
         {
           "choices": [
@@ -535,7 +574,8 @@
           "id": 3,
           "image": "c1_6",
           "save": false,
-          "text": "dg003"
+          "text": "dg003",
+          "volume": 0.9
         },
         {
           "choices": [
@@ -553,7 +593,8 @@
           "id": 4,
           "image": "c1_2",
           "save": false,
-          "text": "dg008"
+          "text": "dg008",
+          "volume": 0.9
         },
         {
           "choices": [],
@@ -561,7 +602,9 @@
           "nextdialog": 10,
           "image": "c1_5",
           "save": false,
-          "text": "dg009"
+          "text": "dg009",
+          "music":"assets/musics/out-of-dark-bonfire-eating.ogg",
+          "volume": 0.9
         },
         {
           "choices": [
@@ -579,7 +622,9 @@
           "id": 6,
           "image": "dead",
           "save": false,
-          "text": "dg001"
+          "text": "dg001",
+          "music":"assets/musics/out-of-dark-you-are-dead.ogg",
+          "volume": 0.9
         },
         {
           "choices": [
@@ -597,7 +642,9 @@
           "id": 7,
           "image": "dead",
           "save": false,
-          "text": "dg004"
+          "text": "dg004",
+          "music":"assets/musics/out-of-dark-you-are-dead.ogg",
+          "volume": 0.9
         },
         {
           "choices": [
@@ -615,7 +662,9 @@
           "id": 8,
           "image": "dead",
           "save": false,
-          "text": "dg006"
+          "text": "dg006",
+          "music":"assets/musics/out-of-dark-you-are-dead.ogg",
+          "volume": 0.9
         },
         {
           "choices": [
@@ -633,38 +682,43 @@
           "id": 9,
           "image": "dead",
           "save": false,
-          "text": "dg007"
+          "text": "dg007",
+          "music":"assets/musics/out-of-dark-you-are-dead.ogg",
+          "volume": 0.9
         },
         {
           "choices": [],
           "id": 10,
           "image": "tobicon",
           "save": false,
-          "text": "dg010"
+          "text": "dg010",
+          "volume": 0.9
         }
       ]
     },
     {
       "id": 2,
       "name": "Future Life",
-      "imageUrl": "assets/images/cyber.jpg",
+      "imageUrl": "assets/images/future-life.jpg",
       "music": "assets/musics/main-menu-music.ogg",
       "texts": {
         "tr-TR": {
           "dg000": "Çalan alarm sesiyle gözlerini açmıştın. “Leona, alarmı kapat.” Dedin yatağından kalkarak. Leona senin kişisel yapay zeka asistanındı. “Günaydın Mark, saat 07.16. Hava parçalı bulutlu ve 18 derece.” Yavaşça boynunu kıtlattın ve banyoya doğru ilerledin. Banyoda, ellerini lavaboya dayayarak, aynada kendine baktın. Dünden kalmış küçük bir morluk gözünün altında solmaya yüz tutmuştu. Başını iki yana sallayıp kendini toparladın ve yüzünü yıkadın.\n",
           "dg001": "“Kahven hazır Mark.” Leona’nın cümlesiyle banyodan çıktın ve mutfağa ilerledin. Siyah mermerden yapılmış tezgahın üstündeki makinadan dumanlar tüten kahveni bir bardağa doldurdun. “Bugün için iki görüşmen var Mark. İkisi de zamanı senin belirlemeni istedi. Birisi Cyber Readers. Askeri bakımdan hizmetinden faydalanmak istiyorlar. Diğeri ise Techno Line. Ağ Gezerlik yeteneklerine ihtiyaç duyduklarına dair not düşmüşler. Önce hangisiyle görüşmek istersin?”\n",
           "dg002": "“Randevu notlarına göre, Cyber Readers’ın merkezinden bir bellek çalınmış. Bunu geri almanı istiyorlar. Çalan kişi yada kişiler yazılmamış.” Tezgaha yaslanarak kahveni içmeye başladı. “Techno Line’ın derdi neymiş?” Sen kahveni içmeye devam ederken Leona’da soruna cevap verdi. “Techno Line dün saat 18.35’den beri siber saldırı altındaymış. Eklediği nota göre, kendi Ağ Gezerleri savunma durumundaymış ancak sürekli saldırı sebebiyle saldıranlara karşı harekete geçememişler. Saldıran kişi yada kişiler yazılmamış.”\n",
-          "dg003": "“Techno Line’ı önce görelim Leona. Nerede buluşmak istiyorlar?” Kahveni hızlıca bitirip kıyafetlerini değiştirmek için yatak odana gittin. “Şehrin Tellesa Bölgesi’ndeki merkezlerinde onlarla görüşeceksin Mark. Yaklaşık 47 dakika da orada olursun. Saat şu anda 07.32. Randevuyu saat kaça almamı istersin?” \n\nÜzerini değiştirmiş ve ekipman odana ilerlemiştin. “08.30 ideal Leona, teşekkürler.” Dedin ve Ağ Gezerlik ekipmanların arasından sinirsel bağlantı çipini, şakağındaki bellek yuvasına taktın. Gözlerindeki sibernetik bilgisayar üzerinde kod akışı geçtikten sonra görüşün tekrar geri geldi. Kulağına kulaklığını taktın ve ceketini alarak evinden çıktın. Garajında duran motoruna binerek randevu konumuna doğru ilerlemeye başladın.\n",
-          "dg004": "40 dakikalık bir yolculuğun ardından Techno Line’ın merkezine gelmiştin. Motorunu park edip binadan içeri girdin. Girişteki sensörleri seni baştan aşağı taradı ve sonunda bir adamın “Hoş geldiniz Mark Ian Blue. Direktör Temura Naradasi sizi 17. Katta, Ağ Labirenti biriminde bekliyor.” Konuşan kişi Techno Line’ın yapay zekasıydı. \n\nBaşınla anladığını belirterek asansöre ilerledin. Asansöre binip 17’ye bastın ve yukarı çıkarken kulağına dolan hafif müziği dinlemeye başladın. 17. Kata geldiğinde kapılar iki yana açıldı ve asansörden çıktın. Duvardaki tabelalara bakarak Ağ Labirenti birimine ilerlemeye başladın. Sen yaklaştığında birimin kapısı açıldı ve içeri girdin. \n\nSıradan bir ana kontrol odasına benzemiyordu. Daha çok siber dalış odası gibiydi. Odaya dağılmış olan birkaç potun içinde Ağ Gezerlerin, siber dünyaya girmiş olduğunu gördün. Gözlerin etrafta gezinirken orta yaşlarda, siyahi ve hafif çekik gözlü birisi sana yaklaşarak elini uzattı. “Ah Mark, tam zamanında geldin, teşekkürler.”\n",
-          "dg005": "Hafifçe gülümsedin. “Anlaşılan her ne kadar, en iyi 5 siber savunma şirketinden biri olsanız dışarıdan yardıma muhtaç duruma düşebiliyorsunuz Bay Naradasi.” Direktör kaşlarını hafifçe çattı. “Hazırlıksız yakalandığımız doğru, anca şu anda zaman önemli, boş konuşmanın sırası değil. Benimle gel.”\n",
-          "dg006": "Adamın uzattığı elini sıkarak onu selamladın. “Sanırım saldırı altındaymışsınız Direktör Naradasi. Sorun ne? Saldıranlar kim biliyor musunuz?” Direkt olarak işe girmen direktörün hoşuna gitmiş olacak ki hafifçe gülümsedi. “Evet Mark, şu ana kadar dayanabildik ancak kesinlikle yardım gerekiyor. Benimle gel.”\n",
-          "dg007": "Direktörü takip ederek alandaki büyük monitörlerin önüne doğru ilerledin. Ekranlarda akan kodlar ara sıra eksilse de hemen yerine yenisi geçiyordu. “Dünden beri bununla uğraşıyoruz. Çok yoğun bir saldırı altında olduğumuz için ancak savunmaya yetecek adamımız var. Senden istediğimiz şey, siber dünyaya girip, biz savunma ile düşmanı oyalarken onlara saldıracak bir açıklık bulman ve onları indirmen.” Direktörün sözleri bittiğinde çeneni hafifçe kaşıdın. \n\n“Bahsettiğiniz kadar yoğunsa dediğiniz şeyi yapmak kolay olmayacak.” \n\n“Alacağın ücrette bununla paralel olacak Mark, merak etme.” \n\nPara konusu açıldığında hafifçe gülümsedin. “Gireceğim potu gösterin.”\n",
-          "dg008": "“Cyber Readers’a öncelik ver Leona. Nerede buluşmak istiyorlar?” Kahveni hızlıca bitirip kıyafetlerini değiştirmek için yatak odana gittin. “Şehrin Pacigeon Bölgesi’ndeki merkezlerinde onlarla görüşeceksin Mark. Yaklaşık 33 dakika da orada olursun. Saat şu anda 07.32. Randevuyu saat kaça almamı istersin?” \n\nÜzerini değiştirmiş ve ekipman odana ilerlemiştin. “08.30 ideal Leona, teşekkürler.” Dedin. Ardından silah dolabını açarak önce tabanca kemerini taktın ve sonrasında sırtına asabileceğin bir tüfek çıkardın dolaptan. Tabancanı ve tüfeğini kuşandığında dolabın kenarında duran mühimmat çantanı da sırtına atarak odadan çıktın. Kulağına kulaklığını taktın ve ceketini alarak evinden çıktın. Garajında duran motoruna binerek randevu konumuna doğru ilerlemeye başladın. \n\nSkyset City, ülkedeki en bozuk şehirlerden biriydi ve burada paralı askerlik yaygın. Bu yüzden yolda, sırtında silah bulunan birisi kolay kolay polis tarafından durdurulmazdı. Sende bu sayede saat 08.01’de Cyber Readers’ın merkezine gelebilmiştin.\n",
-          "dg009": "Motorunu park edip binadan içeri girdin. Girişteki sensörleri seni baştan aşağı taradı ve sonunda bir kadının “Hoş geldiniz Mark Ian Blue. Direktör Andrew Autera sizi 13. Katta, Ağ Çarpışması biriminde bekliyor.” Konuşan kişi Cyber Readers’ın yapay zekasıydı. \n\nBaşınla anladığını belirterek asansöre ilerledin. Asansöre binip 13’e bastın ve yukarı çıkarken kulağına dolan hafif müziği dinlemeye başladın. 13. Kata geldiğinde kapılar iki yana açıldı ve asansörden çıktın. Duvardaki tabelalara bakarak Ağ Çarpışması birimine ilerlemeye başladın. Sen yaklaştığında birimin kapısı açıldı ve içeri girdin. \n\nSıradan bir ana kontrol odasına benziyordu. Gayet sakin gibiydi, herkes işinin başında sessizce çalışıyordu. Gözlerin etrafta gezinirken orta yaşlarda, açık tenli ve mavi gözlü birisi sana yaklaşarak elini uzattı. “Ah Mark, tam zamanında geldin, teşekkürler.”\n",
-          "dg010": "Hafifçe gülümsedin. “Anlaşılan her ne kadar, en iyi 5 paralı asker şirketinden biri olsanız dışarıdan yardıma muhtaç duruma düşebiliyorsunuz Bay Autera.” Direktör kaşlarını hafifçe çattı. “Hazırlıksız yakalandığımız doğru, anca şu anda zaman önemli, boş konuşmanın sırası değil. Benimle gel.”\n",
-          "dg011": "Adamın uzattığı elini sıkarak onu selamladın. “Sanırım bir hırsızlık söz konusu Direktör Autera. Sorun ne? Hırsızın kim olduğunu biliyor musunuz?” Direkt olarak işe girmen direktörün hoşuna gitmiş olacak ki hafifçe gülümsedi. “Evet Mark, bu işi kendi askerlerimize yaptırırsak çok büyük ses çıkar ve halk bu durumu öğrenir bu yüzden bizim dışımızdan birine ihtiyacımız vardı. Benimle gel.”\n",
-          "dg012": "Direktörü takip ederek kontrol odasından çıktın ve onun kişisel ofisine girdin. Direktör masasının önüne geçtiğinde masaya dokundu ve bir kamera görüntüsü oynamaya başladı. Görüntüde bir adama saldıran yaklaşık 7 8 kişi vardı. “Alfred Torick. On yılı aşkın süredir şirketin iç halkasında. Dün gece darp edildi ve benim dışımda onda olduğunu kimsenin bilmediği bir bellek çalındı. Görüntülerdeki kişiler ise gece içinde kayıplara karıştılar. Sende istediğimiz de bu kişilerden hangisinin belleği çaldığını öğrenmen ve onu geri getirmen.” \n\nÇeneni hafifçe kaşıdın. “Kolay olmayacak ancak yapabilirim. Öncelikle Bay Torick ile konuşmak istiyorum.” Diyerek direktöre döndün ancak direktörün yüzünde kasvetli bir hava vardı. “Alfred Torick bugün hastanede öldü. Aldığı darbelerin birçoğu hayati organına gelmiş. Normal insan gücüyle yapılamayacak hasarlar olduğu için saldırganların-“ derken direktörün sözünü kestin. \n\n“Saldırganların sibernetik uzuv geliştirmelerine sahip olduğunu düşünüyorsunuz. İşi daha da zorlaştıracak bir durum.” \n\n“Alacağın ücrette bununla paralel olacak Mark, merak etme.” \n\nPara konusu açıldığında hafifçe gülümsedin. “O halde bana darp mahalinin yerini gösterin.”\n",
-          "dg013": "Devam Edecek...",
+          "dg003": "“Techno Line’ı önce görelim Leona. Nerede buluşmak istiyorlar?” Kahveni hızlıca bitirip kıyafetlerini değiştirmek için yatak odana gittin. “Şehrin Tellesa Bölgesi’ndeki merkezlerinde onlarla görüşeceksin Mark. Yaklaşık 47 dakika da orada olursun. Saat şu anda 07.32. Randevuyu saat kaça almamı istersin?” \n\nÜzerini değiştirmiş ve ekipman odana ilerlemiştin. “08.30 ideal Leona, teşekkürler.” Dedin ve Ağ Gezerlik ekipmanların arasından sinirsel bağlantı çipini, şakağındaki bellek yuvasına taktın. Gözlerindeki sibernetik bilgisayar üzerinde kod akışı geçtikten sonra görüşün tekrar geri geldi.\n",
+          "dg004": "Kulaklığını taktın ve ceketini alarak evinden çıktın. Garajında duran motoruna binerek randevu konumuna doğru ilerlemeye başladın. 40 dakikalık bir yolculuğun ardından Techno Line’ın merkezine gelmiştin. Motorunu park edip binadan içeri girdin.\n",
+          "dg005": "Girişteki sensörleri seni baştan aşağı taradı ve sonunda bir adamın “Hoş geldiniz Mark Ian Blue. Direktör Temura Naradasi sizi 17. Katta, Ağ Labirenti biriminde bekliyor.” Konuşan kişi Techno Line’ın yapay zekasıydı. \n\nBaşınla anladığını belirterek asansöre ilerledin. Asansöre binip 17’ye bastın ve yukarı çıkarken kulağına dolan hafif müziği dinlemeye başladın. 17. Kata geldiğinde kapılar iki yana açıldı ve asansörden çıktın. Duvardaki tabelalara bakarak Ağ Labirenti birimine ilerlemeye başladın. Sen yaklaştığında birimin kapısı açıldı ve içeri girdin. \n\nSıradan bir ana kontrol odasına benzemiyordu. Daha çok siber dalış odası gibiydi. Odaya dağılmış olan birkaç potun içinde Ağ Gezerlerin, siber dünyaya girmiş olduğunu gördün. Gözlerin etrafta gezinirken orta yaşlarda, siyahi ve hafif çekik gözlü birisi sana yaklaşarak elini uzattı. “Ah Mark, tam zamanında geldin, teşekkürler.”\n",
+          "dg006": "Hafifçe gülümsedin. “Anlaşılan her ne kadar, en iyi 5 siber savunma şirketinden biri olsanız dışarıdan yardıma muhtaç duruma düşebiliyorsunuz Bay Naradasi.” Direktör kaşlarını hafifçe çattı. “Hazırlıksız yakalandığımız doğru, anca şu anda zaman önemli, boş konuşmanın sırası değil. Benimle gel.”\n",
+          "dg007": "Adamın uzattığı elini sıkarak onu selamladın. “Sanırım saldırı altındaymışsınız Direktör Naradasi. Sorun ne? Saldıranlar kim biliyor musunuz?” Direkt olarak işe girmen direktörün hoşuna gitmiş olacak ki hafifçe gülümsedi. “Evet Mark, şu ana kadar dayanabildik ancak kesinlikle yardım gerekiyor. Benimle gel.”\n",
+          "dg008": "Direktörü takip ederek alandaki büyük monitörlerin önüne doğru ilerledin. Ekranlarda akan kodlar ara sıra eksilse de hemen yerine yenisi geçiyordu. “Dünden beri bununla uğraşıyoruz. Çok yoğun bir saldırı altında olduğumuz için ancak savunmaya yetecek adamımız var. Senden istediğimiz şey, siber dünyaya girip, biz savunma ile düşmanı oyalarken onlara saldıracak bir açıklık bulman ve onları indirmen.” Direktörün sözleri bittiğinde çeneni hafifçe kaşıdın. \n\n“Bahsettiğiniz kadar yoğunsa dediğiniz şeyi yapmak kolay olmayacak.” \n\n“Alacağın ücrette bununla paralel olacak Mark, merak etme.” \n\nPara konusu açıldığında hafifçe gülümsedin. “Gireceğim potu gösterin.”\n",
+          "dg009": "“Cyber Readers’a öncelik ver Leona. Nerede buluşmak istiyorlar?” Kahveni hızlıca bitirip kıyafetlerini değiştirmek için yatak odana gittin. “Şehrin Pacigeon Bölgesi’ndeki merkezlerinde onlarla görüşeceksin Mark. Yaklaşık 33 dakika da orada olursun. Saat şu anda 07.32. Randevuyu saat kaça almamı istersin?” \n\nÜzerini değiştirmiş ve ekipman odana ilerlemiştin. “08.30 ideal Leona, teşekkürler.” Dedin. Ardından silah dolabını açarak önce tabanca kemerini taktın ve sonrasında sırtına asabileceğin bir tüfek çıkardın dolaptan. Tabancanı ve tüfeğini kuşandığında dolabın kenarında duran mühimmat çantanı da sırtına atarak odadan çıktın. ",
+          "dg010": "Kulaklığını taktın ve ceketini alarak evinden çıktın. Garajında duran motoruna binerek randevu konumuna doğru ilerlemeye başladın. \n\nSkyset City, ülkedeki en bozuk şehirlerden biriydi ve burada paralı askerlik yaygın. Bu yüzden yolda, sırtında silah bulunan birisi kolay kolay polis tarafından durdurulmazdı. Sende bu sayede saat 08.01’de Cyber Readers’ın merkezine gelebilmiştin. Motorunu park edip binadan içeri girdin.\n",
+          "dg011": "Girişteki sensörleri seni baştan aşağı taradı ve sonunda bir kadının “Hoş geldiniz Mark Ian Blue. Direktör Andrew Autera sizi 13. Katta, Ağ Çarpışması biriminde bekliyor.” Konuşan kişi Cyber Readers’ın yapay zekasıydı. \n\nBaşınla anladığını belirterek asansöre ilerledin. Asansöre binip 13’e bastın ve yukarı çıkarken kulağına dolan hafif müziği dinlemeye başladın. 13. Kata geldiğinde kapılar iki yana açıldı ve asansörden çıktın. Duvardaki tabelalara bakarak Ağ Çarpışması birimine ilerlemeye başladın. Sen yaklaştığında birimin kapısı açıldı ve içeri girdin. \n\nSıradan bir ana kontrol odasına benziyordu. Gayet sakin gibiydi, herkes işinin başında sessizce çalışıyordu. Gözlerin etrafta gezinirken orta yaşlarda, açık tenli ve mavi gözlü birisi sana yaklaşarak elini uzattı. “Ah Mark, tam zamanında geldin, teşekkürler.”\n",
+          "dg012": "Hafifçe gülümsedin. “Anlaşılan her ne kadar, en iyi 5 paralı asker şirketinden biri olsanız dışarıdan yardıma muhtaç duruma düşebiliyorsunuz Bay Autera.” Direktör kaşlarını hafifçe çattı. “Hazırlıksız yakalandığımız doğru, anca şu anda zaman önemli, boş konuşmanın sırası değil. Benimle gel.”\n",
+          "dg013": "Adamın uzattığı elini sıkarak onu selamladın. “Sanırım bir hırsızlık söz konusu Direktör Autera. Sorun ne? Hırsızın kim olduğunu biliyor musunuz?” Direkt olarak işe girmen direktörün hoşuna gitmiş olacak ki hafifçe gülümsedi. “Evet Mark, bu işi kendi askerlerimize yaptırırsak çok büyük ses çıkar ve halk bu durumu öğrenir bu yüzden bizim dışımızdan birine ihtiyacımız vardı. Benimle gel.”\n",
+          "dg014": "Direktörü takip ederek kontrol odasından çıktın ve onun kişisel ofisine girdin. Direktör masasının önüne geçtiğinde masaya dokundu ve bir kamera görüntüsü oynamaya başladı. Görüntüde bir adama saldıran yaklaşık 7 8 kişi vardı. “Alfred Torick. On yılı aşkın süredir şirketin iç halkasında. Dün gece darp edildi ve benim dışımda onda olduğunu kimsenin bilmediği bir bellek çalındı. Görüntülerdeki kişiler ise gece içinde kayıplara karıştılar. Sende istediğimiz de bu kişilerden hangisinin belleği çaldığını öğrenmen ve onu geri getirmen.” \n\nÇeneni hafifçe kaşıdın. “Kolay olmayacak ancak yapabilirim. Öncelikle Bay Torick ile konuşmak istiyorum.” Diyerek direktöre döndün ancak direktörün yüzünde kasvetli bir hava vardı. “Alfred Torick bugün hastanede öldü. Aldığı darbelerin birçoğu hayati organına gelmiş. Normal insan gücüyle yapılamayacak hasarlar olduğu için saldırganların-“ derken direktörün sözünü kestin. \n\n“Saldırganların sibernetik uzuv geliştirmelerine sahip olduğunu düşünüyorsunuz. İşi daha da zorlaştıracak bir durum.” \n\n“Alacağın ücrette bununla paralel olacak Mark, merak etme.” \n\nPara konusu açıldığında hafifçe gülümsedin. “O halde bana darp mahalinin yerini gösterin.”\n",
+          "dg015": "Devam Edecek...",
           "ch01": "“Sorunlarını biliyor musun Leona?”",
           "ch02": "“Cyber Readers’ları önce koy.”",
           "ch03": "“Techno Line’la ilk önce göreşelim.”",
@@ -672,19 +726,22 @@
           "ch05": "Ciddi ol."
         },
         "en-US": {
-          "dg000": "You opened your eyes to the sound of the alarm. “Leona, turn off the alarm.” You said getting up from your bed. Leona was your personal AI assistant. “Good morning Mark, it's 7:16 am. Partly cloudy and 18 degrees.” You cracked your neck slowly and made your way to the bathroom. In the bathroom, you put your hands on the sink and looked at yourself in the mirror. A small bruise from yesterday was fading under his eye. You shook your head, collected yourself, and washed your face. \n\n“Your coffee is ready, Mark.” With Leona's sentence, you left the bathroom and proceeded to the kitchen. You poured a steaming coffee from the machine on the black marble counter into a glass. “You have two meetings for today, Mark. Both wanted you to set the time. One is Cyber Readers. They want to benefit from your military service. The other is Techno Line. They made a note that they need Network Roaming abilities. Who would you like to meet first?”\n",
-          "dg001": "“According to the appointment notes, a memory was stolen from the Cyber Readers headquarters. They want you to take this back. The person or persons who stole it are not written.” Leaning on the counter, he started drinking his coffee. “What's wrong with Techno Line?” While you were drinking your coffee, Leona answered your question. “Techno Line has been under cyber attack since 6:35 pm yesterday. According to the note he added, their Network Wanderers were on the defensive, but could not take action against the attackers due to the constant attack. The attacker or persons were not written.”\n",
-          "dg002": "“Let's see Techno Line first, Leona. Where do they want to meet?” You quickly finished your coffee and went to your bedroom to change your clothes. “You will meet them at their city center in the Tellesa District, Mark. You'll be there in about 47 minutes. The time is now 07:32. What time do you want me to make the appointment?” \n\nYou changed and proceeded to your equipment room. “08.30 is ideal Leona, thanks.” You said and inserted the neural interconnection chip into the memory slot in your temple through the Network Mobility equipment. After the stream of code passed over the cybernetic computer in your eyes, your vision was back again. You put on your earphones and took your jacket and left the house. You got into your car parked in your garage and started to make your way to the rendezvous location.\n",
-          "dg003": "After a 40-minute journey, you came to the center of Techno Line. You parked your engine and entered the building. The sensors at the entrance scanned you from head to toe, and finally a man said, “Welcome, Mark Ian Blue. Director Temura Naradasi is waiting for you on the 17th Floor, in the Net Maze unit.” The person speaking was the artificial intelligence of Techno Line. \n\nYou nodded and proceeded to the elevator. You got into the elevator and pressed 17 and started listening to the soft music that filled your ears as you went up. When you got to the 17th floor, the doors opened and you stepped out of the elevator. Looking at the signs on the wall, you started to move towards the Net Maze unit. As you approached, the door to the unit opened and you walked in. \n\nIt didn't look like an ordinary master control room. It was more like a cyber diving room. In a few pots scattered around the room, you saw that the Network Walkers had entered the cyber world. While your eyes were wandering around, a middle-aged black man with slightly slanted eyes approached you and held out his hand. “Oh Mark, you're just in time, thank you.”\n",
-          "dg004": "You smiled slightly. “It seems that although you are one of the top 5 cyber defense companies, you may be in need of outside help, Mr. Naradasi.” The director frowned slightly. “It is true that we were caught off guard, but right now time is of the essence, not the time for idle talk. Come with me.”\n",
-          "dg005": "You shook the man's outstretched hand and greeted him. “I think you are under attack, Director Naradasi. What's the problem? Do you know who the attackers are?” The director must have been pleased that you were hired directly, as he smiled slightly. “Yes Mark, we've been able to hold on so far, but we definitely need help. Come with me.”\n",
-          "dg006": "You followed the director towards the large monitors in the space. Even though the codes flowing on the screens were reduced from time to time, they were replaced immediately. “We have been dealing with this since yesterday. Since we are under heavy attack, we only have enough men to defend. What we're asking you to do is enter the cyber world, find an opening to attack them while we stall the enemy with defense, and take them down.” You lightly scratched your chin as the director finished. \n\n“It won't be easy to do what you say if it's as intense as you say it is.” \n\n“Your pay will be in line with that, Mark, don't worry.” \n\nYou smiled slightly when the topic of money came up. “Show me the pot I'm going in.”\n",
-          "dg007": "“Prioritize Cyber Readers, Leona. Where do they want to meet?” You quickly finished your coffee and went to your bedroom to change your clothes. “You will meet them at their city center in the Pacigeon District, Mark. You'll be there in about 33 minutes. The time is now 07:32. What time do you want me to make the appointment?” \n\nYou changed and proceeded to your equipment room. “08.30 is ideal Leona, thanks.” You said. Then you opened the gun cabinet, first put on your gun belt and then took out a rifle that you could hang on your back. When you were armed with your pistol and rifle, you threw your ammunition bag on your back and left the room. You put on your earphones and took your jacket and left the house. You got into your car parked in your garage and started to make your way to the rendezvous location. \n\nSkyset City was one of the most corrupt cities in the country, and mercenaries are common here. Therefore, on the road, someone with a gun on his back would not be easily stopped by the police. Thanks to this, you were able to come to the center of Cyber Readers at 08.01.\n",
-          "dg008": "You parked your engine and entered the building. The sensors at the entrance scanned you from head to toe, and finally a woman said, “Welcome, Mark Ian Blue. Director Andrew Autera awaits you in the Network Crash unit on Floor 13.” The person speaking was the artificial intelligence of Cyber Readers. \n\nYou nodded and proceeded to the elevator. You got into the elevator and pressed 13 and started listening to the soft music that filled your ears as you went up. When you reached the 13th floor, the doors opened and you stepped out of the elevator. Looking at the signs on the wall, you started to advance towards the Network Skirmish unit. As you approached, the door to the unit opened and you walked in. \n\nIt looked like an ordinary master control room. It seemed quite calm, everyone was working quietly at their work. While your eyes were wandering around, a middle-aged, fair-skinned and blue-eyed person approached you and held out his hand. “Oh Mark, you're just in time, thank you.”\n",
-          "dg009": "You smiled slightly. “It seems that although you are one of the top 5 companies of mercenaries, you may be in need of outside help, Mr. Autera.” The director frowned slightly. “It is true that we were caught off guard, but right now time is of the essence, not the time for idle talk. Come with me.”\n",
-          "dg010": "You shook the man's outstretched hand and greeted him. “I think there's been a theft, Director Autera. What's the problem? Do you know who the thief is?” The director must have been pleased that you were hired directly, as he smiled slightly. “Yes Mark, it would be a big deal if we had our own soldiers do this job and the public would know about it, so we needed someone outside of us. Come with me.”\n",
-          "dg011": "You followed the director out of the control room and into his personal office. When the director stepped in front of his desk, he touched the desk and a footage began to play. There were about 7 8 people in the footage attacking a man. “Alfred Torick. In the inner circle of the company for over ten years. He was beaten last night, and a memory was stolen that no one knew he had except me. The people in the images disappeared during the night. What we want is for you to find out which of these people stole the memory and bring it back.” \n\nYou scratched your chin lightly. “It won't be easy, but I can do it. I would like to speak to Mr. Torick first.” You turned to the director, but the director had a gloomy look on his face. “Alfred Torick died in hospital today. Many of the blows he received were on his vital organ. You interrupted the director when you said that the attackers-“, since there is damage that cannot be done with normal human power. \n\n“You think the attackers have cybernetic limb enhancements. It is a situation that will make the job even more difficult.” \n\n“Your pay will be in line with that, Mark, don't worry.” \n\nYou smiled slightly when the topic of money came up. “Then show me the location of the assault.”\n",
-          "dg012": "To be continued…",
+          "dg000": "You opened your eyes to the sound of the alarm. “Leona, turn off the alarm.” You said getting up from your bed. Leona was your personal AI assistant. “Good morning Mark, it's 7:16 am. Partly cloudy and 18 degrees.” You cracked your neck slowly and made your way to the bathroom. In the bathroom, you put your hands on the sink and looked at yourself in the mirror. A small bruise from yesterday was fading under his eye. You shook your head, collected yourself, and washed your face.\n",
+          "dg001": "“Your coffee is ready, Mark.” With Leona's sentence, you left the bathroom and proceeded to the kitchen. You poured a steaming coffee from the machine on the black marble counter into a glass. “You have two meetings for today, Mark. Both wanted you to set the time. One is Cyber Readers. They want to benefit from your military service. The other is Techno Line. They made a note that they need Network Roaming abilities. Who would you like to meet first?”\n",
+          "dg002": "“According to the appointment notes, a memory was stolen from the Cyber Readers headquarters. They want you to take this back. The person or persons who stole it are not written.” Leaning on the counter, he started drinking his coffee. “What's wrong with Techno Line?” While you were drinking your coffee, Leona answered your question. “Techno Line has been under cyber attack since 6:35 pm yesterday. According to the note he added, their Network Wanderers were on the defensive, but could not take action against the attackers due to the constant attack. The attacker or persons were not written.”\n",
+          "dg003": "“Let's see Techno Line first, Leona. Where do they want to meet?” You quickly finished your coffee and went to your bedroom to change your clothes. “You will meet them at their city center in the Tellesa District, Mark. You'll be there in about 47 minutes. The time is now 07:32. What time do you want me to make the appointment?”\n\n You changed and proceeded to your equipment room. “08.30 is ideal Leona, thanks.” You said and inserted the neural interconnection chip into the memory slot in your temple through the Network Mobility equipment. After the stream of code passed over the cybernetic computer in your eyes, your vision was back again.\n",
+          "dg004": "You put on your earphones and took your jacket and left the house. You got into your car parked in your garage and started to make your way to the rendezvous location. After a 40-minute journey, you came to the center of Techno Line. You parked your engine and entered the building.\n",
+          "dg005": "The sensors at the entrance scanned you from head to toe, and finally a man said, “Welcome, Mark Ian Blue. Director Temura Naradasi is waiting for you on the 17th Floor, in the Net Maze unit.” The person speaking was the artificial intelligence of Techno Line.\n\n You nodded and proceeded to the elevator. You got into the elevator and pressed 17 and started listening to the soft music that filled your ears as you went up. When you got to the 17th floor, the doors opened and you stepped out of the elevator. Looking at the signs on the wall, you started to move towards the Net Maze unit. As you approached, the door to the unit opened and you walked in.\n\n It didn't look like an ordinary master control room. It was more like a cyber diving room. In a few pots scattered around the room, you saw that the Network Walkers had entered the cyber world. While your eyes were wandering around, a middle-aged black man with slightly slanted eyes approached you and held out his hand. “Oh Mark, you're just in time, thank you.”\n",
+          "dg006": "You smiled slightly. “It seems that although you are one of the top 5 cyber defense companies, you may be in need of outside help, Mr. Naradasi.” The director frowned slightly. “It is true that we were caught off guard, but right now time is of the essence, not the time for idle talk. Come with me.”\n",
+          "dg007": "You shook the man's outstretched hand and greeted him. “I think you are under attack, Director Naradasi. What's the problem? Do you know who the attackers are?” The director must have been pleased that you were hired directly, as he smiled slightly. “Yes Mark, we've been able to hold on so far, but we definitely need help. Come with me.”\n",
+          "dg008": "You followed the director towards the large monitors in the space. Even though the codes flowing on the screens were reduced from time to time, they were replaced immediately. “We have been dealing with this since yesterday. Since we are under heavy attack, we only have enough men to defend. What we're asking you to do is enter the cyber world, find an opening to attack them while we stall the enemy with defense, and take them down.” You lightly scratched your chin as the director finished.\n\n “It won't be easy to do what you say if it's as intense as you say it is.”\n\n “Your pay will be in line with that, Mark, don't worry.”\n\n You smiled slightly when the topic of money came up. “Show me the pot I'm going in.”\n",
+          "dg009": "“Prioritize Cyber Readers, Leona. Where do they want to meet?” You quickly finished your coffee and went to your bedroom to change your clothes. “You will meet them at their city center in the Pacigeon District, Mark. You'll be there in about 33 minutes. The time is now 07:32. What time do you want me to make the appointment?”\n\n You changed and proceeded to your equipment room. “08.30 is ideal Leona, thanks.” You said. Then you opened the gun cabinet, first put on your gun belt and then took out a rifle that you could hang on your back. When you were armed with your pistol and rifle, you threw your ammunition bag on your back and left the room.\n",
+          "dg010": "You put on your earphones and took your jacket and left the house. You got into your car parked in your garage and started to make your way to the rendezvous location.\n\n Skyset City was one of the most corrupt cities in the country, and mercenaries are common here. Therefore, on the road, someone with a gun on his back would not be easily stopped by the police. Thanks to this, you were able to come to the center of Cyber Readers at 08.01. You parked your engine and entered the building.\n",
+          "dg011": "The sensors at the entrance scanned you from head to toe, and finally a woman said, “Welcome, Mark Ian Blue. Director Andrew Autera awaits you in the Network Crash unit on Floor 13.” The person speaking was the artificial intelligence of Cyber Readers.\n\n You nodded and proceeded to the elevator. You got into the elevator and pressed 13 and started listening to the soft music that filled your ears as you went up. When you reached the 13th floor, the doors opened and you stepped out of the elevator. Looking at the signs on the wall, you started to advance towards the Network Skirmish unit. As you approached, the door to the unit opened and you walked in.\n\n It looked like an ordinary master control room. It seemed quite calm, everyone was working quietly at their work. While your eyes were wandering around, a middle-aged, fair-skinned and blue-eyed person approached you and held out his hand. “Oh Mark, you're just in time, thank you.”\n",
+          "dg012": "You smiled slightly. “It seems that although you are one of the top 5 companies of mercenaries, you may be in need of outside help, Mr. Autera.” The director frowned slightly. “It is true that we were caught off guard, but right now time is of the essence, not the time for idle talk. Come with me.”\n",
+          "dg013": "You shook the man's outstretched hand and greeted him. “I think there's been a theft, Director Autera. What's the problem? Do you know who the thief is?” The director must have been pleased that you were hired directly, as he smiled slightly. “Yes Mark, it would be a big deal if we had our own soldiers do this job and the public would know about it, so we needed someone outside of us. Come with me.”\n",
+          "dg014": "You followed the director out of the control room and into his personal office. When the director stepped in front of his desk, he touched the desk and a footage began to play. There were about 7 8 people in the footage attacking a man. “Alfred Torick. In the inner circle of the company for over ten years. He was beaten last night, and a memory was stolen that no one knew he had except me. The people in the images disappeared during the night. What we want is for you to find out which of these people stole the memory and bring it back.”\n\n You scratched your chin lightly. “It won't be easy, but I can do it. I would like to speak to Mr. Torick first.” You turned to the director, but the director had a gloomy look on his face. “Alfred Torick died in hospital today. Many of the blows he received were on his vital organ. You interrupted the director when you said that the attackers-“, since there is damage that cannot be done with normal human power.\n\n“You think the attackers have cybernetic limb enhancements. It is a situation that will make the job even more difficult.”\n\n “Your pay will be in line with that, Mark, don't worry.”\n\n You smiled slightly when the topic of money came up. “Then show me the location of the assault.”\n",
+          "dg015": "To be continued…",
           "ch01": "“Do you know your problems Leona?”",
           "ch02": "“Put the Cyber Readers first.”",
           "ch03": "“Let's talk to Techno Line first.”",
@@ -695,11 +752,12 @@
       "dialogs": [
         {
           "id": 0,
-          "image": "c2_1",
+          "image": "fl-bed",
           "save": false,
           "text": "dg000",
-          "music": "assets/musics/cyber.mp3",
-          "volume": 0.1
+          "music": "assets/musics/future-life-alarm.ogg",
+          "playOnce": true,
+          "volume": 0.9
         },
         {
           "choices": [
@@ -710,7 +768,7 @@
             },
             {
               "id": 1,
-              "nextdialog": 8,
+              "nextdialog": 9,
               "text": "ch02"
             },
             {
@@ -720,17 +778,18 @@
             }
           ],
           "id": 1,
-          "image": "c2_5",
+          "image": "fl-kitchen",
           "save": false,
           "text": "dg001",
-          "music": "assets/musics/cyber.mp3",
-          "volume": 0.5
+          "music": "assets/musics/future-life-coffee.ogg",
+          "playOnce": true,
+          "volume": 0.9
         },
         {
           "choices": [
             {
               "id": 0,
-              "nextdialog": 8,
+              "nextdialog": 9,
               "text": "ch02"
             },
             {
@@ -740,108 +799,140 @@
             }
           ],
           "id": 2,
-          "image": "c2_5",
+          "image": "fl-kitchen",
           "save": false,
-          "text": "dg002"
+          "text": "dg002",
+          "volume": 0.9
         },
         {
           "id": 3,
-          "image": "c2_4",
+          "image": "fl-weapon",
           "save": true,
-          "text": "dg003"
+          "text": "dg003",
+          "volume": 0.9
+        },
+        {
+          "id": 4,
+          "image": "fl-moto",
+          "save": false,
+          "text": "dg004",
+          "music": "assets/musics/future-life-moto.ogg",
+          "playOnce": true,
+          "volume": 0.9
         },
         {
           "choices": [
             {
               "id": 0,
-              "nextdialog": 5,
+              "nextdialog": 6,
               "text": "ch04"
             },
             {
               "id": 1,
-              "nextdialog": 6,
+              "nextdialog": 7,
               "text": "ch05"
             }
           ],
-          "id": 4,
-          "image": "c2_3",
-          "save": false,
-          "text": "dg004"
-        },
-        {
           "id": 5,
-          "nextdialog": 7,
-          "image": "c2_3",
+          "image": "fl-building",
           "save": false,
-          "text": "dg005"
+          "text": "dg005",
+          "music": "assets/musics/future-life-office.ogg",
+          "volume": 0.9
         },
         {
           "id": 6,
-          "nextdialog": 7,
-          "image": "c2_3",
+          "nextdialog": 8,
+          "image": "fl-building",
           "save": false,
-          "text": "dg006"
+          "text": "dg006",
+          "volume": 0.9
         },
         {
           "id": 7,
-          "nextdialog": 13,
-          "image": "c2_2",
+          "image": "fl-building",
           "save": true,
-          "text": "dg007"
+          "text": "dg007",
+          "volume": 0.9
         },
         {
           "id": 8,
-          "image": "c2_4",
+          "nextdialog": 15,
+          "image": "fl-office",
           "save": true,
-          "text": "dg007"
+          "text": "dg007",
+          "volume": 0.9
+        },
+        {
+          "id": 9,
+          "image": "fl-weapon",
+          "save": false,
+          "text": "dg009",
+          "volume": 0.9
+        },
+        {
+          "id": 10,
+          "image": "fl-moto",
+          "save": false,
+          "text": "dg010",
+          "music": "assets/musics/future-life-moto.ogg",
+          "playOnce": true,
+          "volume": 0.9
         },
         {
           "choices": [
             {
               "id": 0,
-              "nextdialog": 10,
+              "nextdialog": 12,
               "text": "ch04"
             },
             {
               "id": 1,
-              "nextdialog": 11,
+              "nextdialog": 13,
               "text": "ch05"
             }
           ],
-          "id": 9,
-          "image": "c2_2",
-          "save": false,
-          "text": "dg009"
-        },
-        {
-          "id": 10,
-          "nextdialog": 12,
-          "image": "c2_2",
-          "save": false,
-          "text": "dg010"
-        },
-        {
           "id": 11,
-          "image": "c2_2",
+          "image": "fl-office",
           "save": false,
-          "text": "dg011"
+          "text": "dg011",
+          "music": "assets/musics/future-life-office.ogg",
+          "volume": 0.9
         },
         {
           "id": 12,
-          "image": "c2_6",
+          "nextdialog": 14,
+          "image": "fl-office",
           "save": true,
-          "text": "dg012"
+          "text": "dg012",
+          "volume": 0.9
         },
         {
           "id": 13,
+          "image": "fl-office",
+          "save": false,
+          "text": "dg013",
+          "volume": 0.9
+        },
+        {
+          "id": 14,
+          "image": "fl-office",
+          "save": false,
+          "text": "dg014",
+          "volume": 0.9
+        },
+        {
+          "id": 15,
           "image": "tobicon",
           "save": false,
-          "text": "dg013"
+          "text": "dg015",
+          "volume": 0.9
         }
       ]
     }
   ],
   "images": {
+    "night": "https://firebasestorage.googleapis.com/v0/b/tezprojesi-3ea5d.appspot.com/o/Fenrik's%20Journay%2Fnight-ambiance.jpg?alt=media&token=1593129f-5a0c-4285-829f-ac9587564e0a",
     "bed": "https://firebasestorage.googleapis.com/v0/b/tezprojesi-3ea5d.appspot.com/o/yatakhane.jpeg?alt=media&token=0744ddae-aa22-4f63-9b7c-641d7ad3a91c",
     "eat": "https://firebasestorage.googleapis.com/v0/b/tezprojesi-3ea5d.appspot.com/o/yemekhane.jpeg?alt=media&token=30fa4236-3ede-4f83-9b3c-1ed0ce33c19b",
     "train": "https://firebasestorage.googleapis.com/v0/b/tezprojesi-3ea5d.appspot.com/o/training-area.jpeg?alt=media&token=0322c8ab-73b2-41ea-a19b-d1e33b509aff",
@@ -853,11 +944,12 @@
     "c1_6": "https://firebasestorage.googleapis.com/v0/b/tezprojesi-3ea5d.appspot.com/o/Out%20of%20Dark%2F6.jpg?alt=media&token=e36e76fc-5176-4ca5-997e-7b5754a12cae",
     "dead": "https://firebasestorage.googleapis.com/v0/b/tezprojesi-3ea5d.appspot.com/o/Out%20of%20Dark%2Fu-ar-dead.jpg?alt=media&token=3af87de2-2cce-41fc-a3d7-6d696185912b",
     "tobicon": "https://firebasestorage.googleapis.com/v0/b/tezprojesi-3ea5d.appspot.com/o/to-be-con.jpg?alt=media&token=42259da6-f785-4b31-83ff-b4c4fb7803ce",
-    "c2_1": "https://firebasestorage.googleapis.com/v0/b/tezprojesi-3ea5d.appspot.com/o/Future%20Life%2F1.jpg?alt=media&token=3a4c25ec-f342-4376-ba36-f1f9c727cc8b",
-    "c2_2": "https://firebasestorage.googleapis.com/v0/b/tezprojesi-3ea5d.appspot.com/o/Future%20Life%2F2.jpg?alt=media&token=25916b89-ef98-49b1-a138-cfaac02e4c73",
-    "c2_3": "https://firebasestorage.googleapis.com/v0/b/tezprojesi-3ea5d.appspot.com/o/Future%20Life%2F3.jpg?alt=media&token=57ffda7c-f2d2-4d20-8039-93360190f388",
-    "c2_4": "https://firebasestorage.googleapis.com/v0/b/tezprojesi-3ea5d.appspot.com/o/Future%20Life%2F4.jpg?alt=media&token=c3b872b1-73d2-442c-b0f2-389c76f47dcc",
-    "c2_5": "https://firebasestorage.googleapis.com/v0/b/tezprojesi-3ea5d.appspot.com/o/Future%20Life%2F5.jpg?alt=media&token=fdfedc92-2c4a-491f-9fae-0594c01ed209",
-    "c2_6": "https://firebasestorage.googleapis.com/v0/b/tezprojesi-3ea5d.appspot.com/o/Future%20Life%2F6.jpg?alt=media&token=08a7cce8-aefa-455e-a186-80d68e7d2a5b"
+    "fl-bed": "https://firebasestorage.googleapis.com/v0/b/tezprojesi-3ea5d.appspot.com/o/Future%20Life%2F1.jpg?alt=media&token=3a4c25ec-f342-4376-ba36-f1f9c727cc8b",
+    "fl-office": "https://firebasestorage.googleapis.com/v0/b/tezprojesi-3ea5d.appspot.com/o/Future%20Life%2F2.jpg?alt=media&token=25916b89-ef98-49b1-a138-cfaac02e4c73",
+    "fl-building": "https://firebasestorage.googleapis.com/v0/b/tezprojesi-3ea5d.appspot.com/o/Future%20Life%2F3.jpg?alt=media&token=57ffda7c-f2d2-4d20-8039-93360190f388",
+    "fl-weapon": "https://firebasestorage.googleapis.com/v0/b/tezprojesi-3ea5d.appspot.com/o/Future%20Life%2F4.jpg?alt=media&token=c3b872b1-73d2-442c-b0f2-389c76f47dcc",
+    "fl-kitchen": "https://firebasestorage.googleapis.com/v0/b/tezprojesi-3ea5d.appspot.com/o/Future%20Life%2F5.jpg?alt=media&token=fdfedc92-2c4a-491f-9fae-0594c01ed209",
+    "fl-office2": "https://firebasestorage.googleapis.com/v0/b/tezprojesi-3ea5d.appspot.com/o/Future%20Life%2F6.jpg?alt=media&token=08a7cce8-aefa-455e-a186-80d68e7d2a5b",
+    "fl-moto": "https://firebasestorage.googleapis.com/v0/b/tezprojesi-3ea5d.appspot.com/o/Future%20Life%2FCyberPunk%20Battle%20Bike.jpg?alt=media&token=6ef2d24b-47c3-44eb-878f-550df52ea634"
   }
 }
