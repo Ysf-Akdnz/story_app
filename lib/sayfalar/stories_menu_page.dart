@@ -22,8 +22,15 @@ class MainMenuPage extends StatefulWidget {
 class _MainMenuPageState extends State<MainMenuPage> {
   final GlobalKey<ScaffoldState> _key = GlobalKey();
   final storyData = StoryData();
-  bool showExitStory = true;
+  bool showContinue = false;
   bool showExitUserStory = false;
+  bool isIntroMusicPlaying = false;
+
+  Future<bool> showContiune() async {
+    final prefs = await SharedPreferences.getInstance();
+    final dialogId = prefs.getInt('dialogId') ?? 0;
+    return dialogId != 0;
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -73,7 +80,7 @@ class _MainMenuPageState extends State<MainMenuPage> {
     );
   }
 
-  Widget _mainMenuButton() {
+  _mainMenuButton() {
     return Column(
       mainAxisSize: MainAxisSize.max,
       children: <Widget>[
@@ -95,65 +102,104 @@ class _MainMenuPageState extends State<MainMenuPage> {
                 }),
           ),
         ),
-        ElevatedButton(
-            style: TextButton.styleFrom(
-                textStyle: const TextStyle(fontSize: 30),
-                backgroundColor: Colors.transparent),
-            onPressed: () async {
-              final prefs = await SharedPreferences.getInstance();
-              final chapterId = prefs.getInt('chapterId') ?? 0;
-              final dialogId = prefs.getInt('dialogId') ?? 0;
-              // ignore: use_build_context_synchronously
-              Navigator.of(context).pushReplacement(
-                MaterialPageRoute(
-                  builder: (context) => StoryChoicePage(
-                    chapterNum: chapterId,
-                    dialogNum: dialogId,
+        FutureBuilder(
+          future: showContiune(),
+          builder: (context, snapshot) {
+            bool show = snapshot.data ?? false;
+            return Column(
+              children: [
+                if (show)
+                  ElevatedButton(
+                    style: TextButton.styleFrom(
+                      textStyle: const TextStyle(fontSize: 30),
+                      backgroundColor: Colors.transparent,
+                    ),
+                    onPressed: () async {
+                      final prefs = await SharedPreferences.getInstance();
+                      final chapterId = prefs.getInt('chapterId') ?? 0;
+                      final dialogId = prefs.getInt('dialogId') ?? 0;
+                      Navigator.of(context).pushReplacement(
+                        MaterialPageRoute(
+                          builder: (context) => StoryChoicePage(
+                            chapterNum: chapterId,
+                            dialogNum: dialogId,
+                          ),
+                        ),
+                      );
+                    },
+                    child: Text(
+                      'Devam Et'.tr,
+                      style: GoogleFonts.quintessential(color: Colors.white),
+                    ),
                   ),
+                const SizedBox(height: 25),
+                ElevatedButton(
+                  style: TextButton.styleFrom(
+                      textStyle: const TextStyle(fontSize: 30),
+                      backgroundColor: Colors.transparent),
+                  onPressed: () async {
+                    // Giriş ekranındaki müziği durdur
+                    //setStop(currentMusic);
+                    final prefs = await SharedPreferences.getInstance();
+                    final chapterId = prefs.getInt('chapterId') ?? 0;
+                    // ignore: use_build_context_synchronously
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => StoryChoicePage(
+                          chapterNum: chapterId,
+                          dialogNum: 0,
+                        ),
+                      ),
+                    );
+                  },
+                  child: Text(
+                    'Yeni Oyun'.tr,
+                    style: GoogleFonts.quintessential(color: Colors.white),
+                  ), //Yeni Oyun
                 ),
-              );
-            },
-            child: Text(
-              'Devam Et'.tr,
-              style: GoogleFonts.quintessential(color: Colors.white),
-            )), //Devam Et
-        const SizedBox(height: 25),
-        ElevatedButton(
-          style: TextButton.styleFrom(
-              textStyle: const TextStyle(fontSize: 30),
-              backgroundColor: Colors.transparent),
-          onPressed: () async {
-            final prefs = await SharedPreferences.getInstance();
-            final chapterId = prefs.getInt('chapterId') ?? 0;
-            // ignore: use_build_context_synchronously
-            Navigator.push(
-              context,
-              MaterialPageRoute(
-                builder: (context) => StoryChoicePage(
-                  chapterNum: chapterId,
-                  dialogNum: 0,
-                ),
-              ),
+                const SizedBox(height: 25),
+                ExitButtons(),
+                const SizedBox(height: 100)
+              ],
             );
           },
-          child: Text(
-            'Yeni Oyun'.tr,
-            style: GoogleFonts.quintessential(color: Colors.white),
-          ), //Yeni Oyun
         ),
-        const SizedBox(height: 25),
-        if (showExitStory)
-          ExitButtons(
-            exitStory: true,
-            exitUserStory: false,
-          ),
-        if (showExitUserStory)
-          ExitButtons(
-            exitStory: false,
-            exitUserStory: true,
-          ),
-        const SizedBox(height: 100)
       ],
     );
   }
 }
+
+
+
+
+ /*void checkGameProgress() async {
+    final prefs = await SharedPreferences.getInstance();
+    final chapterId = prefs.getInt('chapterId');
+    final dialogId = prefs.getInt('dialogId');
+    if (chapterId != null && dialogId != null && dialogId > 0) {
+      setState(
+        () {
+          showContinue = true;
+        },
+      );
+    }
+  }*/
+/*
+  @override
+  void initState() {
+    super.initState();
+    checkGameProgress();
+  }
+
+  @override
+  void didChangeDependencies() {
+    super.didChangeDependencies();
+    checkGameProgress();
+  }
+
+  @override
+  void didUpdateWidget(MainMenuPage oldWidget) {
+    super.didUpdateWidget(oldWidget);
+    checkGameProgress();
+  }*/

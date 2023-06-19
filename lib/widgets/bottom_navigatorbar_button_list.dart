@@ -193,7 +193,7 @@ class _GetSettingsState extends State<GetSettings> {
                   Navigator.pushReplacement(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => const GirisSayfasi(),
+                      builder: (context) => GirisSayfasi(),
                     ),
                   );
                 },

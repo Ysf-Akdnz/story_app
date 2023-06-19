@@ -36,8 +36,11 @@ class _CardButtonsState extends State<CardButtons> {
     return GestureDetector(
       onTap: () async {
         final prefs = await SharedPreferences.getInstance();
-        await prefs.setInt('chapterId', widget.id);
-        await prefs.setInt('dialogId', 0);
+        final chapterId = widget.id;
+        // Her hikaye için başlangıç diyalogunu belirleyin
+        final dialogId = 0;
+        await prefs.setInt('chapterId', chapterId);
+        await prefs.setInt('dialogId', dialogId);
         // ignore: use_build_context_synchronously
         Navigator.of(context).pushReplacement(
           MaterialPageRoute(

@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:shared_preferences/shared_preferences.dart';
+import 'package:story_app/sayfalar/stories_menu_page.dart';
 import 'package:story_app/widgets/story_list_widget.dart';
 import 'package:story_app/widgets/bottom_navigatorbar_button_list.dart';
 import 'package:story_app/model/setting.dart';
@@ -11,7 +13,7 @@ import '../utils/audio_background.dart';
 
 // Uygulama açıldığında görünen ilk sayfadır
 class GirisSayfasi extends StatefulWidget {
-  const GirisSayfasi({super.key});
+  GirisSayfasi({super.key});
 
   @override
   State<GirisSayfasi> createState() => _GirisSayfasiState();
@@ -21,19 +23,19 @@ class _GirisSayfasiState extends State<GirisSayfasi> {
   final GlobalKey<ScaffoldState> _key = GlobalKey();
   final storyData = StoryData();
 
-  @override
+  /*@override
   void initState() {
     loadStoryMusic();
     super.initState();
   }
 
   Future<void> loadStoryMusic() async {
-    var music = "assets/musics/main-menu-music.ogg";
+    var music = await storyData.getStoryMusic();
     if (music == null) {
       return;
     }
     playMusic(music);
-  }
+  }*/
 
   @override
   Widget build(BuildContext context) {
@@ -45,7 +47,7 @@ class _GirisSayfasiState extends State<GirisSayfasi> {
         child: Scaffold(
           key: _key,
           backgroundColor: Colors.black87,
-          body: const GirissSayfasi(),
+          body: GirissSayfasi(),
           bottomNavigationBar: GetSettings(
             sckey: _key,
             menuVisible: false,
@@ -62,7 +64,7 @@ class _GirisSayfasiState extends State<GirisSayfasi> {
 }
 
 class GirissSayfasi extends StatefulWidget {
-  const GirissSayfasi({super.key});
+  GirissSayfasi({super.key});
 
   @override
   State<GirissSayfasi> createState() => _GirissSayfasiState();
@@ -177,6 +179,52 @@ class _GirissSayfasiState extends State<GirissSayfasi> {
             margin: const EdgeInsets.only(bottom: 150),
             child: Column(
               children: [
+                Container(
+                  margin: const EdgeInsets.only(top: 20),
+                  child: InkWell(
+                    onTap: () async {
+                      final prefs = await SharedPreferences.getInstance();
+                      final chapterId = prefs.getInt('chapterId') ?? 0;
+                      final dialogId = prefs.getInt('dialogId') ?? 0;
+                      await prefs.setInt('chapterId', chapterId);
+                      await prefs.setInt('dialogId', dialogId);
+                      // ignore: use_build_context_synchronously
+                      Navigator.of(context).pushReplacement(
+                        MaterialPageRoute(
+                          builder: (context) => const MainMenuPage(),
+                        ),
+                      );
+                    },
+                    child: Container(
+                      width: MediaQuery.of(context).size.width / 1.5,
+                      padding: const EdgeInsets.all(10),
+                      decoration: BoxDecoration(
+                        gradient: const LinearGradient(
+                            colors: [
+                              Color.fromARGB(221, 0, 47, 113),
+                              Color.fromARGB(221, 0, 85, 205)
+                            ],
+                            begin: Alignment.bottomLeft,
+                            end: Alignment.topCenter),
+                        borderRadius: BorderRadius.circular(13),
+                        // ignore: prefer_const_literals_to_create_immutables
+                        boxShadow: [
+                          const BoxShadow(
+                            color: Colors.black54,
+                            offset: Offset(0, 6),
+                            blurRadius: 5,
+                          )
+                        ],
+                      ),
+                      child: Text(
+                        'mh'.tr,
+                        textAlign: TextAlign.center,
+                        style: GoogleFonts.quintessential(
+                            color: Colors.white, fontSize: 22),
+                      ),
+                    ),
+                  ),
+                ),
                 Container(
                   margin: const EdgeInsets.only(top: 20),
                   child: InkWell(

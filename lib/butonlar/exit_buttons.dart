@@ -4,12 +4,15 @@ import 'package:google_fonts/google_fonts.dart';
 
 import '../sayfalar/user_stories_page.dart';
 import '../widgets/story_list_widget.dart';
+import '../sayfalar/main_menu_page.dart';
 
 class ExitButtons extends StatefulWidget {
-  final bool exitUserStory;
-  final bool exitStory;
-  const ExitButtons(
-      {super.key, required this.exitUserStory, required this.exitStory});
+  //final bool exitUserStory;
+  //final bool exitStory;
+  const ExitButtons({
+    super.key,
+    /*required this.exitUserStory, required this.exitStory*/
+  });
 
   @override
   State<ExitButtons> createState() => _ExitButtonsState();
@@ -49,7 +52,7 @@ class _ExitButtonsState extends State<ExitButtons> {
                   Navigator.pushReplacement(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => const StoryListWidget(),
+                      builder: (context) => GirisSayfasi(),
                     ),
                   );
                 },
@@ -68,7 +71,7 @@ class _ExitButtonsState extends State<ExitButtons> {
     );
   }
 
-  Future<dynamic> exitUserStory() {
+  /*Future<dynamic> exitUserStory() {
     return showDialog(
       context: context,
       builder: (context) => AlertDialog(
@@ -118,23 +121,23 @@ class _ExitButtonsState extends State<ExitButtons> {
         ],
       ),
     );
-  }
+  }*/
 
-  bool _exitUserStory = true;
-  bool _exitStory = true;
+  //bool _exitUserStory = true;
+  //bool _exitStory = true;
 
-  @override
+  /*@override
   void initState() {
     _exitUserStory = widget.exitUserStory;
     _exitStory = widget.exitStory;
     super.initState();
-  }
+  }*/
 
   @override
   Widget build(BuildContext context) {
     return Column(
       children: [
-        Visibility(
+        /*Visibility(
           visible: _exitUserStory,
           child: ElevatedButton(
             style: TextButton.styleFrom(
@@ -148,9 +151,9 @@ class _ExitButtonsState extends State<ExitButtons> {
               style: GoogleFonts.quintessential(color: Colors.white),
             ), //Çıkış
           ),
-        ),
+        ),*/
         Visibility(
-          visible: _exitStory,
+          //visible: _exitStory,
           child: ElevatedButton(
             style: TextButton.styleFrom(
                 textStyle: const TextStyle(fontSize: 30),

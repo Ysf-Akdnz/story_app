@@ -60,22 +60,23 @@ class _StoryChoicePageState extends State<StoryChoicePage> {
   void initState() {
     super.initState();
     currentChapter = widget.chapterNum;
-    loadDialogMusic();
     currentDialog = widget.dialogNum;
+    loadDialogMusic();
   }
 
   @override
   void didUpdateWidget(StoryChoicePage oldWidget) {
     super.didUpdateWidget(oldWidget);
     if (widget.dialogNum != oldWidget.dialogNum) {
-      currentDialog = widget.dialogNum;
-      loadDialogMusic();
+      setCurrentDialog(widget.dialogNum);
     }
   }
 
   void setCurrentDialog(int dialogNum) {
     if (currentDialog != dialogNum) {
-      currentDialog = dialogNum;
+      setState(() {
+        currentDialog = dialogNum;
+      });
       loadDialogMusic();
     }
   }
@@ -243,7 +244,7 @@ class _StoryChoicePageState extends State<StoryChoicePage> {
                                 child: GestureDetector(
                                   onLongPress: () {
                                     setState(() {
-                                      currentDialog = choice["nextdialog"];
+                                      setCurrentDialog(choice["nextdialog"]);
                                     });
                                   },
                                   child: ElevatedButton(

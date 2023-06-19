@@ -125,7 +125,7 @@ class _ArayuzMainState extends State<ArayuzMain> {
         final shouldpop = await showWarning(context);
         return shouldpop ?? false;
       },
-      child: const GirisSayfasi(),
+      child: GirisSayfasi(),
     );
   }
 }

@@ -3,6 +3,8 @@ import 'dart:io';
 import 'package:path_provider/path_provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:firebase_database/firebase_database.dart';
+import 'package:story_app/data/dialog_data.dart';
+import '../sayfalar/stories_menu_page.dart';
 
 class StoryData {
   dynamic data;
@@ -40,7 +42,6 @@ class StoryData {
   }
 
   Future<dynamic> readJson() async {
-    prefs = await SharedPreferences.getInstance();
     final dynamic response =
         loadUserStories ? await readUserStories() : await readFirebaseData();
     final jsonString = json.encode(response);
@@ -49,25 +50,31 @@ class StoryData {
   }
 
   Future<dynamic> getDialog(int chapterId, int dialogId) async {
+    prefs = await SharedPreferences.getInstance();
     data ??= await readJson(); //data == null ise imiş
     if (data["chapters"].length <= chapterId) {
       return null;
     }
+
     var chapter = data["chapters"][chapterId];
     var texts = chapter["texts"];
     numDialog = chapter["dialogs"].length;
+
     if (chapter["dialogs"].length <= dialogId) {
       return null;
     }
+
     var dialog = chapter["dialogs"][dialogId];
     var music = dialog["music"];
     var volume = dialog["volume"];
     var playOnce = dialog["playOnce"];
     bool save = dialog["save"];
+
     if (save) {
       await prefs.setInt('chapterId', chapterId);
       await prefs.setInt('dialogId', dialogId);
     }
+
     var dialogView = {
       "images": data["images"],
       "dialog": dialog,
@@ -76,6 +83,7 @@ class StoryData {
       "volume": volume,
       "playOnce": playOnce
     };
+
     return dialogView;
   }
 
@@ -102,7 +110,7 @@ class StoryData {
     return data["chapters"][chapterId]["imageUrl"];
   }
 
-  /*Future<String?> getStoryMusic() async {
+  Future<String> getStoryMusic() async {
     data ??= await readJson();
     final prefs = await SharedPreferences.getInstance();
     final chapterId = prefs.getInt('chapterId') ?? 0;
@@ -111,7 +119,7 @@ class StoryData {
     }
     final chapter = data["chapters"][chapterId];
     return chapter["music"];
-  }*/
+  }
 
   Future<String> getStoryName() async {
     data ??= await readJson();

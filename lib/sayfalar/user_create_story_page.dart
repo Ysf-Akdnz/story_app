@@ -2,12 +2,14 @@ import 'dart:convert';
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:story_app/model/story_name.dart';
 import 'package:story_app/model/dialogCards.dart';
 import 'package:story_app/sayfalar/user_stories_page.dart';
 
 import '../butonlar/create_story_button.dart';
+import '../data/data.dart';
 import '../data/user_story.dart';
 import '../model/story_image.dart';
 
@@ -47,6 +49,7 @@ class CreateStory extends StatefulWidget {
 class _CreateStoryState extends State<CreateStory> {
   TextEditingController textEditingController = TextEditingController();
   final ImagePicker picker = ImagePicker();
+  final storyData = StoryData();
   String? imagePath;
   int? id;
 
@@ -58,6 +61,19 @@ class _CreateStoryState extends State<CreateStory> {
     setState(() {
       userChapter["imageUrl"] = uploadedImagePath;
     });
+  }
+
+  bool areDialogTextsValid() {
+    final dialogs = userChapter['dialogs'] as List<dynamic>;
+    final coverImage = userChapter["imageUrl"];
+    if (dialogs.length == 0 || coverImage == null) return false;
+    for (final dialog in dialogs) {
+      final dialogText = dialog['text'];
+      if (dialogText == null || dialogText.isEmpty) {
+        return false;
+      }
+    }
+    return true;
   }
 
   @override
@@ -74,8 +90,8 @@ class _CreateStoryState extends State<CreateStory> {
         physics: const ScrollPhysics(),
         shrinkWrap: true,
         children: [
-          CreateStoryButton(
-            onTap: () async {
+          CreateStoryButton(onTap: () async {
+            if (areDialogTextsValid()) {
               test = jsonEncode(userChapter as dynamic);
               await saveStoryToJson();
               // ignore: use_build_context_synchronously
@@ -84,8 +100,42 @@ class _CreateStoryState extends State<CreateStory> {
                   builder: (context) => const StoryListViewUser(),
                 ),
               );
-            },
-          ),
+            } else {
+              showDialog(
+                context: context,
+                builder: (context) {
+                  return AlertDialog(
+                    backgroundColor: Colors.black54,
+                    title: Text(
+                      'uyari'.tr,
+                      textAlign: TextAlign.center,
+                      style: GoogleFonts.quintessential(
+                        color: Colors.red.withOpacity(0.8),
+                      ),
+                    ),
+                    content: Text(
+                      'uyariMetni'.tr,
+                      style: GoogleFonts.quintessential(
+                          color: Colors.white.withOpacity(0.8)),
+                    ),
+                    actions: [
+                      TextButton(
+                        onPressed: () {
+                          Navigator.of(context).pop();
+                        },
+                        child: Text(
+                          'tmm'.tr,
+                          style: GoogleFonts.quintessential(
+                            color: Colors.blue.withOpacity(0.8),
+                          ),
+                        ),
+                      ),
+                    ],
+                  );
+                },
+              );
+            }
+          }),
           StoryName(
             hintText: 'storyName'.tr,
             //textController: textEditingController,

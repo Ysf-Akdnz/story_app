@@ -10,8 +10,10 @@ Map<String, dynamic> userChapter = {
   "id": -1,
   "name": "",
   "imageUrl": null,
-  "music": "assets/musics/no-sound.mp3",
+  "music": "assets/musics/no-sound.ogg",
   "translated": false,
+  "playOnce": true,
+  "volume": 0.1,
   "dialogs": [
     /* {
       "id": 0,

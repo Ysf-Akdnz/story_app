@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -23,7 +22,7 @@ class _CreateChoiceButtonState extends State<CreateChoiceButton> {
       .map((value) => DropdownMenuItem(
             value: value["id"],
             child: Text(
-              "Dialog ${value["id"]}",
+              'dialog'.tr + "${value["id"]}",
               style: const TextStyle(color: Colors.white),
             ),
           ))
@@ -84,7 +83,6 @@ class _CreateChoiceButtonState extends State<CreateChoiceButton> {
                           onPressed: () {
                             setState(
                               () {
-
                                 getChoice()["text"] = controller.text;
                                 getChoice()["nextdialog"] = nextDialog;
                                 Navigator.pop(context);

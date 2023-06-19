@@ -24,7 +24,7 @@ class Dil extends Translations {
           'kf': 'Kapak Fotoğrafı',
           'storyName': 'Hikayenin Başlığını Giriniz',
           'olustur': 'Oluştur',
-          'dialog': 'Diyalog ',
+          'dialog': 'Sahne ',
           'ws': 'Hikaye Metni',
           'save': 'Kaydet',
           'choiceText': 'Seçim Yazısı',
@@ -32,7 +32,11 @@ class Dil extends Translations {
           'geri': 'Geri',
           'düzenle': 'Düzenle',
           'sil': 'Sil',
-          'sonraki': 'Sonraki...'
+          'sonraki': 'Sonraki...',
+          'tmm': 'Tamam',
+          'uyari': 'UYARI!',
+          'uyariMetni': 'Sahnelerin metinleri boş olamaz!',
+          'mh': 'Hikayeye Devam et'
         },
         'en_US': {
           'Duraklat': 'Pause',
@@ -49,7 +53,7 @@ class Dil extends Translations {
           'kf': 'Cover Photo',
           'storyName': 'Enter Story Title',
           'olustur': 'Create',
-          'dialog': 'Dialog ',
+          'dialog': 'Scene ',
           'ws': 'Story Text',
           'save': 'Save',
           'choiceText': 'Choice Text',
@@ -57,7 +61,11 @@ class Dil extends Translations {
           'geri': 'Back',
           'düzenle': 'Edit',
           'sil': 'Delete',
-          'sonraki': 'Next...'
+          'sonraki': 'Next...',
+          'tmm': 'Okay',
+          'uyari': 'WARNING!',
+          'uyariMetni': 'The texts of the scenes cannot be empty!',
+          'mh': 'Continue Story'
         },
       };
 }

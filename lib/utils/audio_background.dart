@@ -8,7 +8,7 @@ var lastVolume = 1.0;
 void playMusic(path, {double volume = 1.0, loopMode = LoopMode.off}) async {
   if (player.playing && currentMusic == path) return;
   lastVolume = volume;
-  if (muteMusic) volume = 0;
+  if (muteMusic) volume = 0.0;
   currentMusic = path;
   await player.setVolume(volume);
   await player.stop();
@@ -30,4 +30,8 @@ void setStop(path) async {
   if (player.playing && currentMusic == path) return;
   currentMusic = path;
   await player.stop();
+}
+
+void stopMusic() async {
+  setStop(currentMusic);
 }

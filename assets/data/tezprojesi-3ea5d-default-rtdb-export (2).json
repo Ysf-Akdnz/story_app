@@ -4,6 +4,7 @@
       "id": 0,
       "name": "Fenrik's Journay",
       "imageUrl": "assets/images/fenriks-journay.jpeg",
+      "music": "assets/musics/main-menu-music.ogg",
       "texts": {
         "tr-TR": {
           "dg000": "At arabasının sallantılarıyla gözlerini yavaşça araladın. Gece göğünün altında bulutsuz ve yıldızlı bir manzarayla karşılaştın. Yavaşça doğrulduğunda yanında, senin yaşlarında birkaç gencin daha uyuduğunu gördün. İleride meşale ışıkları gözükmeye başlamıştı. \n\n“Uyanın!” diye bağırdı sürücü ve uyumakta olanlar herkesi uyandırdı. Kısa süre sonra araba durduğunda örme zincir zırh giymiş bir asker arabaya yaklaştı. \n\n“İnin ve beni takip edin.” \n\nArabadan inip adamı takip etmeye başladın. Onu takip ederken talim alanlarının etrafından geçtiğinizi fark ettin. İlk talim alanı neredeyse boştu. Sadece birkaç kişi birbirleriyle kılıç mücadelesindeydi ve bir hayli yorulmuş görünüyorlardı. İkinci talim alanına geldiğinizde takip ettiğiniz asker durdu. Yanına iki asker daha geldi ve birisi elindeki parşömen ve kalemi, sizi oraya götüren askere uzattı. Başınızdaki asker parşömen ve kağıdı aldı ve size döndü. \n\n“Sıraya girin, sırayla bilgileriniz alınacak.”\n",
@@ -435,10 +436,11 @@
       "id": 1,
       "name": "Out Of Dark",
       "imageUrl": "assets/images/out-of-dark-foto.jpeg",
+      "music": "assets/musics/main-menu-music.ogg",
       "texts": {
         "tr-TR": {
           "dg000": "Saatlerdir ormanda dolaşıyor, ne yapacağını bilmiyordun. Nereden geldiğini, nasıl geldiğini, burada ne işin olduğunu bilmiyordun, hiçbir şey hatırlamıyordun. Kasvetli karanlığın çevrelediği ağaçlar arasında umutsuzca koşuyordun. Görebildiğin tek şey, aysız gökteki yıldızların cılız ışıklarının, ölü ağaçlarının arasından geçerken oluşturduğu devasa gölgelerdi. Nefes nefese kalmış vaziyette bir ağaca yaslandığın sırada ormanın içinden gelen sesler, içindeki korkuyu arttırıyor, gözlerinin istemsizce etrafa bakmasına neden oluyorlardı. \n\nYapabileceğin tek şey ilerlemek, ilerlemek ve ilerlemekti. Ayakların senden izinsiz hareket etmeye başladığında omurgandan aşağı soğuk bir ter damlasının indiğini hissettin. Nefeslerin sessizleşirken korku bedenini parça parça ele geçiriyordu. Nihayetinde ayaklarının kontrolünü ele geçirdiğinde önünde çok fazla seçenek olmadığını fark ettin.\n",
-          "dg001": "Arkanı döndü ve geldiğini düşündüğün yöne doğru ilerlemeye başladın. İlerledin, ilerledin ve ilerledin. Yol sonsuz gibiydi adeta ve içinden istemsizce sessiz çığlıklar yükseliyordu. Zaman mefhumunu kaybetmiştin. Ne kadar süre ilerlediğini bilmiyordun. Tek bildiğin şey karanlığın seni sarmaladığıydı ve artık hiçbir şey hissetmiyordun. Huzura erişebilmiş miydin? Bu sorunun cevabı muhtemelen olumsuzdu, artık gerçeklik senin için yok olmuştu. Unuttuğun hatıraların seninle birlikte yok oluşa sürüklenmişti. \n\n\n-Öldün- >>>\n",
+          "dg001": "Arkanı döndün ve geldiğini düşündüğün yöne doğru ilerlemeye başladın. İlerledin, ilerledin ve ilerledin. Yol sonsuz gibiydi adeta ve içinden istemsizce sessiz çığlıklar yükseliyordu. Zaman mefhumunu kaybetmiştin. Ne kadar süre ilerlediğini bilmiyordun. Tek bildiğin şey karanlığın seni sarmaladığıydı ve artık hiçbir şey hissetmiyordun. Huzura erişebilmiş miydin? Bu sorunun cevabı muhtemelen olumsuzdu, artık gerçeklik senin için yok olmuştu. Unuttuğun hatıraların seninle birlikte yok oluşa sürüklenmişti. \n\n\n-Öldün- >>>\n",
           "dg002": "Beklemeye başladın. Saatin kaç olduğunu bilmiyordun, ne zaman sabah olacağını bilmiyordun. Ne kadar beklemen gerektiğini bilmiyordun. Hiçbir şey bilmediğin bu yerde beklemeye devam edecek misin?\n",
           "dg003": "Gökteki cılız yıldızlar parlamaya devam ediyor, uğursuz bir rüzgar, tayin edemediğin bir yönden esiyordu. Ormandaki iç karartan sesler zaman zaman yükseliyor zaman zaman alçalıyordu. Ne yapacağını bilemeyen bir âcizlik bedenini sarmalıyordu.\n",
           "dg004": "Kararlıydın, güneş yükseldiğinde buradan kurtulacağını, puslu anılarının geri döneceğini ve hatırlayamadığın zamanlardaki gizemlerin çözümünü bulacağını düşünüyordun. Bekledin. Bekledin. Bekledin. Ne kadar zaman geçmişti bilmiyordun. Yıllar sonra iskeletlerin bir grup ormancı tarafından bulunduğunda hala oturur pozisyonda kurtuluşunu bekliyordun… \n\n\n-Öldün- >>>\n",
@@ -446,7 +448,7 @@
           "dg006": "Kapıyı tıkladığında, kapı kendiliğinden açıldı ve gördüğün en son şey yüzüne gelen, parlak ve keskin bir şeyin görüntüsü olmuştu. Sonrasında bir anlık acı ve bir an sonra da sonsuz karanlıktaydın.\n",
           "dg007": "Kulübeyi es geçtin. Ne olduğunu bilmediğin bir yere gitmek, karanlık ormanda dolaşmaktan daha ürkütücü gelmişti belki de sana kim bilir. Ancak durmadın. Daha önce verdiğin karar gibi aynı, ilerlemeye devam ettin. En sonunda ışığa ulaşacağına inanıyordun. Nihayetinde ulaştın da. İki parıltılı nokta görmüştün karanlık ormanda. İki parıltının hareket edişini göremeden göğsünde bir acı hissettin ve ardından boynuna gelen ısırıkla birlikte bir hayvanın akşam yemeği oldun.\n",
           "dg008": "Kulübeye yaklaştın ve etrafında dönmeye başladın. Bir yandan da kulübeyi inceliyordun. Sonunda perdesi kapalı olmayan ve yarı açık bir pencere buldun. İçeriye baktığında, kapının arkasında tavana iple bağlanmış bir şey gördün. Ne olduğunu tam göremiyordun buradan.\n",
-          "dg009": "Pencereyi sessizce açarak içeri girdin. İçerisi loş bir ışıkla aydınlanmıştı. Gözlerini küçük kulübede gezdirince ışığın sebebinin bir şöminede pişen yemeğin altındaki ateşten geldiğini gördün. Aldığın kokularda ateşin üstündeki kazandan geliyordu. Yavaşça kazana yaklaştın. Aldığın kokular daha da bir güzel geliyordu artık. Kazanın içindeki kepçeyi tutup yemeği karıştırdığında en sevdiğin güvece benzediğini gördün. \n\nHemen kulübeyi aradın ve tabak, kaşık bulup kendine yemek koydun ve karnını doyurdun. Sonrasında kulübeyi incelemeye başladı. Bu sırada duvarlarda fotoğraflar olduğunu fark ettin. Sıska, sakallı bir adamın yanında şişman, iri yarı bir kadın ve önlerinde de üç küçük kız durmuştu. \n\nGerek yüz ifadeleri, gerek giyinişleri, gerek içinde bulunduğun durum, hepsi birlikte daha da ürkmene sebep olmuştu. Fotoğrafların diğerleri de bu aile olduğunu düşündüğün insanlarla ilgiliydi. \n\nHızla fotoğrafların olduğu duvardan ayrıldın ve evi incelemeye devam ettin. Bu sırada bir duvara asılı bir fener buldun. Eline alıp açmayı denediğinde hala çalıştığını anlamıştın. Gülümseyerek evi incelemeye devam ettin.\n",
+          "dg009": "Pencereyi sessizce açarak içeri girdin. İçerisi loş bir ışıkla aydınlanmıştı. Gözlerini küçük kulübede gezdirince ışığın sebebinin bir şöminede pişen yemeğin altındaki ateşten geldiğini gördün. Aldığın kokularda ateşin üstündeki kazandan geliyordu. Yavaşça kazana yaklaştın. Aldığın kokular daha da bir güzel geliyordu artık. Kazanın içindeki kepçeyi tutup yemeği karıştırdığında en sevdiğin güvece benzediğini gördün. \n\nHemen kulübeyi aradın ve tabak, kaşık bulup kendine yemek koydun ve karnını doyurdun. Sonrasında kulübeyi incelemeye başladın. Bu sırada duvarlarda fotoğraflar olduğunu fark ettin. Sıska, sakallı bir adamın yanında şişman, iri yarı bir kadın ve önlerinde de üç küçük kız durmuştu. \n\nGerek yüz ifadeleri, gerek giyinişleri, gerek içinde bulunduğun durum, hepsi birlikte daha da ürkmene sebep olmuştu. Fotoğrafların diğerleri de bu aile olduğunu düşündüğün insanlarla ilgiliydi. \n\nHızla fotoğrafların olduğu duvardan ayrıldın ve evi incelemeye devam ettin. Bu sırada bir duvara asılı bir fener buldun. Eline alıp açmayı denediğinde hala çalıştığını anlamıştın. Gülümseyerek evi incelemeye devam ettin.\n",
           "dg010": "Devam Edecek...",
           "ch01": "İlerlemeye devam edebilirdin.",
           "ch02": "Olduğun yerde sabaha kadar bekleyebilirdin.",
@@ -597,13 +599,13 @@
           "volume": 0.9
         },
         {
-          "choices": [],
           "id": 5,
           "nextdialog": 10,
           "image": "c1_5",
-          "save": false,
+          "save": true,
           "text": "dg009",
           "music":"assets/musics/out-of-dark-bonfire-eating.ogg",
+          "playOnce": true,
           "volume": 0.9
         },
         {
@@ -624,6 +626,7 @@
           "save": false,
           "text": "dg001",
           "music":"assets/musics/out-of-dark-you-are-dead.ogg",
+          "playOnce": true,
           "volume": 0.9
         },
         {
@@ -644,6 +647,7 @@
           "save": false,
           "text": "dg004",
           "music":"assets/musics/out-of-dark-you-are-dead.ogg",
+          "playOnce": true,
           "volume": 0.9
         },
         {
@@ -664,6 +668,7 @@
           "save": false,
           "text": "dg006",
           "music":"assets/musics/out-of-dark-you-are-dead.ogg",
+          "playOnce": true,
           "volume": 0.9
         },
         {
@@ -684,6 +689,7 @@
           "save": false,
           "text": "dg007",
           "music":"assets/musics/out-of-dark-you-are-dead.ogg",
+          "playOnce": true,
           "volume": 0.9
         },
         {
@@ -844,7 +850,7 @@
           "id": 6,
           "nextdialog": 8,
           "image": "fl-building",
-          "save": false,
+          "save": true,
           "text": "dg006",
           "volume": 0.9
         },
@@ -866,7 +872,7 @@
         {
           "id": 9,
           "image": "fl-weapon",
-          "save": false,
+          "save": true,
           "text": "dg009",
           "volume": 0.9
         },
@@ -910,7 +916,7 @@
         {
           "id": 13,
           "image": "fl-office",
-          "save": false,
+          "save": true,
           "text": "dg013",
           "volume": 0.9
         },

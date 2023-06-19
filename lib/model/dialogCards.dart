@@ -6,7 +6,6 @@ import 'package:shared_preferences/shared_preferences.dart';
 import 'package:story_app/data/user_story.dart';
 import 'dialog_editing.dart';
 
-
 class DialogCards extends StatefulWidget {
   const DialogCards({super.key});
 
@@ -64,8 +63,8 @@ class _DialogCardsState extends State<DialogCards> {
                   userChapter["dialogs"].add({
                     "id": userChapter["dialogs"].length,
                     "save": true,
-                    "music": "assets/musics/no-sound.mp3",
-                    "volume": 0.0,
+                    "music": "assets/musics/no-sound.ogg",
+                    "volume": 0.1,
                     "choices": [
                       {"id": 0, "text": '', "nextdialog": 0}
                     ]
