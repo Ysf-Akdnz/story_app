@@ -35,7 +35,8 @@ class Dil extends Translations {
           'sonraki': 'Sonraki...',
           'tmm': 'Tamam',
           'uyari': 'UYARI!',
-          'uyariMetni': 'Sahnelerin metinleri boş olamaz!',
+          'uyariMetni':
+              'Sahnelerin metinleri ve hikayenin kapak fotosu boş olamaz!',
           'mh': 'Hikayeye Devam et'
         },
         'en_US': {
@@ -64,7 +65,8 @@ class Dil extends Translations {
           'sonraki': 'Next...',
           'tmm': 'Okay',
           'uyari': 'WARNING!',
-          'uyariMetni': 'The texts of the scenes cannot be empty!',
+          'uyariMetni':
+              'The texts of the scenes and the cover photo of the story cannot be empty!',
           'mh': 'Continue Story'
         },
       };
